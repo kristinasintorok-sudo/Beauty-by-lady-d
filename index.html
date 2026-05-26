@@ -934,11 +934,6 @@
   }
   footer .f-partner .b img { width: 100%; height: 100%; object-fit: contain; padding: 2px; }
 
-  /* responsive */
-  @media (min-width: 720px) {
-    .wrap { max-width: 480px; box-shadow: 0 0 80px rgba(62,47,34,.08); }
-  }
-
   /* fade-up scroll animation */
   @media (prefers-reduced-motion: no-preference) {
     .fade-up {
@@ -950,6 +945,103 @@
       opacity: 1;
       transform: none;
     }
+  }
+
+  /* ======= DESKTOP RESPONSIVE ======= */
+  @media (min-width: 720px) {
+    .wrap { max-width: 100%; box-shadow: none; }
+
+    /* Nav pill — centered, max 960px */
+    .nav-pill {
+      left: 50%;
+      right: auto;
+      top: 20px;
+      transform: translateX(-50%);
+      width: min(960px, calc(100% - 48px));
+    }
+
+    /* Hero — full viewport */
+    .hero { height: 100vh; max-height: none; }
+    .hero-img { inset: 0 0 22% 0; }
+    .hero-mark .word { font-size: clamp(70px, 10vw, 140px); }
+    .hero-caption { padding: 0 12%; }
+    .hero-caption h1 { font-size: clamp(30px, 3.8vw, 58px); max-width: 680px; margin: 0 auto 14px; }
+    .hero-caption p { font-size: 15px; max-width: 480px; }
+
+    /* Typography scale */
+    h2 { font-size: clamp(34px, 3.5vw, 52px); }
+
+    /* Sections — wider padding */
+    section { padding: 80px 8vw; }
+
+    /* Philosophy */
+    .philosophy { padding: 80px 8vw 60px; }
+    .phil-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      grid-template-columns: 1fr .75fr;
+      gap: 60px;
+    }
+    .phil-text h2 { font-size: clamp(32px, 3.2vw, 50px); }
+    .phil-text p { font-size: 14px; }
+    .phil-creds { max-width: 1100px; margin: 36px auto 0; }
+
+    /* Triptych */
+    .triptych-wrap { padding: 60px 8vw 40px; }
+    .triptych { max-width: 1100px; margin: 0 auto 28px; gap: 14px; }
+    .triptych-cap { max-width: 1100px; margin: 0 auto; }
+    .triptych-cap h2 { font-size: clamp(30px, 3vw, 46px); }
+
+    /* Display band */
+    .display-word { font-size: 22vw; }
+    .display-band .floating { width: 40%; max-width: 500px; }
+
+    /* Trainer */
+    .trainer { padding: 40px 8vw 80px; }
+    .trainer-card { max-width: 720px; margin: 0 auto; }
+    .trainer-body .name { font-size: 42px; }
+
+    /* Courses — 3 columns */
+    .courses { padding: 80px 8vw 60px; }
+    .section-head { max-width: 700px; margin-left: auto; margin-right: auto; }
+    .course-list { flex-direction: row; align-items: flex-start; gap: 18px; }
+    .course { flex: 1; min-width: 0; }
+    .course .ctitle { font-size: 21px; }
+    .course .price { font-size: 26px; }
+
+    /* Bundle */
+    .bundle-wrap { padding: 20px 8vw 80px; }
+    .bundle { max-width: 700px; margin: 0 auto; }
+
+    /* Included */
+    .included { padding: 80px 8vw 60px; }
+    .included-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px 32px;
+    }
+
+    /* FAQ */
+    .faq { padding: 80px 8vw 60px; }
+    .faq .section-head { max-width: 700px; margin: 0 auto; }
+    .faq-list { max-width: 860px; margin: 28px auto 0; }
+    details.q summary { font-size: 20px; }
+
+    /* Booking */
+    .booking { padding: 100px 8vw; }
+    .booking h2 { font-size: clamp(40px, 4vw, 60px); }
+    .booking p.lead { font-size: 15px; max-width: 480px; }
+
+    /* Footer */
+    footer { padding: 60px 8vw 40px; }
+    footer .f-wordmark { font-size: 80px; }
+  }
+
+  @media (min-width: 1200px) {
+    .phil-text p { font-size: 15px; }
+    .triptych-cap p { font-size: 15px; }
+    .section-head p { font-size: 15px; }
   }
 </style>
 </head>
