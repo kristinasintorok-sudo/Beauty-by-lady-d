@@ -348,12 +348,12 @@
   .triptych-wrap { padding: 44px max(22px, 6vw) 30px; background: var(--cream); }
   .triptych {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
     margin-bottom: 24px;
   }
   .tri {
-    aspect-ratio: 2/3;
+    aspect-ratio: 3/4;
     border-radius: 2px;
     background-size: cover;
     background-position: center;
@@ -1095,7 +1095,7 @@
 
     /* Triptych */
     .triptych-wrap { padding: 60px 8vw 40px; }
-    .triptych { max-width: 1400px; margin: 0 auto 28px; gap: 14px; }
+    .triptych { max-width: 1400px; margin: 0 auto 28px; gap: 14px; grid-template-columns: repeat(4, 1fr); }
     .triptych-cap { max-width: 1100px; margin: 0 auto; }
     .triptych-cap h2 { font-size: clamp(30px, 3vw, 46px); }
 
