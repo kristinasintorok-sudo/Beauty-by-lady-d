@@ -582,6 +582,39 @@
     line-height: 1.6;
   }
 
+  /* portfolio */
+  .portfolio {
+    padding: 72px max(22px, 6vw) 60px;
+    background: var(--cream);
+    border-top: 1px solid var(--line-soft);
+  }
+  .portfolio .section-head { margin-bottom: 28px; }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 8px;
+  }
+  .port-img {
+    border-radius: 2px;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 4/5;
+  }
+  .port-1 { background-image: url('images/AE15BF2F-9901-407C-8378-4E8CB7CEABD9.png'); }
+  .port-2 { background-image: url('images/photo-output.jpeg'); }
+  .port-3 { background-image: url('images/IMG_4226.jpeg'); }
+  .port-4 { background-image: url('images/IMG_4008.png'); }
+  .port-5 {
+    background-image: url('images/IMG_4027.png');
+    grid-column: 1 / -1;
+    aspect-ratio: 16/9;
+  }
+  @media (min-width: 768px) {
+    .portfolio-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .port-5 { grid-column: auto; aspect-ratio: 4/5; }
+  }
+
   /* courses */
   .courses {
     background: var(--cream-soft);
@@ -1641,6 +1674,21 @@
         <div class="t">Lifetime Support</div>
         <div class="d">Direct line to Tatiana for every case after graduation.</div>
       </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="section-head fade-up">
+      <span class="eyebrow">— Our Work —</span>
+      <h2 style="margin-top:14px;">Results that<br/><em>speak for themselves.</em></h2>
+    </div>
+    <div class="portfolio-grid fade-up">
+      <div class="port-img port-1"></div>
+      <div class="port-img port-2"></div>
+      <div class="port-img port-3"></div>
+      <div class="port-img port-4"></div>
+      <div class="port-img port-5"></div>
     </div>
   </section>
 
