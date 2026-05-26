@@ -57,8 +57,8 @@
   }
 
   /* layout shell */
-  .wrap { max-width: 430px; margin: 0 auto; background: var(--cream); position: relative; }
-  section { padding: 56px 22px; }
+  .wrap { width: 100%; margin: 0 auto; background: var(--cream); position: relative; }
+  section { padding: 56px max(22px, 6vw); }
   h1, h2, h3, h4 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
@@ -73,7 +73,7 @@
   /* floating pill nav */
   .nav-pill {
     position: absolute;
-    top: 14px; left: 14px; right: 14px;
+    top: 14px; left: max(14px, 3vw); right: max(14px, 3vw);
     z-index: 6;
     display: flex;
     align-items: center;
@@ -241,7 +241,7 @@
   /* philosophy */
   .philosophy {
     background: var(--cream-deep);
-    padding: 64px 22px 50px;
+    padding: 64px max(22px, 6vw) 50px;
     position: relative;
     overflow: hidden;
     border-top: 1px solid rgba(75,110,122,.18);
@@ -344,7 +344,7 @@
   .phil-creds i { width: 3px; height: 3px; border-radius: 50%; background: var(--blue); }
 
   /* triptych */
-  .triptych-wrap { padding: 44px 22px 30px; background: var(--cream); }
+  .triptych-wrap { padding: 44px max(22px, 6vw) 30px; background: var(--cream); }
   .triptych {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -417,7 +417,7 @@
   }
 
   /* trainer */
-  .trainer { padding: 24px 22px 60px; background: var(--cream); }
+  .trainer { padding: 24px max(22px, 6vw) 60px; background: var(--cream); }
   .trainer-card {
     background: var(--paper);
     border: 1px solid var(--line-soft);
@@ -474,7 +474,7 @@
   /* courses */
   .courses {
     background: var(--cream-soft);
-    padding: 72px 22px 56px;
+    padding: 72px max(22px, 6vw) 56px;
     border-top: 1px solid var(--line-soft);
     border-bottom: 1px solid var(--line-soft);
   }
@@ -654,7 +654,7 @@
   }
 
   /* bundle */
-  .bundle-wrap { padding: 18px 22px 64px; background: var(--cream-soft); }
+  .bundle-wrap { padding: 18px max(22px, 6vw) 64px; background: var(--cream-soft); }
   .bundle {
     background: linear-gradient(180deg, var(--cream-deep) 0%, #E9DDC8 100%);
     border: 1px solid var(--rose);
@@ -748,7 +748,7 @@
   }
 
   /* included */
-  .included { padding: 72px 22px 60px; background: var(--cream); }
+  .included { padding: 72px max(22px, 6vw) 60px; background: var(--cream); }
   .included-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -779,7 +779,7 @@
   .inc .d { font-size: 12px; color: var(--brown-soft); line-height: 1.5; }
 
   /* faq */
-  .faq { padding: 72px 22px 60px; background: var(--cream-soft); border-top: 1px solid var(--line-soft); }
+  .faq { padding: 72px max(22px, 6vw) 60px; background: var(--cream-soft); border-top: 1px solid var(--line-soft); }
   .faq-list { margin-top: 28px; }
   details.q { border-bottom: 1px solid var(--line-soft); padding: 18px 0; }
   details.q[open] { padding-bottom: 22px; }
@@ -825,7 +825,7 @@
   /* booking */
   .booking {
     background: var(--rose-tint);
-    padding: 72px 22px 76px;
+    padding: 72px max(22px, 6vw) 76px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -877,7 +877,7 @@
   /* footer */
   footer {
     background: var(--cream);
-    padding: 48px 22px 36px;
+    padding: 48px max(22px, 6vw) 36px;
     text-align: center;
     border-top: 1px solid var(--line-soft);
   }
@@ -949,7 +949,7 @@
 
   /* ======= DESKTOP RESPONSIVE ======= */
   @media (min-width: 720px) {
-    .wrap { max-width: 100%; box-shadow: none; }
+    .wrap { width: 100%; }
 
     /* Nav pill — centered, max 960px */
     .nav-pill {
