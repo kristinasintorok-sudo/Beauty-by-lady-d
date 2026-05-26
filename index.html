@@ -471,6 +471,95 @@
   }
   .trainer-cert .seal img { width: 100%; height: 100%; object-fit: contain; padding: 2px; }
 
+  /* services */
+  .services {
+    padding: 72px max(22px, 6vw) 60px;
+    background: var(--cream-deep);
+    border-top: 1px solid var(--line-soft);
+  }
+  .services .section-head { margin-bottom: 38px; }
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .service-card {
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-radius: 2px;
+    padding: 22px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .service-card:hover {
+    border-color: var(--rose-soft);
+    box-shadow: 0 10px 30px -16px rgba(62,47,34,.18);
+  }
+  .service-card.wide {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+  .service-card .s-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1.1;
+    color: var(--brown-deep);
+    font-weight: 300;
+  }
+  .service-card.wide .s-name { font-size: 26px; }
+  .service-card .s-desc {
+    font-size: 12px;
+    color: var(--brown-soft);
+    line-height: 1.55;
+    flex: 1;
+  }
+  .service-card .s-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--brown-deep);
+    line-height: 1;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid var(--line-soft);
+  }
+  .service-card.wide .s-price {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 30px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .service-card .s-price sup {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--taupe-deep);
+    vertical-align: top;
+    margin-right: 1px;
+  }
+  .service-card .s-tag {
+    font-size: 10px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: var(--taupe-deep);
+    font-weight: 400;
+    margin-bottom: 2px;
+  }
+  .service-note {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--brown-soft);
+    letter-spacing: .04em;
+  }
+
   /* courses */
   .courses {
     background: var(--cream-soft);
@@ -1056,8 +1145,8 @@
         Lady D
       </a>
       <div class="links">
+        <a href="#services">Services</a>
         <a href="#courses">Courses</a>
-        <a href="#trainer">Trainer</a>
         <a href="#faq">FAQ</a>
       </div>
       <div class="clinita-badge" title="Clinita Italy certified">
@@ -1139,6 +1228,52 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- SALON SERVICES -->
+  <section class="services" id="services">
+    <div class="section-head fade-up">
+      <span class="eyebrow">— Salon Services —</span>
+      <h2 style="margin-top:14px;">PMU treatments,<br/>by <em>appointment.</em></h2>
+      <p>Permanent makeup for clients — all work performed by Tatiana using the Clinita Italy clinical protocol.</p>
+    </div>
+
+    <div class="service-grid fade-up">
+      <div class="service-card">
+        <div class="s-tag">Brows</div>
+        <div class="s-name">Powder Brows</div>
+        <div class="s-desc">Soft shaded brows with a powdery, make-up finish. Ideal for all skin types.</div>
+        <div class="s-price"><sup>€</sup>250</div>
+      </div>
+      <div class="service-card">
+        <div class="s-tag">Brows</div>
+        <div class="s-name">Hairstrokes</div>
+        <div class="s-desc">Fine hair-like strokes for a natural, defined brow.</div>
+        <div class="s-price"><sup>€</sup>280</div>
+      </div>
+      <div class="service-card">
+        <div class="s-tag">Lips</div>
+        <div class="s-name">Lip Blush</div>
+        <div class="s-desc">A soft wash of colour to enhance, define and restore the natural lip.</div>
+        <div class="s-price"><sup>€</sup>250</div>
+      </div>
+      <div class="service-card">
+        <div class="s-tag">Eyes</div>
+        <div class="s-name">Eyeliner</div>
+        <div class="s-desc">Precise lash-line definition or a full liner — tailored to your eye shape.</div>
+        <div class="s-price"><sup>€</sup>200</div>
+      </div>
+      <div class="service-card wide">
+        <div>
+          <div class="s-tag">Specialist</div>
+          <div class="s-name">Scar Restoration</div>
+          <div class="s-desc">Medical-grade pigmentation for scar camouflage, alopecia and post-surgical work. Individual consultation required.</div>
+        </div>
+        <div class="s-price">On<br/>request</div>
+      </div>
+    </div>
+
+    <p class="service-note fade-up">Prices include initial session. Touch-up pricing discussed at consultation.</p>
   </section>
 
   <!-- COURSES -->
@@ -1359,9 +1494,9 @@
   <!-- BOOKING -->
   <section class="booking" id="book">
     <div class="booking-inner">
-      <span class="eyebrow">— Reserve your place —</span>
-      <h2>1:1 training,<br/>by <em>appointment.</em></h2>
-      <p class="lead">Every course is private — just you and Tatiana. Reach out and we'll arrange a quiet call to talk through your goals.</p>
+      <span class="eyebrow">— Book —</span>
+      <h2>Every visit,<br/>by <em>appointment.</em></h2>
+      <p class="lead">Training or treatment — reach out on WhatsApp or call and we'll arrange everything privately.</p>
 
       <div class="cta-stack">
         <a class="btn-large whatsapp" href="https://wa.me/35794009509">
