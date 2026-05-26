@@ -1,0 +1,1344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Beauty by Lady D Studio — PMU · Nicosia</title>
+<meta name="description" content="Beauty by Lady D Studio — a private 1:1 PMU studio &amp; training in Nicosia, Cyprus. Clinita Italy certified courses with Tatiana — Powder Brows, Lip Blush, Eyeliner &amp; Scar Restoration." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:       #F5F0E8;
+    --cream-deep:  #ECE3D5;
+    --cream-soft:  #FBF7F1;
+    --paper:       #FFFDF9;
+    --taupe:       #A89684;
+    --taupe-deep:  #8B7355;
+    --rose:        #C99B8E;
+    --rose-deep:   #B5897C;
+    --rose-soft:   #E6C7BD;
+    --rose-tint:   #F2DDD3;
+    --blue:        #4B6E7A;
+    --blue-deep:   #335560;
+    --blue-soft:   #C5D3D8;
+    --blue-tint:   #E3EAED;
+    --brown:       #5C4A3A;
+    --brown-deep:  #3E2F22;
+    --brown-soft:  #826A55;
+    --line:        #D8CCBA;
+    --line-soft:   #E8DECC;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--brown);
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; }
+
+  .eyebrow {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 10.5px;
+    letter-spacing: .32em;
+    text-transform: uppercase;
+    color: var(--taupe-deep);
+  }
+
+  /* layout shell */
+  .wrap { max-width: 430px; margin: 0 auto; background: var(--cream); position: relative; }
+  section { padding: 56px 22px; }
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    color: var(--brown-deep);
+    letter-spacing: .005em;
+  }
+  h2 { font-size: 34px; line-height: 1.05; text-wrap: balance; }
+  h3 { font-size: 24px; line-height: 1.15; }
+  p { text-wrap: pretty; }
+  em { font-style: italic; }
+
+  /* floating pill nav */
+  .nav-pill {
+    position: absolute;
+    top: 14px; left: 14px; right: 14px;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 8px 7px 14px;
+    background: rgba(245, 240, 232, .78);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid rgba(255, 253, 249, .55);
+    border-radius: 999px;
+    box-shadow: 0 6px 28px -10px rgba(62, 47, 34, .18);
+  }
+  .nav-pill .brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--brown-deep);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: .01em;
+  }
+  .nav-pill .brand .dot {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: #1a1714;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .nav-pill .brand .dot img { width: 88%; height: 88%; object-fit: contain; }
+  .nav-pill .links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 10.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--brown);
+    font-weight: 400;
+  }
+  .nav-pill .links a { transition: color .2s ease; }
+  .nav-pill .links a:hover { color: var(--rose); }
+  .nav-pill .clinita-badge {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid var(--line-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .nav-pill .clinita-badge img { width: 100%; height: 100%; object-fit: contain; padding: 3px; }
+
+  @media (max-width: 380px) {
+    .nav-pill .links a:nth-child(n+3) { display: none; }
+  }
+
+  /* hero */
+  .hero {
+    position: relative;
+    padding: 0;
+    height: 88vh;
+    min-height: 640px;
+    max-height: 820px;
+    overflow: hidden;
+    background: var(--cream);
+  }
+  .hero-img {
+    position: absolute;
+    inset: 0 0 30% 0;
+    background-image: url('images/hero-brow-work.jpeg');
+    background-size: cover;
+    background-position: center 55%;
+    filter: saturate(.94) brightness(1.02);
+  }
+  .hero-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(245,240,232,.05) 0%,
+      rgba(245,240,232,0) 35%,
+      rgba(245,240,232,.45) 78%,
+      rgba(245,240,232,.96) 96%,
+      var(--cream) 100%
+    );
+  }
+  .hero-mark {
+    position: absolute;
+    right: 22px;
+    bottom: 36%;
+    text-align: right;
+    z-index: 3;
+    pointer-events: none;
+  }
+  .hero-mark .word {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    color: #FBF7F1;
+    font-size: 62px;
+    line-height: .85;
+    letter-spacing: -.01em;
+    text-shadow: 0 4px 24px rgba(0,0,0,.35);
+  }
+  .hero-mark .sub {
+    margin-top: 8px;
+    font-size: 9.5px;
+    letter-spacing: .36em;
+    text-transform: uppercase;
+    color: #FBF7F1;
+    font-weight: 400;
+    text-shadow: 0 1px 8px rgba(0,0,0,.5);
+  }
+  .hero-caption {
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 48px;
+    text-align: center;
+    z-index: 4;
+    padding: 0 32px;
+  }
+  .hero-caption h1 {
+    font-size: 26px;
+    line-height: 1.12;
+    color: var(--brown-deep);
+    font-weight: 300;
+    text-wrap: balance;
+    margin-bottom: 10px;
+  }
+  .hero-caption h1 em { color: var(--rose-deep); }
+  .hero-caption p {
+    font-size: 13px;
+    color: var(--brown-soft);
+    max-width: 300px;
+    margin: 0 auto;
+    line-height: 1.55;
+  }
+  .hero-tape {
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    font-size: 9.5px;
+    letter-spacing: .32em;
+    text-transform: uppercase;
+    color: var(--taupe-deep);
+    font-weight: 400;
+    z-index: 4;
+  }
+  .hero-tape i {
+    width: 3px; height: 3px;
+    border-radius: 50%;
+    background: var(--rose);
+  }
+
+  /* philosophy */
+  .philosophy {
+    background: var(--cream-deep);
+    padding: 64px 22px 50px;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(75,110,122,.18);
+    border-bottom: 1px solid rgba(75,110,122,.18);
+  }
+  .philosophy::before {
+    content: "D";
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    position: absolute;
+    top: -90px; right: -50px;
+    font-size: 380px;
+    color: var(--blue);
+    opacity: .07;
+    line-height: 1;
+    pointer-events: none;
+    letter-spacing: -.04em;
+    z-index: 0;
+  }
+  .phil-grid {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 22px;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+  }
+  .phil-text { padding-top: 6px; }
+  .phil-text .eyebrow {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .phil-text .eyebrow::before {
+    content: "";
+    width: 18px; height: 1px;
+    background: var(--blue);
+    display: inline-block;
+  }
+  .phil-text h2 { font-size: 30px; line-height: 1.04; margin-bottom: 14px; }
+  .phil-text h2 em { color: var(--rose-deep); }
+  .phil-text p { font-size: 13px; color: var(--brown-soft); line-height: 1.65; margin-bottom: 10px; }
+  .pill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+    padding: 11px 20px;
+    background: var(--blue);
+    color: var(--cream-soft);
+    border-radius: 999px;
+    font-size: 11px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: background .2s ease, transform .2s ease;
+  }
+  .pill-btn:hover { background: var(--blue-deep); transform: translateY(-1px); }
+  .phil-img {
+    aspect-ratio: 3/4;
+    background: var(--cream) url('images/studio-lips.png') center / cover no-repeat;
+    border-radius: 2px;
+    position: relative;
+  }
+  .phil-img::before {
+    content: "";
+    position: absolute;
+    top: 14px; left: -12px; right: 12px; bottom: -14px;
+    background: var(--blue);
+    opacity: .18;
+    border-radius: 2px;
+    z-index: -1;
+  }
+  .phil-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(201,155,142,.06), rgba(201,155,142,0) 50%);
+    pointer-events: none;
+  }
+  .phil-creds {
+    margin-top: 36px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(75,110,122,.22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    font-size: 10px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--blue-deep);
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+  }
+  .phil-creds i { width: 3px; height: 3px; border-radius: 50%; background: var(--blue); }
+
+  /* triptych */
+  .triptych-wrap { padding: 44px 22px 30px; background: var(--cream); }
+  .triptych {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .tri {
+    aspect-ratio: 2/3;
+    border-radius: 2px;
+    background-size: cover;
+    background-position: center;
+  }
+  .tri-1 { background-image: url('images/hero-brow-work.jpeg'); background-position: 65% 50%; }
+  .tri-2 { background-image: url('images/clinical-sterile.jpeg'); background-position: center 30%; }
+  .tri-3 { background-image: url('images/clinical-scar.png'); background-position: center 30%; }
+  .triptych-cap {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 18px;
+    align-items: start;
+    padding-top: 14px;
+  }
+  .triptych-cap h2 { font-size: 30px; line-height: 1.04; }
+  .triptych-cap h2 em { color: var(--rose-deep); }
+  .triptych-cap p { font-size: 13px; color: var(--brown-soft); line-height: 1.65; }
+
+  /* display band */
+  .display-band {
+    position: relative;
+    background: var(--cream);
+    padding: 50px 0 0;
+    overflow: hidden;
+  }
+  .display-word {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--blue);
+    opacity: .65;
+    font-size: 38vw;
+    line-height: .78;
+    letter-spacing: -.04em;
+    text-align: center;
+    margin: 0 -10px -14px;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+  }
+  .display-band .floating {
+    position: relative;
+    margin: -22% auto 0;
+    width: 78%;
+    aspect-ratio: 3/4;
+    background: url('images/trainer-portrait.jpeg') center 22% / cover;
+    border-radius: 2px;
+    z-index: 2;
+    box-shadow: 0 30px 80px -30px rgba(62,47,34,.28);
+  }
+  .display-band .floating-cap {
+    text-align: center;
+    margin-top: 22px;
+    padding: 0 22px 50px;
+  }
+  .display-band .floating-cap p {
+    font-size: 12.5px;
+    color: var(--brown-soft);
+    max-width: 300px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+
+  /* trainer */
+  .trainer { padding: 24px 22px 60px; background: var(--cream); }
+  .trainer-card {
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-radius: 2px;
+    padding: 0 0 30px;
+    overflow: hidden;
+    position: relative;
+  }
+  .trainer-body { padding: 28px 26px 0; text-align: center; }
+  .trainer-body .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    line-height: 1.02;
+    color: var(--brown-deep);
+    margin: 8px 0 6px;
+    font-weight: 300;
+  }
+  .trainer-body .name em { color: var(--rose-deep); }
+  .trainer-body .role {
+    font-size: 11px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--taupe-deep);
+    font-weight: 400;
+    margin-bottom: 18px;
+  }
+  .trainer-body .bio { font-size: 13.5px; color: var(--brown-soft); line-height: 1.7; }
+  .trainer-cert {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+    padding: 7px 16px 7px 7px;
+    background: var(--cream-deep);
+    border-radius: 999px;
+    font-size: 10px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--brown);
+    font-weight: 400;
+  }
+  .trainer-cert .seal {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid var(--line-soft);
+  }
+  .trainer-cert .seal img { width: 100%; height: 100%; object-fit: contain; padding: 2px; }
+
+  /* courses */
+  .courses {
+    background: var(--cream-soft);
+    padding: 72px 22px 56px;
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .section-head { text-align: center; margin-bottom: 34px; }
+  .section-head .eyebrow { display: inline-block; margin-bottom: 14px; }
+  .section-head h2 { margin-bottom: 10px; }
+  .section-head p { font-size: 13.5px; color: var(--brown-soft); max-width: 320px; margin: 0 auto; }
+
+  .course-list { display: flex; flex-direction: column; gap: 14px; }
+  .course {
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-radius: 2px;
+    padding: 26px 22px 0;
+    position: relative;
+    overflow: hidden;
+    transition: border-color .3s ease, box-shadow .3s ease;
+  }
+  .course.open {
+    border-color: var(--rose-soft);
+    box-shadow: 0 18px 40px -28px rgba(62,47,34,.18);
+  }
+  .course-head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto;
+    gap: 6px 18px;
+    align-items: start;
+    padding-bottom: 22px;
+  }
+  .course .num {
+    position: absolute;
+    top: 20px; right: 22px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--rose);
+    font-size: 13px;
+    letter-spacing: .1em;
+  }
+  .course .ctitle {
+    grid-column: 1 / -1;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    line-height: 1.08;
+    color: var(--brown-deep);
+    font-weight: 300;
+    padding-right: 48px;
+    margin-bottom: 4px;
+  }
+  .course .meta {
+    grid-column: 1 / 2;
+    font-size: 10.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--taupe-deep);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .course .meta i { width: 3px; height: 3px; border-radius: 50%; background: var(--taupe); }
+  .course .price {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: var(--brown-deep);
+    align-self: end;
+    line-height: 1;
+  }
+  .course .price sup { font-size: 14px; font-weight: 300; color: var(--taupe-deep); vertical-align: top; margin-right: 2px; }
+  .course .desc {
+    grid-column: 1 / -1;
+    font-size: 13px;
+    color: var(--brown-soft);
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+  .course-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-top: 1px solid var(--line-soft);
+    padding: 18px 0 22px;
+    font-size: 10.5px;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--taupe-deep);
+    text-align: left;
+    font-weight: 400;
+  }
+  .course-toggle .arrow {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .3s ease, background .3s ease, border-color .3s ease, color .3s ease;
+    color: var(--taupe-deep);
+    flex-shrink: 0;
+  }
+  .course-toggle .arrow svg { width: 10px; height: 10px; }
+  .course.open .course-toggle .arrow {
+    transform: rotate(180deg);
+    background: var(--rose);
+    border-color: var(--rose);
+    color: #fff;
+  }
+  .course-toggle .label-open { display: none; }
+  .course.open .course-toggle .label-closed { display: none; }
+  .course.open .course-toggle .label-open { display: inline; }
+  .course-body { max-height: 0; overflow: hidden; transition: max-height .5s ease; }
+  .course.open .course-body { max-height: 2400px; }
+  .course-body-inner { padding: 4px 0 26px; border-top: 1px dashed var(--line-soft); }
+  .curriculum-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    font-weight: 400;
+    margin: 22px 0 18px;
+  }
+  .curriculum-eyebrow::after { content: ""; flex: 1; height: 1px; background: var(--line-soft); }
+  .module {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line-soft);
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 14px;
+  }
+  .module:last-child { border-bottom: none; }
+  .module .mn {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--rose-deep);
+    line-height: 1.6;
+    letter-spacing: .05em;
+  }
+  .module .mt {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--brown-deep);
+    margin-bottom: 3px;
+  }
+  .module .md { font-size: 12.5px; color: var(--brown-soft); line-height: 1.55; }
+  .takeaway {
+    margin-top: 20px;
+    padding: 16px 18px;
+    background: var(--cream-deep);
+    border-left: 2px solid var(--rose);
+    font-size: 12.5px;
+    color: var(--brown);
+    line-height: 1.6;
+  }
+  .takeaway b {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: var(--brown-deep);
+    font-size: 14px;
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: .02em;
+  }
+
+  /* bundle */
+  .bundle-wrap { padding: 18px 22px 64px; background: var(--cream-soft); }
+  .bundle {
+    background: linear-gradient(180deg, var(--cream-deep) 0%, #E9DDC8 100%);
+    border: 1px solid var(--rose);
+    border-radius: 2px;
+    padding: 8px;
+    position: relative;
+  }
+  .bundle-inner {
+    background: var(--paper);
+    border: 1px dashed var(--rose-soft);
+    border-radius: 2px;
+    padding: 36px 24px 28px;
+    position: relative;
+    text-align: center;
+  }
+  .bundle-tag {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--rose);
+    color: #fff;
+    font-size: 9.5px;
+    letter-spacing: .32em;
+    text-transform: uppercase;
+    padding: 7px 18px;
+    border-radius: 999px;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+  .bundle .b-sub {
+    font-size: 10.5px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--taupe-deep);
+    margin: 6px 0 4px;
+  }
+  .bundle .b-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 1.02;
+    color: var(--brown-deep);
+    margin: 2px 0 16px;
+  }
+  .bundle .b-title em { color: var(--rose-deep); }
+  .bundle .b-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1;
+    color: var(--brown-deep);
+    margin: 6px 0 4px;
+    letter-spacing: -.01em;
+  }
+  .bundle .b-price sup { font-size: 22px; font-weight: 300; color: var(--taupe-deep); vertical-align: top; margin-right: 4px; }
+  .bundle .b-save {
+    display: inline-block;
+    font-size: 10.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    padding: 5px 0 0;
+  }
+  .bundle .b-save s { color: var(--taupe); margin-right: 8px; font-weight: 300; }
+  .bundle .b-list {
+    margin-top: 24px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line-soft);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+    text-align: left;
+  }
+  .bundle .b-list li {
+    list-style: none;
+    font-size: 12px;
+    color: var(--brown);
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    line-height: 1.4;
+  }
+  .bundle .b-list li::before {
+    content: "";
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--rose);
+    margin-top: 7px;
+    flex: 0 0 auto;
+  }
+
+  /* included */
+  .included { padding: 72px 22px 60px; background: var(--cream); }
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 18px;
+    margin-top: 36px;
+  }
+  .inc { text-align: center; }
+  .inc .ico {
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    background: var(--cream-deep);
+    border: 1px solid var(--line-soft);
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--taupe-deep);
+  }
+  .inc .ico svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.2; }
+  .inc .t {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--brown-deep);
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+  .inc .d { font-size: 12px; color: var(--brown-soft); line-height: 1.5; }
+
+  /* faq */
+  .faq { padding: 72px 22px 60px; background: var(--cream-soft); border-top: 1px solid var(--line-soft); }
+  .faq-list { margin-top: 28px; }
+  details.q { border-bottom: 1px solid var(--line-soft); padding: 18px 0; }
+  details.q[open] { padding-bottom: 22px; }
+  details.q:first-of-type { border-top: 1px solid var(--line-soft); }
+  details.q summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.25;
+    color: var(--brown-deep);
+    font-weight: 400;
+  }
+  details.q summary::-webkit-details-marker { display: none; }
+  details.q summary .plus {
+    width: 22px; height: 22px;
+    flex: 0 0 22px;
+    position: relative;
+  }
+  details.q summary .plus::before,
+  details.q summary .plus::after {
+    content: "";
+    position: absolute;
+    background: var(--taupe-deep);
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  details.q summary .plus::before { width: 12px; height: 1px; }
+  details.q summary .plus::after { width: 1px; height: 12px; transition: transform .3s ease; }
+  details.q[open] summary .plus::after { transform: translate(-50%, -50%) rotate(90deg); }
+  details.q > p {
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--brown-soft);
+    line-height: 1.7;
+    padding-right: 34px;
+  }
+
+  /* booking */
+  .booking {
+    background: var(--rose-tint);
+    padding: 72px 22px 76px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .booking::before, .booking::after {
+    content: "";
+    position: absolute;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,155,142,.32) 0%, rgba(201,155,142,0) 70%);
+    pointer-events: none;
+  }
+  .booking::before { top: -120px; left: -120px; }
+  .booking::after { bottom: -140px; right: -140px; }
+  .booking-inner { position: relative; z-index: 2; }
+  .booking h2 { font-size: 40px; margin: 14px 0 14px; }
+  .booking h2 em { color: var(--rose-deep); }
+  .booking p.lead { font-size: 13.5px; color: var(--brown-soft); max-width: 320px; margin: 0 auto 28px; }
+  .cta-stack { display: flex; flex-direction: column; gap: 12px; max-width: 320px; margin: 0 auto; }
+  .btn-large {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 18px 22px;
+    border-radius: 999px;
+    font-size: 11px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: transform .2s ease, background .2s ease, color .2s ease;
+    border: 1px solid transparent;
+  }
+  .btn-large:hover { transform: translateY(-1px); }
+  .btn-large .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    letter-spacing: .05em;
+    text-transform: none;
+    font-size: 15px;
+  }
+  .btn-large svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .btn-large.primary { background: var(--brown-deep); color: var(--cream-soft); }
+  .btn-large.primary:hover { background: var(--brown); }
+  .btn-large.whatsapp { background: var(--blue); color: #fff; }
+  .btn-large.whatsapp:hover { background: var(--blue-deep); }
+  .hours { margin-top: 28px; font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--taupe-deep); }
+
+  /* footer */
+  footer {
+    background: var(--cream);
+    padding: 48px 22px 36px;
+    text-align: center;
+    border-top: 1px solid var(--line-soft);
+  }
+  footer .f-wordmark {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 54px;
+    color: var(--brown-deep);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.01em;
+    margin-bottom: 8px;
+  }
+  footer .f-loc {
+    font-size: 10.5px;
+    letter-spacing: .32em;
+    text-transform: uppercase;
+    color: var(--taupe-deep);
+    margin-bottom: 10px;
+  }
+  footer .f-address {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--brown);
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+  footer .f-meta { font-size: 11px; color: var(--taupe); letter-spacing: .05em; line-height: 1.7; }
+  footer .f-meta a { color: var(--rose-deep); text-decoration: none; }
+  footer .f-partner {
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 9.5px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--brown-soft);
+  }
+  footer .f-partner .b {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid var(--line-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  footer .f-partner .b img { width: 100%; height: 100%; object-fit: contain; padding: 2px; }
+
+  /* responsive */
+  @media (min-width: 720px) {
+    .wrap { max-width: 480px; box-shadow: 0 0 80px rgba(62,47,34,.08); }
+  }
+
+  /* fade-up scroll animation */
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-up {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+    .fade-up.in {
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO + floating pill nav -->
+  <section class="hero">
+    <nav class="nav-pill" aria-label="Primary">
+      <a class="brand" href="#">
+        <span class="dot"><img src="images/ladyd-logo.png" alt="" /></span>
+        Lady D
+      </a>
+      <div class="links">
+        <a href="#courses">Courses</a>
+        <a href="#trainer">Trainer</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="clinita-badge" title="Clinita Italy certified">
+        <img src="images/clinita-logo.jpeg" alt="Clinita Italy" />
+      </div>
+    </nav>
+
+    <div class="hero-img" role="img" aria-label="Tatiana performing PMU in studio"></div>
+
+    <div class="hero-mark">
+      <div class="word">Lady&nbsp;D</div>
+      <div class="sub">Beauty by Lady D Studio · Nicosia</div>
+    </div>
+
+    <div class="hero-caption">
+      <h1>The craft of <em>permanent beauty,</em><br>taught one student at a time.</h1>
+      <p>A small Clinita-certified PMU studio in Nicosia — private training and treatments, by appointment only.</p>
+    </div>
+
+    <div class="hero-tape">
+      <span>Clinita Italy</span><i></i>
+      <span>1:1 Training</span><i></i>
+      <span>Nicosia · CY</span>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy">
+    <div class="phil-grid fade-up">
+      <div class="phil-text">
+        <span class="eyebrow">A quiet philosophy</span>
+        <h2>A new approach to <em>permanent makeup</em></h2>
+        <p>Beauty by Lady D Studio is a permanent makeup studio in Nicosia — a single chair, a single student, a single client at a time.</p>
+        <p>We believe PMU should support the face, not overwhelm it. Clinical method, soft modern results, and the time the work deserves.</p>
+        <a class="pill-btn" href="#about">More about the studio</a>
+      </div>
+      <div class="phil-img" role="img" aria-label="PMU lip work close-up"></div>
+    </div>
+    <div class="phil-creds fade-up">
+      <span>Clinita Italy</span><i></i>
+      <span>1:1 Private</span><i></i>
+      <span>By Appointment</span>
+    </div>
+  </section>
+
+  <!-- TRIPTYCH -->
+  <section class="triptych-wrap" id="about">
+    <div class="triptych fade-up">
+      <div class="tri tri-1" role="img" aria-label="Powder brow work in studio"></div>
+      <div class="tri tri-2" role="img" aria-label="Sterile Clinita protocol"></div>
+      <div class="tri tri-3" role="img" aria-label="Scar restoration in clinical setting"></div>
+    </div>
+    <div class="triptych-cap fade-up">
+      <h2>Pure craft<br/>by <em>protocol.</em></h2>
+      <p>Thoughtful technique, gentle pigments, and the Clinita Italy clinical method — calm, considered work that heals predictably.</p>
+    </div>
+  </section>
+
+  <!-- DISPLAY BAND + portrait -->
+  <section class="display-band" id="trainer">
+    <div class="display-word">studio</div>
+    <div class="floating fade-up" role="img" aria-label="Tatiana Protasova"></div>
+    <div class="floating-cap fade-up">
+      <p>Every training is 1:1 — one student, one chair, one conversation. Every certificate earned, never sold.</p>
+    </div>
+  </section>
+
+  <!-- TRAINER -->
+  <section class="trainer">
+    <div class="trainer-card fade-up">
+      <div class="trainer-body">
+        <span class="eyebrow">Your trainer</span>
+        <div class="name">Tatiana <em>Protasova</em></div>
+        <div class="role">Master PMU &amp; Scar Restoration</div>
+        <p class="bio">A decade behind the machine and a Clinita Italy Master Trainer certification. Tatiana teaches the full clinical tattooing system — from pigment theory to oncology scar restoration — one student at a time, with the time it deserves.</p>
+        <div class="trainer-cert">
+          <span class="seal"><img src="images/clinita-logo.jpeg" alt="" /></span>
+          Clinita Italy · Master Trainer
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section class="courses" id="courses">
+    <div class="section-head">
+      <span class="eyebrow">— The Courses —</span>
+      <h2 style="margin-top:14px;">Three techniques.<br/>One <em>protocol.</em></h2>
+      <p>Each course pairs anatomy and pigment theory with supervised, hands-on work on a live model.</p>
+    </div>
+
+    <div class="course-list">
+
+      <!-- Course 1 -->
+      <article class="course fade-up">
+        <span class="num">i.</span>
+        <div class="course-head">
+          <h3 class="ctitle">Powder Brows &amp; Hairstrokes</h3>
+          <div class="meta"><span>4 Days</span><i></i><span>1:1 Private</span><i></i><span>Live Model</span></div>
+          <div class="price"><sup>€</sup>1,600</div>
+          <p class="desc">Two complete brow techniques in one course — powder shading and fine hairstroke work, combined into a soft dimensional result.</p>
+        </div>
+        <button class="course-toggle" type="button" aria-expanded="false">
+          <span><span class="label-closed">View full curriculum · 12 modules</span><span class="label-open">Hide curriculum</span></span>
+          <span class="arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 4l3 3 3-3"/></svg></span>
+        </button>
+        <div class="course-body">
+          <div class="course-body-inner">
+            <div class="curriculum-eyebrow">What you will learn</div>
+            <div class="module"><div class="mn">01</div><div><div class="mt">Skin Science &amp; Anatomy</div><div class="md">How pigment behaves across skin types, undertones and conditions — the foundation of lasting results.</div></div></div>
+            <div class="module"><div class="mn">02</div><div><div class="mt">Facial Mapping &amp; Design</div><div class="md">Golden ratio, goniometric measurement, brow architecture and symmetry for every face shape.</div></div></div>
+            <div class="module"><div class="mn">03</div><div><div class="mt">Colour Theory</div><div class="md">Clinita colour system — pigment selection, mixing, warm/cool correction and post-healing colour evolution.</div></div></div>
+            <div class="module"><div class="mn">04</div><div><div class="mt">Machine Setup &amp; Control</div><div class="md">Dermograph configuration, needle selection, speed, depth and pressure for both techniques.</div></div></div>
+            <div class="module"><div class="mn">05</div><div><div class="mt">Powder Brow Technique</div><div class="md">Shading gradient, density control, pixel precision — building a soft, defined powder result.</div></div></div>
+            <div class="module"><div class="mn">06</div><div><div class="mt">Hairstroke Technique</div><div class="md">Fine hair-like strokes — understanding natural hair direction, stroke pattern and skin reading.</div></div></div>
+            <div class="module"><div class="mn">07</div><div><div class="mt">Hairstroke Needle Mastery</div><div class="md">Liner needle control for hairstrokes — pressure, angle, speed and avoiding over-working the skin.</div></div></div>
+            <div class="module"><div class="mn">08</div><div><div class="mt">Hybrid Brow Approach</div><div class="md">Combining powder shading with hairstrokes for a natural, dimensional and fully personalised result.</div></div></div>
+            <div class="module"><div class="mn">09</div><div><div class="mt">Healing &amp; Aftercare</div><div class="md">Clinita aftercare protocol, healing stages, client home-care and touch-up timing for both techniques.</div></div></div>
+            <div class="module"><div class="mn">10</div><div><div class="mt">Hygiene &amp; Sterile Protocol</div><div class="md">Full Clinita sterile working method — field preparation and cross-contamination prevention.</div></div></div>
+            <div class="module"><div class="mn">11</div><div><div class="mt">Client Consultation</div><div class="md">Contraindications, informed consent, skin assessment and professional expectation setting.</div></div></div>
+            <div class="module"><div class="mn">12</div><div><div class="mt">Live Practice</div><div class="md">Silicone skin exercises followed by a supervised treatment on a live model covering both techniques.</div></div></div>
+            <div class="takeaway"><b>Your kit &amp; what you leave with</b>Full Clinita professional starter kit, every pigment and consumable needed, plus your certified Clinita PMU machine — yours to keep, no further purchases required.</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Course 2 -->
+      <article class="course fade-up">
+        <span class="num">ii.</span>
+        <div class="course-head">
+          <h3 class="ctitle">Lip Blush</h3>
+          <div class="meta"><span>3 Days</span><i></i><span>1:1 Private</span><i></i><span>Live Model</span></div>
+          <div class="price"><sup>€</sup>1,300</div>
+          <p class="desc">Enhance, define and restore lips with a soft wash of colour — one of the fastest growing PMU services.</p>
+        </div>
+        <button class="course-toggle" type="button" aria-expanded="false">
+          <span><span class="label-closed">View full curriculum · 9 modules</span><span class="label-open">Hide curriculum</span></span>
+          <span class="arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 4l3 3 3-3"/></svg></span>
+        </button>
+        <div class="course-body">
+          <div class="course-body-inner">
+            <div class="curriculum-eyebrow">What you will learn</div>
+            <div class="module"><div class="mn">01</div><div><div class="mt">Lip Anatomy &amp; Skin Science</div><div class="md">Mucosal vs dry skin behaviour, pigment retention differences and the unique healing process of lip tissue.</div></div></div>
+            <div class="module"><div class="mn">02</div><div><div class="mt">Lip Design &amp; Symmetry</div><div class="md">Lip mapping, cupid's bow architecture, corrective reshaping and natural proportion for every mouth shape.</div></div></div>
+            <div class="module"><div class="mn">03</div><div><div class="mt">Colour Theory for Lips</div><div class="md">Pigment selection for warm and cool tones, correcting discolouration and matching natural lip colour.</div></div></div>
+            <div class="module"><div class="mn">04</div><div><div class="mt">Machine Technique for Lips</div><div class="md">Dermograph setup for delicate lip tissue — needle choice, working speed and pressure control.</div></div></div>
+            <div class="module"><div class="mn">05</div><div><div class="mt">Lip Blush Technique</div><div class="md">Full procedure — outline, gradient fill, blush wash effect, feathered edge and building a luminous result.</div></div></div>
+            <div class="module"><div class="mn">06</div><div><div class="mt">Healing &amp; Aftercare</div><div class="md">Lip-specific healing stages, swelling management, colour loss during healing and touch-up protocol.</div></div></div>
+            <div class="module"><div class="mn">07</div><div><div class="mt">Contraindications &amp; Consultation</div><div class="md">Cold sore history, filler interactions, skin conditions, consent and managing client expectations.</div></div></div>
+            <div class="module"><div class="mn">08</div><div><div class="mt">Corrective Work Introduction</div><div class="md">Basic principles of working over existing pigment, uneven colour and previous lip treatments.</div></div></div>
+            <div class="module"><div class="mn">09</div><div><div class="mt">Live Practice</div><div class="md">Silicone skin exercises followed by a fully supervised lip blush treatment on a live model.</div></div></div>
+            <div class="takeaway"><b>Your kit &amp; what you leave with</b>Full Clinita professional starter kit with every pigment and consumable, plus your certified Clinita PMU machine — yours to keep from day one.</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Course 3 -->
+      <article class="course fade-up">
+        <span class="num">iii.</span>
+        <div class="course-head">
+          <h3 class="ctitle">Eyeliner</h3>
+          <div class="meta"><span>1 Day</span><i></i><span>1:1 Private</span><i></i><span>Live Model</span></div>
+          <div class="price"><sup>€</sup>1,200</div>
+          <p class="desc">Define the eyes with precision — permanent eyeliner is one of the most requested PMU treatments.</p>
+        </div>
+        <button class="course-toggle" type="button" aria-expanded="false">
+          <span><span class="label-closed">View full curriculum · 9 modules</span><span class="label-open">Hide curriculum</span></span>
+          <span class="arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 4l3 3 3-3"/></svg></span>
+        </button>
+        <div class="course-body">
+          <div class="course-body-inner">
+            <div class="curriculum-eyebrow">What you will learn</div>
+            <div class="module"><div class="mn">01</div><div><div class="mt">Eye Anatomy &amp; Safety</div><div class="md">Periocular anatomy, nerve mapping, proximity to the eye and contraindications specific to eyeliner.</div></div></div>
+            <div class="module"><div class="mn">02</div><div><div class="mt">Eye Shape Analysis</div><div class="md">Assessing lid structure and eye shape to determine the most flattering liner placement.</div></div></div>
+            <div class="module"><div class="mn">03</div><div><div class="mt">Liner Design &amp; Mapping</div><div class="md">Precise line placement, thickness calibration, wing design and achieving symmetry between both eyes.</div></div></div>
+            <div class="module"><div class="mn">04</div><div><div class="mt">Pigment Selection</div><div class="md">Black Pearl Pro and Deep Professional Black — properties, layering behaviour and longevity on different skin types.</div></div></div>
+            <div class="module"><div class="mn">05</div><div><div class="mt">Machine Technique for Eyeliner</div><div class="md">Fine liner needle control, speed and depth in the sensitive periocular area — safely and precisely.</div></div></div>
+            <div class="module"><div class="mn">06</div><div><div class="mt">Liner Styles</div><div class="md">Lash line enhancement, soft definition, defined liner — adapting the result to anatomy and preference.</div></div></div>
+            <div class="module"><div class="mn">07</div><div><div class="mt">Healing &amp; Aftercare</div><div class="md">Eyeliner healing stages, pigment softening, colour depth management and touch-up scheduling.</div></div></div>
+            <div class="module"><div class="mn">08</div><div><div class="mt">Consultation &amp; Contraindications</div><div class="md">Lash extension interactions, dry eye conditions, consent and full pre and post-care education.</div></div></div>
+            <div class="module"><div class="mn">09</div><div><div class="mt">Live Practice</div><div class="md">Silicone skin exercises followed by a fully supervised eyeliner treatment on a live model.</div></div></div>
+            <div class="takeaway"><b>Your kit &amp; what you leave with</b>Full Clinita professional starter kit with every pigment and consumable, plus your certified Clinita PMU machine — yours to keep from day one.</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- BUNDLE -->
+  <div class="bundle-wrap">
+    <div class="bundle fade-up">
+      <div class="bundle-inner">
+        <div class="bundle-tag">Full Basic Bundle</div>
+        <div class="b-sub" style="margin-top:6px;">All three techniques</div>
+        <div class="b-title">The Complete<br/><em>Artist</em></div>
+        <div class="b-price"><sup>€</sup>2,500</div>
+        <div class="b-save"><s>€4,100</s> Save €1,600</div>
+        <ul class="b-list">
+          <li>Powder Brows &amp; Hairstrokes</li>
+          <li>Lip Blush technique</li>
+          <li>Eyeliner technique</li>
+          <li>Full Clinita pigment kit</li>
+          <li>Certified PMU machine</li>
+          <li>Lifetime mentorship</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- INCLUDED -->
+  <section class="included">
+    <div class="section-head">
+      <span class="eyebrow">— What's Included —</span>
+      <h2 style="margin-top:14px;">Everything you need to <em>begin.</em></h2>
+    </div>
+
+    <div class="included-grid">
+      <div class="inc">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v15l-7-3-7 3V4z"/><path d="M9 9h6M9 12h4"/></svg>
+        </div>
+        <div class="t">Certificate</div>
+        <div class="d">Internationally recognised Clinita Italy certification.</div>
+      </div>
+      <div class="inc">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="1"/><path d="M9 7V5a3 3 0 0 1 6 0v2M4 12h16"/></svg>
+        </div>
+        <div class="t">Full Kit</div>
+        <div class="d">Pigments, cartridges, mapping &amp; aftercare — all curated.</div>
+      </div>
+      <div class="inc">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v6M9 9h6l1 4-4 8-4-8 1-4z"/><circle cx="12" cy="13" r="1"/></svg>
+        </div>
+        <div class="t">PMU Machine</div>
+        <div class="d">Your own Clinita-certified rotary machine, yours to keep.</div>
+      </div>
+      <div class="inc">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="1"/><path d="M3 9h18M8 21h8"/></svg>
+        </div>
+        <div class="t">Pre-Course Webinars</div>
+        <div class="d">Theory, anatomy &amp; pigment science before you arrive.</div>
+      </div>
+      <div class="inc">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg>
+        </div>
+        <div class="t">MyClinita App</div>
+        <div class="d">Protocols, colour theory &amp; client management on demand.</div>
+      </div>
+      <div class="inc">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3.5-7.1L21 4l-.5 4-4-.5"/><path d="M12 8v5l3 2"/></svg>
+        </div>
+        <div class="t">Lifetime Support</div>
+        <div class="d">Direct line to Tatiana for every case after graduation.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="section-head">
+      <span class="eyebrow">— Questions —</span>
+      <h2 style="margin-top:14px;">Before you <em>book.</em></h2>
+    </div>
+
+    <div class="faq-list">
+      <details class="q">
+        <summary>Do I need previous experience?<span class="plus"></span></summary>
+        <p>No — our basic courses are designed for beginners. If you already practise, we'll calibrate the curriculum to advance your technique under the Clinita protocol.</p>
+      </details>
+      <details class="q">
+        <summary>Will I work on a live model?<span class="plus"></span></summary>
+        <p>Yes — every course closes with a fully supervised live treatment. You bring one model for the practice day; we'll guide you on exactly what to arrange in the lead-up.</p>
+      </details>
+      <details class="q">
+        <summary>What happens after the course?<span class="plus"></span></summary>
+        <p>You receive your Clinita certificate, ongoing mentorship via WhatsApp, access to the MyClinita app, and an open invitation to bring case studies back into the studio.</p>
+      </details>
+      <details class="q">
+        <summary>Is a payment plan available?<span class="plus"></span></summary>
+        <p>Yes — flexible payment options are available. We discuss the arrangement privately, quietly, and tailored to your situation.</p>
+      </details>
+      <details class="q">
+        <summary>Do I keep the machine and kit?<span class="plus"></span></summary>
+        <p>Always. The certified Clinita rotary machine and full pigment kit are yours from day one and remain yours after graduation — no rental, no return.</p>
+      </details>
+      <details class="q">
+        <summary>How do I book a place?<span class="plus"></span></summary>
+        <p>Send a WhatsApp message or call us directly. We'll arrange a short conversation to understand your goals before confirming dates and the deposit.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="booking" id="book">
+    <div class="booking-inner">
+      <span class="eyebrow">— Reserve your place —</span>
+      <h2>1:1 training,<br/>by <em>appointment.</em></h2>
+      <p class="lead">Every course is private — just you and Tatiana. Reach out and we'll arrange a quiet call to talk through your goals.</p>
+
+      <div class="cta-stack">
+        <a class="btn-large whatsapp" href="https://wa.me/35794009509">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.2-.4-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.4.1-.6.1-.1.3-.4.5-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/>
+            <path d="M20.5 3.5A10.4 10.4 0 0 0 3.4 16.1L2 22l6-1.6a10.4 10.4 0 0 0 5 1.3A10.4 10.4 0 0 0 20.5 3.5zM12 19.9a8.6 8.6 0 0 1-4.4-1.2l-.3-.2-3.6 1 1-3.5-.2-.3a8.6 8.6 0 1 1 16-4.6 8.6 8.6 0 0 1-8.5 8.8z"/>
+          </svg>
+          <span>WhatsApp <span class="num">+357 94 009 509</span></span>
+        </a>
+        <a class="btn-large primary" href="tel:+35794009509">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/>
+          </svg>
+          <span>Call <span class="num">+357 94 009 509</span></span>
+        </a>
+      </div>
+
+      <div class="hours">Mon — Sat · 10:00 – 19:00 · Nicosia</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="f-wordmark">Lady&nbsp;D</div>
+    <div class="f-loc">Beauty by Lady D Studio · Nicosia</div>
+    <div class="f-address">Vasilissis Freiderikis 18 · Nicosia 1066</div>
+    <div class="f-meta">
+      <a href="https://instagram.com/beautybylady_d_studio" target="_blank" rel="noopener">@beautybylady_d_studio</a><br/>
+      © 2026 — All rights reserved
+    </div>
+    <div class="f-partner">
+      <div class="b"><img src="images/clinita-logo.jpeg" alt="" /></div>
+      Authorised Clinita Italy Training Partner
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  // Scroll-triggered fade-up animations
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+  // FAQ accordion — only one open at a time
+  const allDetails = document.querySelectorAll('.faq details.q');
+  allDetails.forEach(d => {
+    d.addEventListener('toggle', () => {
+      if (d.open) {
+        allDetails.forEach(o => { if (o !== d) o.open = false; });
+      }
+    });
+  });
+
+  // Course card expand/collapse
+  document.querySelectorAll('.course-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.course');
+      const willOpen = !card.classList.contains('open');
+      card.classList.toggle('open', willOpen);
+      btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+  });
+</script>
+</body>
+</html>
