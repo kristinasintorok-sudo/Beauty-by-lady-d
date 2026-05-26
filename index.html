@@ -307,24 +307,11 @@
     transition: background .2s ease, transform .2s ease;
   }
   .pill-btn:hover { background: var(--blue-deep); transform: translateY(-1px); }
-  .phil-imgs {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
   .phil-img {
-    border-radius: 2px;
-    background: var(--cream) url('images/C1DC3794-F9D4-4E6C-BC61-C83175174687.png') center / cover no-repeat;
-    aspect-ratio: 4/3;
-    box-shadow: 0 8px 28px -8px rgba(62,47,34,.22);
-    margin-right: 10px;
-  }
-  .phil-img-2 {
-    border-radius: 2px;
+    aspect-ratio: 3/4;
     background: var(--cream) url('images/studio-lips.png') center / cover no-repeat;
-    aspect-ratio: 4/3;
-    box-shadow: 0 8px 28px -8px rgba(62,47,34,.22);
-    margin-left: 10px;
+    border-radius: 2px;
+    position: relative;
   }
   .phil-img::before {
     content: "";
@@ -1218,10 +1205,7 @@
         <p>We believe PMU should support the face, not overwhelm it. Clinical method, soft modern results, and the time the work deserves.</p>
         <a class="pill-btn" href="#about">More about the studio</a>
       </div>
-      <div class="phil-imgs">
-        <div class="phil-img" role="img" aria-label="Beauty by Lady D Studio"></div>
-        <div class="phil-img phil-img-2" role="img" aria-label="PMU lip work close-up"></div>
-      </div>
+      <div class="phil-img" role="img" aria-label="PMU lip work close-up"></div>
     </div>
     <div class="phil-creds fade-up">
       <span>Clinita Italy</span><i></i>
