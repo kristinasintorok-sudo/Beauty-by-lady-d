@@ -477,87 +477,103 @@
     background: var(--cream-deep);
     border-top: 1px solid var(--line-soft);
   }
-  .services .section-head { margin-bottom: 38px; }
-  .service-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-top: 10px;
-  }
-  .service-card {
-    background: var(--paper);
-    border: 1px solid var(--line-soft);
-    border-radius: 2px;
-    padding: 22px 20px 20px;
+  .services .section-head { margin-bottom: 32px; }
+
+  /* category tab pills */
+  .svc-tabs {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
-    transition: border-color .2s ease, box-shadow .2s ease;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+    justify-content: center;
   }
-  .service-card:hover {
-    border-color: var(--rose-soft);
-    box-shadow: 0 10px 30px -16px rgba(62,47,34,.18);
+  .svc-tab {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--brown-soft);
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 7px 16px;
+    cursor: pointer;
+    transition: all .2s ease;
+    white-space: nowrap;
   }
-  .service-card.wide {
-    grid-column: 1 / -1;
-    flex-direction: row;
-    align-items: center;
+  .svc-tab:hover { border-color: var(--rose-soft); color: var(--brown); }
+  .svc-tab.active {
+    background: var(--brown-deep);
+    border-color: var(--brown-deep);
+    color: var(--cream-soft);
+  }
+
+  /* service category panel */
+  .svc-panel { display: none; }
+  .svc-panel.active { display: block; }
+
+  /* service rows */
+  .svc-list { display: flex; flex-direction: column; }
+  .svc-row {
+    display: flex;
+    align-items: baseline;
     justify-content: space-between;
-    gap: 18px;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line-soft);
   }
-  .service-card .s-name {
+  .svc-row:first-child { border-top: 1px solid var(--line-soft); }
+  .svc-left { flex: 1; }
+  .svc-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    line-height: 1.1;
+    font-size: 20px;
+    line-height: 1.15;
     color: var(--brown-deep);
     font-weight: 300;
   }
-  .service-card.wide .s-name { font-size: 26px; }
-  .service-card .s-desc {
-    font-size: 12px;
-    color: var(--brown-soft);
-    line-height: 1.55;
-    flex: 1;
+  .svc-dur {
+    font-size: 10.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--taupe-deep);
+    font-weight: 400;
+    margin-top: 3px;
   }
-  .service-card .s-price {
+  .svc-price {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 400;
     color: var(--brown-deep);
-    line-height: 1;
-    margin-top: auto;
-    padding-top: 12px;
-    border-top: 1px solid var(--line-soft);
-  }
-  .service-card.wide .s-price {
-    border-top: none;
-    padding-top: 0;
-    margin-top: 0;
-    font-size: 30px;
     white-space: nowrap;
     flex-shrink: 0;
   }
-  .service-card .s-price sup {
-    font-size: 13px;
+  .svc-price sup {
+    font-size: 12px;
     font-weight: 300;
     color: var(--taupe-deep);
     vertical-align: top;
     margin-right: 1px;
   }
-  .service-card .s-tag {
+
+  /* sub-group label inside a panel */
+  .svc-subhead {
     font-size: 10px;
-    letter-spacing: .24em;
+    letter-spacing: .3em;
     text-transform: uppercase;
-    color: var(--taupe-deep);
+    color: var(--taupe);
     font-weight: 400;
-    margin-bottom: 2px;
+    padding: 20px 0 6px;
   }
+  .svc-subhead:first-child { padding-top: 0; }
+
   .service-note {
-    margin-top: 20px;
+    margin-top: 22px;
     text-align: center;
     font-size: 12px;
     color: var(--brown-soft);
     letter-spacing: .04em;
+    line-height: 1.6;
   }
 
   /* courses */
@@ -1234,46 +1250,220 @@
   <section class="services" id="services">
     <div class="section-head fade-up">
       <span class="eyebrow">— Salon Services —</span>
-      <h2 style="margin-top:14px;">PMU treatments,<br/>by <em>appointment.</em></h2>
-      <p>Permanent makeup for clients — all work performed by Tatiana using the Clinita Italy clinical protocol.</p>
+      <h2 style="margin-top:14px;">Every service,<br/>by <em>appointment.</em></h2>
+      <p>Client treatments at Beauty by Lady D Studio — all work performed by Tatiana in Nicosia.</p>
     </div>
 
-    <div class="service-grid fade-up">
-      <div class="service-card">
-        <div class="s-tag">Brows</div>
-        <div class="s-name">Powder Brows</div>
-        <div class="s-desc">Soft shaded brows with a powdery, make-up finish. Ideal for all skin types.</div>
-        <div class="s-price"><sup>€</sup>250</div>
-      </div>
-      <div class="service-card">
-        <div class="s-tag">Brows</div>
-        <div class="s-name">Hairstrokes</div>
-        <div class="s-desc">Fine hair-like strokes for a natural, defined brow.</div>
-        <div class="s-price"><sup>€</sup>280</div>
-      </div>
-      <div class="service-card">
-        <div class="s-tag">Lips</div>
-        <div class="s-name">Lip Blush</div>
-        <div class="s-desc">A soft wash of colour to enhance, define and restore the natural lip.</div>
-        <div class="s-price"><sup>€</sup>250</div>
-      </div>
-      <div class="service-card">
-        <div class="s-tag">Eyes</div>
-        <div class="s-name">Eyeliner</div>
-        <div class="s-desc">Precise lash-line definition or a full liner — tailored to your eye shape.</div>
-        <div class="s-price"><sup>€</sup>200</div>
-      </div>
-      <div class="service-card wide">
-        <div>
-          <div class="s-tag">Specialist</div>
-          <div class="s-name">Scar Restoration</div>
-          <div class="s-desc">Medical-grade pigmentation for scar camouflage, alopecia and post-surgical work. Individual consultation required.</div>
+    <div class="svc-tabs fade-up">
+      <button class="svc-tab active" data-tab="pmu">Permanent Makeup</button>
+      <button class="svc-tab" data-tab="facials">Facials</button>
+      <button class="svc-tab" data-tab="scars">Scar &amp; Skin</button>
+      <button class="svc-tab" data-tab="brows">Brows &amp; Lashes</button>
+      <button class="svc-tab" data-tab="nails">Nails</button>
+    </div>
+
+    <!-- PMU -->
+    <div class="svc-panel active" id="svc-pmu">
+      <div class="svc-list">
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Hair-strokes Brows</div><div class="svc-dur">3h 30m</div></div>
+          <div class="svc-price"><sup>€</sup>200</div>
         </div>
-        <div class="s-price">On<br/>request</div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Powder Brows</div><div class="svc-dur">3h</div></div>
+          <div class="svc-price"><sup>€</sup>180</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Lip Blush</div><div class="svc-dur">3h</div></div>
+          <div class="svc-price"><sup>€</sup>150</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Shaded Eyeliner</div><div class="svc-dur">3h</div></div>
+          <div class="svc-price"><sup>€</sup>150</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Touch Up</div><div class="svc-dur">2h · 1–1.5 months after initial</div></div>
+          <div class="svc-price"><sup>€</sup>50</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Colour Neutralisation</div><div class="svc-dur">1h · correction of existing PMU</div></div>
+          <div class="svc-price"><sup>€</sup>100</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">PMU Tattoo Removal</div><div class="svc-dur">1h · per session</div></div>
+          <div class="svc-price"><sup>€</sup>70</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Permanent Makeup Consultation</div><div class="svc-dur">20m · deducted from treatment</div></div>
+          <div class="svc-price"><sup>€</sup>15</div>
+        </div>
       </div>
     </div>
 
-    <p class="service-note fade-up">Prices include initial session. Touch-up pricing discussed at consultation.</p>
+    <!-- Facials -->
+    <div class="svc-panel" id="svc-facials">
+      <div class="svc-list">
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Exosomes Therapy</div><div class="svc-dur">1h 30m · advanced cell renewal</div></div>
+          <div class="svc-price"><sup>€</sup>150</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Liposomes Therapy</div><div class="svc-dur">2h · deep hydration &amp; regeneration</div></div>
+          <div class="svc-price"><sup>€</sup>150</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Hyperpigmentation &amp; Sun Pigment</div><div class="svc-dur">1h 20m · tone correction</div></div>
+          <div class="svc-price"><sup>€</sup>150</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">3D Essence Collagen Anti-Ageing</div><div class="svc-dur">1h 30m · elasticity &amp; lifting</div></div>
+          <div class="svc-price"><sup>€</sup>130</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Deep Facial Cleanse</div><div class="svc-dur">1h · cleanse, peel, massage &amp; mask</div></div>
+          <div class="svc-price"><sup>€</sup>75</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Chemical Peel</div><div class="svc-dur">1h · exfoliation &amp; tone refinement</div></div>
+          <div class="svc-price"><sup>€</sup>70</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Ultrasonic Facial Cleanse</div><div class="svc-dur">1h · deep cleanse &amp; texture</div></div>
+          <div class="svc-price"><sup>€</sup>50</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Skin Consultation</div><div class="svc-dur">20m · deducted on same-day treatment</div></div>
+          <div class="svc-price"><sup>€</sup>15</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scar & Skin -->
+    <div class="svc-panel" id="svc-scars">
+      <div class="svc-list">
+        <div class="svc-subhead">Scar Camouflage · Dermopigmentation</div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Scar Camouflage — Small</div><div class="svc-dur">2h</div></div>
+          <div class="svc-price"><sup>€</sup>150</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Scar Camouflage — Medium</div><div class="svc-dur">2h 30m</div></div>
+          <div class="svc-price"><sup>€</sup>200</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Scar Camouflage — Large</div><div class="svc-dur">3h</div></div>
+          <div class="svc-price"><sup>€</sup>250</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Skin Discolouration Camouflage</div><div class="svc-dur">2h · all areas from</div></div>
+          <div class="svc-price"><sup>€</sup>150</div>
+        </div>
+        <div class="svc-subhead">Surgical &amp; Traumatic Scars · Microneedling</div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Surgical / Traumatic Scars — Small</div><div class="svc-dur">1h</div></div>
+          <div class="svc-price"><sup>€</sup>150</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Surgical / Traumatic Scars — Medium</div><div class="svc-dur">1h 30m</div></div>
+          <div class="svc-price"><sup>€</sup>200</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Surgical / Traumatic Scars — Large</div><div class="svc-dur">2h</div></div>
+          <div class="svc-price"><sup>€</sup>250</div>
+        </div>
+        <div class="svc-subhead">Stretch Marks &amp; Acne Scars</div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Stretch Marks — Small Area</div><div class="svc-dur">1h</div></div>
+          <div class="svc-price"><sup>€</sup>150</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Stretch Marks — Medium Area</div><div class="svc-dur">1h 30m</div></div>
+          <div class="svc-price"><sup>€</sup>150</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Stretch Marks — Large Area</div><div class="svc-dur">2h</div></div>
+          <div class="svc-price"><sup>€</sup>150</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Acne Scar Treatment</div><div class="svc-dur">2h · bio collagen induction</div></div>
+          <div class="svc-price"><sup>€</sup>100</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Hair Loss Therapy</div><div class="svc-dur">2h · scalp &amp; follicle treatment</div></div>
+          <div class="svc-price"><sup>€</sup>100</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Brows & Lashes -->
+    <div class="svc-panel" id="svc-brows">
+      <div class="svc-list">
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Lash Lift &amp; Brow Lamination</div><div class="svc-dur">1h</div></div>
+          <div class="svc-price"><sup>€</sup>50</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Brow Lamination</div><div class="svc-dur">40m</div></div>
+          <div class="svc-price"><sup>€</sup>30</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Lash Lift</div><div class="svc-dur">35m</div></div>
+          <div class="svc-price"><sup>€</sup>30</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Brow Tint &amp; Shape</div><div class="svc-dur">35m</div></div>
+          <div class="svc-price"><sup>€</sup>20</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Brow Shaping</div><div class="svc-dur">20m</div></div>
+          <div class="svc-price"><sup>€</sup>10</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nails -->
+    <div class="svc-panel" id="svc-nails">
+      <div class="svc-list">
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Hard Gel (no extensions)</div><div class="svc-dur">2h</div></div>
+          <div class="svc-price"><sup>€</sup>30</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Builder Gel (no extensions)</div><div class="svc-dur">1h 30m</div></div>
+          <div class="svc-price"><sup>€</sup>30</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Dry Pedicure &amp; Soft Gel Polish</div><div class="svc-dur">1h 30m</div></div>
+          <div class="svc-price"><sup>€</sup>27</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Soft Gel</div><div class="svc-dur">1h</div></div>
+          <div class="svc-price"><sup>€</sup>25</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Manicure (cuticles &amp; shape)</div><div class="svc-dur">25m · no polish</div></div>
+          <div class="svc-price"><sup>€</sup>15</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Hard Gel Removal</div><div class="svc-dur">1h</div></div>
+          <div class="svc-price"><sup>€</sup>10</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Soft Gel Removal</div><div class="svc-dur">20m</div></div>
+          <div class="svc-price"><sup>€</sup>10</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Nail Art</div><div class="svc-dur">10m · chrome or blooming gel</div></div>
+          <div class="svc-price">from <sup>€</sup>5</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-left"><div class="svc-name">Nail Correction</div><div class="svc-dur">20m · per nail</div></div>
+          <div class="svc-price">from <sup>€</sup>5</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="service-note fade-up">All prices are per session. Consultations are deducted from the treatment price when booked same day.</p>
   </section>
 
   <!-- COURSES -->
@@ -1554,6 +1744,17 @@
       if (d.open) {
         allDetails.forEach(o => { if (o !== d) o.open = false; });
       }
+    });
+  });
+
+  // Service category tabs
+  document.querySelectorAll('.svc-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const key = tab.dataset.tab;
+      document.querySelectorAll('.svc-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.svc-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('svc-' + key).classList.add('active');
     });
   });
 
