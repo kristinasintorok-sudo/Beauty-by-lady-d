@@ -308,30 +308,23 @@
   }
   .pill-btn:hover { background: var(--blue-deep); transform: translateY(-1px); }
   .phil-imgs {
-    position: relative;
-    height: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
   .phil-img {
-    position: absolute;
     border-radius: 2px;
     background: var(--cream) url('images/C1DC3794-F9D4-4E6C-BC61-C83175174687.png') center / cover no-repeat;
-    width: 88%;
-    height: 58%;
-    top: 0;
-    left: 0;
-    z-index: 2;
+    aspect-ratio: 4/3;
     box-shadow: 0 8px 28px -8px rgba(62,47,34,.22);
+    margin-right: 10px;
   }
   .phil-img-2 {
-    position: absolute;
     border-radius: 2px;
     background: var(--cream) url('images/studio-lips.png') center / cover no-repeat;
-    width: 80%;
-    height: 52%;
-    bottom: 0;
-    right: 0;
-    z-index: 3;
+    aspect-ratio: 4/3;
     box-shadow: 0 8px 28px -8px rgba(62,47,34,.22);
+    margin-left: 10px;
   }
   .phil-img::before {
     content: "";
