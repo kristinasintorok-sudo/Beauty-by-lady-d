@@ -582,6 +582,66 @@
     line-height: 1.6;
   }
 
+  /* why clinita */
+  .why-clinita {
+    padding: 72px max(22px, 6vw) 64px;
+    background: var(--blue-tint);
+    border-top: 1px solid var(--blue-soft);
+    border-bottom: 1px solid var(--blue-soft);
+  }
+  .wc-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    text-align: center;
+  }
+  .wc-logo {
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid var(--blue-soft);
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    padding: 6px;
+  }
+  .wc-logo img { width: 100%; height: 100%; object-fit: contain; }
+  .wc-text p {
+    font-size: 13.5px;
+    color: var(--brown-soft);
+    line-height: 1.7;
+    margin-top: 14px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wc-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 28px;
+  }
+  .wc-badge {
+    background: #fff;
+    border: 1px solid var(--blue-soft);
+    border-radius: 2px;
+    padding: 10px 16px;
+    font-size: 10px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--blue);
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5;
+  }
+  @media (min-width: 768px) {
+    .wc-inner { flex-direction: row; text-align: left; align-items: flex-start; }
+    .wc-text p { margin-left: 0; margin-right: 0; }
+    .wc-badges { justify-content: flex-start; }
+  }
+
   /* portfolio */
   .portfolio {
     padding: 72px max(22px, 6vw) 60px;
@@ -1673,6 +1733,27 @@
         </div>
         <div class="t">Lifetime Support</div>
         <div class="d">Direct line to Tatiana for every case after graduation.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CLINITA -->
+  <section class="why-clinita fade-up">
+    <div class="wc-inner">
+      <div class="wc-logo">
+        <img src="images/clinita-logo.jpeg" alt="Clinita Italy" />
+      </div>
+      <div class="wc-text">
+        <span class="eyebrow">— Why Clinita? —</span>
+        <h2 style="margin-top:14px;">Europe's most <em>scientifically advanced</em> PMU system.</h2>
+        <p>Clinita is one of Europe's most scientifically advanced PMU systems, with over 20 years of expertise. Their pigments are REACH-compliant, MRI-compatible and certified by CTL Bielefeld — the most rigorous independent European laboratory.</p>
+        <p>As a Clinita-trained professional, your qualification is recognised internationally.</p>
+        <div class="wc-badges">
+          <div class="wc-badge">REACH<br/>Compliant</div>
+          <div class="wc-badge">MRI<br/>Compatible</div>
+          <div class="wc-badge">CTL Bielefeld<br/>Certified</div>
+          <div class="wc-badge">20+ Years<br/>Expertise</div>
+        </div>
       </div>
     </div>
   </section>
