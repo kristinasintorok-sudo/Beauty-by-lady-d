@@ -857,6 +857,32 @@
     letter-spacing: .02em;
   }
 
+  .kit-imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .kit-img-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .kit-img-wrap img {
+    width: 100%;
+    border-radius: 2px;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    background: var(--cream);
+  }
+  .kit-caption {
+    font-size: 10px;
+    color: var(--taupe-deep);
+    letter-spacing: .04em;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
   /* bundle */
   .bundle-wrap { padding: 18px max(22px, 6vw) 64px; background: var(--cream-soft); }
   .bundle {
@@ -1596,7 +1622,20 @@
             <div class="module"><div class="mn">10</div><div><div class="mt">Hygiene &amp; Sterile Protocol</div><div class="md">Full Clinita sterile working method — field preparation and cross-contamination prevention.</div></div></div>
             <div class="module"><div class="mn">11</div><div><div class="mt">Client Consultation</div><div class="md">Contraindications, informed consent, skin assessment and professional expectation setting.</div></div></div>
             <div class="module"><div class="mn">12</div><div><div class="mt">Live Practice</div><div class="md">Silicone skin exercises followed by a supervised treatment on a live model covering both techniques.</div></div></div>
-            <div class="takeaway"><b>Your kit &amp; what you leave with</b>Full Clinita professional starter kit including pigments, needles and other consumables to start working, plus your certified Clinita PMU machine — everything you need to begin practising from day one.</div>
+            <div class="takeaway">
+              <b>Your kit &amp; what you leave with</b>
+              Full Clinita professional starter kit including pigments, needles and other consumables to start working, plus your certified Clinita PMU machine — everything you need to begin practising from day one.
+              <div class="kit-imgs">
+                <div class="kit-img-wrap">
+                  <img src="images/clinita-pigmenti.jpeg" alt="Clinita pigments" />
+                  <div class="kit-caption">Professional Clinita pigments — sterile, REACH-compliant and MRI-compatible. Specific colours included per technique.</div>
+                </div>
+                <div class="kit-img-wrap">
+                  <img src="images/a.jpeg" alt="Clinita I-FLY machine" />
+                  <div class="kit-caption">Clinita I-FLY — Wireless Professional Dermographer. The same machine used daily in our studio. Included in every course.</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </article>
@@ -1626,7 +1665,20 @@
             <div class="module"><div class="mn">07</div><div><div class="mt">Contraindications &amp; Consultation</div><div class="md">Cold sore history, filler interactions, skin conditions, consent and managing client expectations.</div></div></div>
             <div class="module"><div class="mn">08</div><div><div class="mt">Corrective Work Introduction</div><div class="md">Basic principles of working over existing pigment, uneven colour and previous lip treatments.</div></div></div>
             <div class="module"><div class="mn">09</div><div><div class="mt">Live Practice</div><div class="md">Silicone skin exercises followed by a fully supervised lip blush treatment on a live model.</div></div></div>
-            <div class="takeaway"><b>Your kit &amp; what you leave with</b>Full Clinita professional starter kit including pigments, needles and other consumables to start working, plus your certified Clinita PMU machine — everything you need to begin practising from day one.</div>
+            <div class="takeaway">
+              <b>Your kit &amp; what you leave with</b>
+              Full Clinita professional starter kit including pigments, needles and other consumables to start working, plus your certified Clinita PMU machine — everything you need to begin practising from day one.
+              <div class="kit-imgs">
+                <div class="kit-img-wrap">
+                  <img src="images/clinita-pigmenti.jpeg" alt="Clinita pigments" />
+                  <div class="kit-caption">Professional Clinita pigments — sterile, REACH-compliant and MRI-compatible. Specific colours included per technique.</div>
+                </div>
+                <div class="kit-img-wrap">
+                  <img src="images/a.jpeg" alt="Clinita I-FLY machine" />
+                  <div class="kit-caption">Clinita I-FLY — Wireless Professional Dermographer. The same machine used daily in our studio. Included in every course.</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </article>
@@ -1656,7 +1708,20 @@
             <div class="module"><div class="mn">07</div><div><div class="mt">Healing &amp; Aftercare</div><div class="md">Eyeliner healing stages, pigment softening, colour depth management and touch-up scheduling.</div></div></div>
             <div class="module"><div class="mn">08</div><div><div class="mt">Consultation &amp; Contraindications</div><div class="md">Lash extension interactions, dry eye conditions, consent and full pre and post-care education.</div></div></div>
             <div class="module"><div class="mn">09</div><div><div class="mt">Live Practice</div><div class="md">Silicone skin exercises followed by a fully supervised eyeliner treatment on a live model.</div></div></div>
-            <div class="takeaway"><b>Your kit &amp; what you leave with</b>Full Clinita professional starter kit including pigments, needles and other consumables to start working, plus your certified Clinita PMU machine — everything you need to begin practising from day one.</div>
+            <div class="takeaway">
+              <b>Your kit &amp; what you leave with</b>
+              Full Clinita professional starter kit including pigments, needles and other consumables to start working, plus your certified Clinita PMU machine — everything you need to begin practising from day one.
+              <div class="kit-imgs">
+                <div class="kit-img-wrap">
+                  <img src="images/clinita-pigmenti.jpeg" alt="Clinita pigments" />
+                  <div class="kit-caption">Professional Clinita pigments — sterile, REACH-compliant and MRI-compatible. Specific colours included per technique.</div>
+                </div>
+                <div class="kit-img-wrap">
+                  <img src="images/a.jpeg" alt="Clinita I-FLY machine" />
+                  <div class="kit-caption">Clinita I-FLY — Wireless Professional Dermographer. The same machine used daily in our studio. Included in every course.</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </article>
@@ -1690,6 +1755,10 @@
     <div class="section-head">
       <span class="eyebrow">— What's Included —</span>
       <h2 style="margin-top:14px;">Everything you need to <em>begin.</em></h2>
+      <div style="margin-top:20px;max-width:420px;margin-left:auto;margin-right:auto;">
+        <img src="images/_MG_7688_porta_colori_plexiglass.jpeg" alt="Clinita colour range" style="width:100%;border-radius:2px;object-fit:cover;aspect-ratio:4/3;" />
+        <p style="font-size:11px;color:var(--taupe-deep);font-style:italic;margin-top:8px;letter-spacing:.04em;">The complete Clinita professional colour system.</p>
+      </div>
     </div>
 
     <div class="included-grid">
