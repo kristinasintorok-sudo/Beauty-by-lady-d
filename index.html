@@ -13,32 +13,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --cream:       #F5F0E8;
-    --cream-deep:  #ECE3D5;
-    --cream-soft:  #FBF7F1;
-    --paper:       #FFFDF9;
-    --taupe:       #A89684;
-    --taupe-deep:  #8B7355;
-    --rose:        #C99B8E;
-    --rose-deep:   #B5897C;
-    --rose-soft:   #E6C7BD;
-    --rose-tint:   #F2DDD3;
-    --blue:        #4B6E7A;
-    --blue-deep:   #335560;
-    --blue-soft:   #C5D3D8;
-    --blue-tint:   #E3EAED;
-    --brown:       #5C4A3A;
-    --brown-deep:  #3E2F22;
-    --brown-soft:  #826A55;
-    --line:        #D8CCBA;
-    --line-soft:   #E8DECC;
+    --cream:       #101312;
+    --cream-deep:  #0c0f0d;
+    --cream-soft:  #181b19;
+    --paper:       #1e2220;
+    --taupe:       rgba(255,255,255,.38);
+    --taupe-deep:  rgba(255,255,255,.55);
+    --rose:        #FFC29E;
+    --rose-deep:   #FF5E69;
+    --rose-soft:   rgba(255,194,158,.18);
+    --rose-tint:   rgba(255,150,232,.12);
+    --blue:        #FF96E8;
+    --blue-deep:   #e070cc;
+    --blue-soft:   rgba(255,150,232,.18);
+    --blue-tint:   rgba(255,150,232,.08);
+    --brown:       rgba(255,255,255,.75);
+    --brown-deep:  #ffffff;
+    --brown-soft:  rgba(255,255,255,.55);
+    --line:        rgba(255,255,255,.1);
+    --line-soft:   rgba(255,255,255,.07);
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    background: var(--cream);
-    color: var(--brown);
+    background: #101312;
+    color: rgba(255,255,255,.75);
     font-family: 'Poppins', system-ui, sans-serif;
     font-weight: 300;
     font-size: 15px;
@@ -60,12 +60,12 @@
   }
 
   /* layout shell */
-  .wrap { width: 100%; margin: 0 auto; background: var(--cream); position: relative; }
+  .wrap { width: 100%; margin: 0 auto; background: #101312; position: relative; }
   section { padding: 56px max(22px, 6vw); }
   h1, h2, h3, h4 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
-    color: var(--brown-deep);
+    color: #ffffff;
     letter-spacing: .005em;
   }
   h2 { font-size: 34px; line-height: 1.05; text-wrap: balance; }
@@ -204,7 +204,7 @@
     font-style: italic;
     font-weight: 300;
     font-size: clamp(28px, 4.5vw, 60px);
-    color: rgba(245,240,232,.7);
+    color: rgba(255,255,255,.6);
     line-height: 1;
     letter-spacing: .04em;
     display: block;
@@ -347,8 +347,8 @@
     padding: 64px max(22px, 6vw) 50px;
     position: relative;
     overflow: hidden;
-    border-top: 1px solid rgba(75,110,122,.18);
-    border-bottom: 1px solid rgba(75,110,122,.18);
+    border-top: 1px solid rgba(255,255,255,.07);
+    border-bottom: 1px solid rgba(255,255,255,.07);
   }
   .philosophy::before {
     content: "D";
@@ -430,7 +430,7 @@
   .phil-creds {
     margin-top: 36px;
     padding-top: 22px;
-    border-top: 1px solid rgba(75,110,122,.22);
+    border-top: 1px solid rgba(255,255,255,.07);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -505,7 +505,7 @@
     background: url('images/trainer-portrait.jpeg') center 22% / cover;
     border-radius: 2px;
     z-index: 2;
-    box-shadow: 0 30px 80px -30px rgba(62,47,34,.28);
+    box-shadow: 0 30px 80px -30px rgba(0,0,0,.5);
   }
   .display-band .floating-cap {
     text-align: center;
@@ -608,9 +608,9 @@
   }
   .svc-tab:hover { border-color: var(--rose-soft); color: var(--brown); }
   .svc-tab.active {
-    background: var(--brown-deep);
-    border-color: var(--brown-deep);
-    color: var(--cream-soft);
+    background: var(--rose);
+    border-color: var(--rose);
+    color: #101312;
   }
 
   /* service category panel */
@@ -797,7 +797,7 @@
   }
   .course.open {
     border-color: var(--rose-soft);
-    box-shadow: 0 18px 40px -28px rgba(62,47,34,.18);
+    box-shadow: 0 18px 40px -28px rgba(0,0,0,.35);
   }
   .course-head {
     display: grid;
