@@ -853,30 +853,52 @@
     border-top: 1px solid var(--line-soft);
   }
   .portfolio .section-head { margin-bottom: 28px; }
+
+  /* portfolio outer category tabs */
+  .port-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .port-tab {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--brown-soft);
+    padding: 9px 22px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all .2s ease;
+    white-space: nowrap;
+  }
+  .port-tab:hover { border-color: var(--rose); color: var(--rose-deep); }
+  .port-tab.active { background: var(--rose); border-color: var(--rose); color: #fff; }
+  .port-panel { display: none; }
+  .port-panel.active { display: block; }
+
+  /* portfolio photo grid */
   .portfolio-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
     gap: 8px;
+    max-width: 860px;
+    margin: 0 auto;
   }
-  .port-img {
-    border-radius: 2px;
-    background-size: cover;
-    background-position: center;
+  .portfolio-grid img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
     aspect-ratio: 4/5;
-  }
-  .port-1 { background-image: url('images/AE15BF2F-9901-407C-8378-4E8CB7CEABD9.png'); }
-  .port-2 { background-image: url('images/photo-output.jpeg'); }
-  .port-3 { background-image: url('images/IMG_4226.jpeg'); }
-  .port-4 { background-image: url('images/IMG_4008.png'); }
-  .port-5 {
-    background-image: url('images/IMG_4027.png');
-    grid-column: 1 / -1;
-    aspect-ratio: 16/9;
+    object-fit: cover;
   }
   @media (min-width: 768px) {
     .portfolio-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
-    .port-5 { grid-column: auto; aspect-ratio: 4/5; }
   }
 
   /* courses */
@@ -1666,7 +1688,7 @@
       <div class="links">
         <a href="#services">Services</a>
         <a href="#courses">Courses</a>
-        <a href="#corrective">Restorative</a>
+        <a href="#portfolio">Portfolio</a>
         <a href="#faq">FAQ</a>
       </div>
       <div class="clinita-badge-wrap">
@@ -2224,93 +2246,121 @@
       <span class="eyebrow">— Our Work —</span>
       <h2 style="margin-top:14px;">Results that<br/><em>speak for themselves.</em></h2>
     </div>
-    <div class="portfolio-grid fade-up">
-      <div class="port-img port-1"></div>
-      <div class="port-img port-2"></div>
-      <div class="port-img port-3"></div>
-      <div class="port-img port-4"></div>
-      <div class="port-img port-5"></div>
-    </div>
-  </section>
 
-  <!-- CORRECTIVE & RESTORATIVE -->
-  <section class="corrective" id="corrective">
-    <div class="section-head fade-up">
-      <span class="eyebrow">— Paramedical Tattooing —</span>
-      <h2 style="margin-top:14px;">Corrective &amp; <em>Restorative Work</em></h2>
-      <p>This is a specialised paramedical category — distinct from cosmetic PMU services. Areola restoration, scar camouflage and scar reduction are clinical procedures that help people reclaim confidence after surgery, trauma or medical treatment. All treatments require a consultation first.</p>
-      <span class="corr-disclaimer">Results vary by individual. All images shown with explicit client consent.</span>
+    <!-- Category tabs -->
+    <div class="port-tabs fade-up">
+      <button class="port-tab active" data-port="brows">Brows</button>
+      <button class="port-tab" data-port="lips">Lips</button>
+      <button class="port-tab" data-port="corrective">Corrective &amp; Restorative</button>
     </div>
 
-    <!-- Sub-category tabs -->
-    <div class="corr-tabs fade-up">
-      <button class="corr-tab active" data-corr="areola">Areola Restoration</button>
-      <button class="corr-tab" data-corr="camouflage">Scar Camouflage</button>
-      <button class="corr-tab" data-corr="reduction">Scar Reduction</button>
-    </div>
-
-    <!-- Areola Restoration -->
-    <div class="corr-panel active" id="corr-areola">
-      <div class="corr-intro">
-        <h3>Areola <em>Restoration</em></h3>
-        <p>Designed for clients who have undergone mastectomy, reconstructive breast surgery or other procedures affecting the areola. Using paramedical tattooing techniques, Tatiana recreates a natural-looking areola and nipple — restoring a sense of wholeness and confidence. Each result is individually tailored to skin tone, size and symmetry preferences.</p>
+    <!-- Brows -->
+    <div class="port-panel active" id="port-brows">
+      <div class="portfolio-grid fade-up">
+        <img src="images/IMG_4008.png" alt="Brow PMU result" loading="lazy" />
+        <img src="images/IMG_4027.png" alt="Brow PMU result" loading="lazy" />
       </div>
-      <div class="corr-gallery">
-        <div class="corr-pair fade-up">
-          <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
-            <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-            <div class="reveal-text">View Results</div>
-            <div class="reveal-note">Paramedical images — tap to view with discretion</div>
+    </div>
+
+    <!-- Lips -->
+    <div class="port-panel" id="port-lips">
+      <div class="portfolio-grid fade-up">
+        <img src="images/AE15BF2F-9901-407C-8378-4E8CB7CEABD9.png" alt="Lip blush result" loading="lazy" />
+        <img src="images/studio-lips.png" alt="Lip blush procedure" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- Corrective & Restorative -->
+    <div class="port-panel" id="port-corrective">
+      <p class="fade-up" style="max-width:580px;margin:0 auto 32px;text-align:center;font-size:13px;color:var(--brown-soft);line-height:1.75;">Paramedical tattooing — distinct from cosmetic PMU. All images shown with explicit client consent. Results vary by individual. A consultation is required before treatment.</p>
+
+      <!-- Sub-category tabs -->
+      <div class="corr-tabs fade-up">
+        <button class="corr-tab active" data-corr="areola">Areola Restoration</button>
+        <button class="corr-tab" data-corr="camouflage">Scar Camouflage</button>
+        <button class="corr-tab" data-corr="reduction">Scar Reduction</button>
+      </div>
+
+      <!-- Areola Restoration -->
+      <div class="corr-panel active" id="corr-areola">
+        <div class="corr-intro">
+          <h3>Areola <em>Restoration</em></h3>
+          <p>Designed for clients who have undergone mastectomy, reconstructive breast surgery or other procedures affecting the areola. Tatiana recreates a natural-looking areola and nipple — restoring a sense of wholeness and confidence.</p>
+        </div>
+        <div class="corr-gallery">
+          <div class="corr-pair fade-up">
+            <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
+              <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <div class="reveal-text">View Results</div>
+              <div class="reveal-note">Paramedical images — tap to view with discretion</div>
+            </div>
+            <img src="images/result-areola-restoration.jpeg" alt="Areola restoration — before (top) and after (bottom)" style="width:100%;display:block;" />
+            <div class="corr-caption">Before (top) · After (bottom) · Shown with client consent</div>
           </div>
-          <img src="images/result-areola-restoration.jpeg" alt="Areola restoration — before (top) and after (bottom)" style="width:100%;display:block;" />
-          <div class="corr-caption">Before (top) · After (bottom) · Shown with client consent</div>
         </div>
       </div>
-    </div>
 
-    <!-- Scar Camouflage -->
-    <div class="corr-panel" id="corr-camouflage">
-      <div class="corr-intro">
-        <h3>Scar <em>Camouflage</em></h3>
-        <p>Scar camouflage uses skin-toned pigments to blend scars — from surgery, injury or self-harm — into the surrounding skin. The technique works on healed, stable scars and is suitable for stretch marks, post-surgical lines and burn scars. Results are gradual and cumulative, building across sessions to create a significantly more even skin tone.</p>
-      </div>
-      <div class="corr-gallery">
-        <div class="corr-pair fade-up">
-          <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
-            <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-            <div class="reveal-text">View Results</div>
-            <div class="reveal-note">Clinical images — tap to view with discretion</div>
+      <!-- Scar Camouflage -->
+      <div class="corr-panel" id="corr-camouflage">
+        <div class="corr-intro">
+          <h3>Scar <em>Camouflage</em></h3>
+          <p>Skin-toned pigments blend scars — from surgery, injury or stretch marks — into the surrounding skin. Results are gradual and cumulative, building across sessions to create a significantly more even skin tone.</p>
+        </div>
+        <div class="corr-gallery">
+          <div class="corr-pair fade-up">
+            <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
+              <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <div class="reveal-text">View Results</div>
+              <div class="reveal-note">Clinical images — tap to view with discretion</div>
+            </div>
+            <img src="images/result-scar-camouflage.jpeg" alt="Scar camouflage — before (left) and after (right)" style="width:100%;display:block;" />
+            <div class="corr-caption">Before (left) · After (right) · Shown with client consent</div>
           </div>
-          <img src="images/result-scar-camouflage.jpeg" alt="Scar camouflage — before (left) and after (right)" style="width:100%;display:block;" />
-          <div class="corr-caption">Before (left) · After (right) · Shown with client consent</div>
+          <div class="corr-pair fade-up">
+            <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
+              <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <div class="reveal-text">View Results</div>
+              <div class="reveal-note">Clinical images — tap to view with discretion</div>
+            </div>
+            <img src="images/photo-output.jpeg" alt="Stretch mark camouflage — before (top) and after (bottom)" style="width:100%;display:block;" />
+            <div class="corr-caption">Before (top) · After (bottom) · Shown with client consent</div>
+          </div>
+          <div class="corr-pair fade-up">
+            <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
+              <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <div class="reveal-text">View Results</div>
+              <div class="reveal-note">Clinical images — tap to view with discretion</div>
+            </div>
+            <img src="images/IMG_4226.jpeg" alt="Stretch mark camouflage — before (left) and after (right)" style="width:100%;display:block;" />
+            <div class="corr-caption">Before (left) · After (right) · Shown with client consent</div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Scar Reduction -->
-    <div class="corr-panel" id="corr-reduction">
-      <div class="corr-intro">
-        <h3>Scar <em>Reduction</em></h3>
-        <p>Using advanced microneedling and clinical tattooing protocols, scar reduction breaks down scar tissue and stimulates collagen remodelling — improving texture, colour and the raised or indented profile of a scar. Suitable for hypertrophic scars, keloids (with assessment) and deep acne scarring. A consultation is always required before treatment begins.</p>
-      </div>
-      <div class="corr-gallery">
-        <div class="corr-pair fade-up">
-          <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
-            <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-            <div class="reveal-text">View Results</div>
-            <div class="reveal-note">Clinical images — tap to view with discretion</div>
+      <!-- Scar Reduction -->
+      <div class="corr-panel" id="corr-reduction">
+        <div class="corr-intro">
+          <h3>Scar <em>Reduction</em></h3>
+          <p>Advanced microneedling and clinical tattooing protocols break down scar tissue and stimulate collagen remodelling — improving texture, colour and the profile of a scar. Suitable for hypertrophic scars, keloids (with assessment) and deep acne scarring.</p>
+        </div>
+        <div class="corr-gallery">
+          <div class="corr-pair fade-up">
+            <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
+              <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <div class="reveal-text">View Results</div>
+              <div class="reveal-note">Clinical images — tap to view with discretion</div>
+            </div>
+            <img src="images/result-stretch-mark-restoration.jpeg" alt="Stretch mark restoration — before (top) and after (bottom)" style="width:100%;display:block;" />
+            <div class="corr-caption">Before (top) · After (bottom) · Shown with client consent</div>
           </div>
-          <img src="images/result-stretch-mark-restoration.jpeg" alt="Stretch mark restoration — before (top) and after (bottom)" style="width:100%;display:block;" />
-          <div class="corr-caption">Before (top) · After (bottom) · Shown with client consent</div>
         </div>
       </div>
-    </div>
 
-    <!-- CTA -->
-    <div class="corr-cta fade-up">
-      <h3 style="font-size:clamp(22px,3vw,34px);margin-bottom:12px;">All restorative treatments<br/>begin with a <em>consultation.</em></h3>
-      <p>Every case is unique. A consultation allows Tatiana to assess your skin, understand your goals and create a realistic treatment plan — with no obligation to proceed.</p>
-      <a class="pill-btn" href="#book" style="margin-top:0;">Book a Consultation</a>
+      <div class="corr-cta fade-up">
+        <h3 style="font-size:clamp(22px,3vw,34px);margin-bottom:12px;">Restorative treatments<br/>begin with a <em>consultation.</em></h3>
+        <p>A consultation allows Tatiana to assess your skin, understand your goals and create a realistic treatment plan — with no obligation to proceed.</p>
+        <a class="pill-btn" href="#book" style="margin-top:0;">Book a Consultation</a>
+      </div>
     </div>
   </section>
 
@@ -2433,7 +2483,18 @@
     });
   });
 
-  // Corrective section tabs
+  // Portfolio category tabs
+  document.querySelectorAll('.port-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const key = tab.dataset.port;
+      document.querySelectorAll('.port-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.port-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('port-' + key).classList.add('active');
+    });
+  });
+
+  // Corrective section tabs (nested inside portfolio)
   document.querySelectorAll('.corr-tab').forEach(tab => {
     tab.addEventListener('click', () => {
       const key = tab.dataset.corr;
