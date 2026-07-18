@@ -943,6 +943,28 @@
   .courses .takeaway { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.1); color: rgba(255,255,255,.75); }
   .courses .takeaway b { color: #fff; }
   .courses .num { color: rgba(255,255,255,.18); }
+  /* course cards sit on white — restore dark text */
+  .course .ctitle { color: var(--brown-deep) !important; }
+  .course .meta span { color: var(--taupe-deep) !important; }
+  .course .meta i { background: var(--taupe) !important; }
+  .course .price { color: var(--brown-deep) !important; }
+  .course .price sup { color: var(--taupe-deep) !important; }
+  .course .desc { color: var(--brown-soft) !important; }
+  .course-enquire {
+    display: inline-block;
+    margin: 14px 0 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--rose);
+    border: 1px solid var(--rose);
+    border-radius: 40px;
+    padding: 9px 22px;
+    text-decoration: none;
+    transition: background .2s ease, color .2s ease;
+  }
+  .course-enquire:hover { background: var(--rose); color: #fff; }
   .section-head { text-align: center; margin-bottom: 34px; }
   .section-head .eyebrow { display: inline-block; margin-bottom: 14px; }
   .section-head h2 { margin-bottom: 10px; }
@@ -2100,6 +2122,7 @@
           <span><span class="label-closed">View full curriculum · 12 modules</span><span class="label-open">Hide curriculum</span></span>
           <span class="arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 4l3 3 3-3"/></svg></span>
         </button>
+        <a class="course-enquire" href="mailto:beautybyladydi@gmail.com?subject=Course%20Enquiry%20%E2%80%94%20Powder%20Brows%20%26%20Hairstrokes">Enquire about this course →</a>
         <div class="course-body">
           <div class="course-body-inner">
             <div class="curriculum-eyebrow">What you will learn</div>
@@ -2136,6 +2159,7 @@
           <span><span class="label-closed">View full curriculum · 9 modules</span><span class="label-open">Hide curriculum</span></span>
           <span class="arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 4l3 3 3-3"/></svg></span>
         </button>
+        <a class="course-enquire" href="mailto:beautybyladydi@gmail.com?subject=Course%20Enquiry%20%E2%80%94%20Lip%20Blush">Enquire about this course →</a>
         <div class="course-body">
           <div class="course-body-inner">
             <div class="curriculum-eyebrow">What you will learn</div>
@@ -2169,6 +2193,7 @@
           <span><span class="label-closed">View full curriculum · 9 modules</span><span class="label-open">Hide curriculum</span></span>
           <span class="arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 4l3 3 3-3"/></svg></span>
         </button>
+        <a class="course-enquire" href="mailto:beautybyladydi@gmail.com?subject=Course%20Enquiry%20%E2%80%94%20Eyeliner">Enquire about this course →</a>
         <div class="course-body">
           <div class="course-body-inner">
             <div class="curriculum-eyebrow">What you will learn</div>
