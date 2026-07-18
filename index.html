@@ -393,16 +393,16 @@
     overflow: hidden;
     background: #0e0a08;
     padding: 20px 0;
-    cursor: pointer;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
   }
+  .training-strip.is-dragging { cursor: grabbing; }
   .training-track {
     display: flex;
     gap: 10px;
     width: max-content;
-    animation: scroll-photos 40s linear infinite;
-  }
-  .training-strip:hover .training-track {
-    animation-play-state: paused;
+    will-change: transform;
   }
   .training-track img {
     height: 220px;
@@ -410,16 +410,8 @@
     border-radius: 5px;
     object-fit: cover;
     flex-shrink: 0;
-    transition: transform .35s ease, brightness .35s ease;
+    pointer-events: none;
     display: block;
-  }
-  .training-track img:hover {
-    transform: scale(1.06);
-    filter: brightness(1.12);
-  }
-  @keyframes scroll-photos {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
   }
 
   /* trust strip */
@@ -1791,24 +1783,20 @@
     <div class="training-track">
       <img src="images/training-5.jpeg" alt="Tatiana at Clinita training" />
       <img src="images/IMG_5425-ea9a4924.png" alt="Tatiana at work" />
-      <img src="images/training-3.png" alt="Tatiana supervising areola restoration training" />
-      <img src="images/training-1.jpeg" alt="Clinical areola restoration training" />
+      <img src="images/training-3.png" alt="Tatiana supervising training" />
+      <img src="images/training-1.jpeg" alt="Clinical training" />
       <img src="images/training-4.png" alt="Clinita training with team" />
-      <img src="images/training-2.jpeg" alt="Areola restoration practice technique" />
+      <img src="images/training-2.jpeg" alt="Practice technique" />
       <img src="images/C1DC3794-F9D4-4E6C-BC61-C83175174687.png" alt="Lady D Studio" />
-      <img src="images/clinita-colour-range.jpeg" alt="Clinita colour range" />
-      <img src="images/clinita-pigmenti.jpeg" alt="Clinita pigments" />
       <img src="images/clinical-sterile.jpeg" alt="Clinical environment" />
       <!-- duplicate for seamless loop -->
       <img src="images/training-5.jpeg" alt="Tatiana at Clinita training" />
       <img src="images/IMG_5425-ea9a4924.png" alt="Tatiana at work" />
-      <img src="images/training-3.png" alt="Tatiana supervising areola restoration training" />
-      <img src="images/training-1.jpeg" alt="Clinical areola restoration training" />
+      <img src="images/training-3.png" alt="Tatiana supervising training" />
+      <img src="images/training-1.jpeg" alt="Clinical training" />
       <img src="images/training-4.png" alt="Clinita training with team" />
-      <img src="images/training-2.jpeg" alt="Areola restoration practice technique" />
+      <img src="images/training-2.jpeg" alt="Practice technique" />
       <img src="images/C1DC3794-F9D4-4E6C-BC61-C83175174687.png" alt="Lady D Studio" />
-      <img src="images/clinita-colour-range.jpeg" alt="Clinita colour range" />
-      <img src="images/clinita-pigmenti.jpeg" alt="Clinita pigments" />
       <img src="images/clinical-sterile.jpeg" alt="Clinical environment" />
     </div>
   </div>
@@ -2536,6 +2524,60 @@
       }
     });
   });
+
+  // Training photo strip — auto-scroll + drag/swipe
+  (function() {
+    const strip = document.querySelector('.training-strip');
+    const track = document.querySelector('.training-track');
+    if (!strip || !track) return;
+
+    let offset = 0;
+    let isDragging = false;
+    let startX = 0;
+    let startOffset = 0;
+    const speed = 0.6;
+
+    function halfWidth() { return track.scrollWidth / 2; }
+
+    function tick() {
+      if (!isDragging) {
+        offset += speed;
+        const hw = halfWidth();
+        if (offset >= hw) offset -= hw;
+        track.style.transform = 'translateX(' + (-offset) + 'px)';
+      }
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+
+    function dragStart(x) {
+      isDragging = true;
+      startX = x;
+      startOffset = offset;
+      strip.classList.add('is-dragging');
+    }
+    function dragMove(x) {
+      if (!isDragging) return;
+      let o = startOffset + (startX - x);
+      const hw = halfWidth();
+      if (o < 0) o += hw;
+      if (o >= hw) o -= hw;
+      offset = o;
+      track.style.transform = 'translateX(' + (-offset) + 'px)';
+    }
+    function dragEnd() {
+      isDragging = false;
+      strip.classList.remove('is-dragging');
+    }
+
+    strip.addEventListener('mousedown', e => dragStart(e.clientX));
+    window.addEventListener('mousemove', e => dragMove(e.clientX));
+    window.addEventListener('mouseup', dragEnd);
+
+    strip.addEventListener('touchstart', e => dragStart(e.touches[0].clientX), { passive: true });
+    strip.addEventListener('touchmove', e => dragMove(e.touches[0].clientX), { passive: true });
+    strip.addEventListener('touchend', dragEnd);
+  })();
 
   // Service category tabs
   document.querySelectorAll('.svc-tab').forEach(tab => {
