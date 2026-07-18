@@ -204,38 +204,53 @@
     );
   }
 
-  /* hero headline — centered logo */
+  /* hero headline left */
   .hero-headline {
     position: absolute;
-    left: 50%;
+    left: max(24px, 6vw);
     top: 50%;
-    transform: translate(-50%, -54%);
+    transform: translateY(-52%);
     z-index: 4;
-    text-align: center;
-    width: min(540px, 88vw);
+    max-width: 560px;
   }
-  .hero-logo-wrap {
-    background: rgba(255,255,255,.93);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 28px 36px;
-    margin-bottom: 28px;
-    box-shadow: 0 20px 60px rgba(0,0,0,.35);
-  }
-  .hero-logo-wrap img {
-    width: 100%;
-    height: auto;
+  .hero-headline .h-by {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(42px, 7vw, 96px);
+    color: rgba(255,255,255,.92);
+    line-height: .9;
+    letter-spacing: -.01em;
     display: block;
   }
+  .hero-headline .h-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: clamp(72px, 13vw, 168px);
+    color: var(--rose);
+    line-height: .82;
+    letter-spacing: -.02em;
+    display: block;
+  }
+  .hero-headline .h-studio {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(28px, 4.5vw, 60px);
+    color: rgba(255,255,255,.6);
+    line-height: 1;
+    letter-spacing: .04em;
+    display: block;
+    margin-top: 4px;
+  }
   .hero-headline .h-sub {
-    margin-top: 0;
+    margin-top: 22px;
     font-size: clamp(11px, 1.2vw, 14px);
-    color: rgba(255,255,255,.75);
+    color: rgba(255,255,255,.6);
     letter-spacing: .05em;
     line-height: 1.6;
-    max-width: 420px;
-    margin: 0 auto 24px;
+    max-width: 380px;
   }
   .hero-headline .h-cta {
     display: inline-flex;
@@ -257,8 +272,7 @@
   .hero-headline .h-cta svg { width: 14px; height: 14px; }
 
   /* hero floating annotation cards — right side */
-  .hero-annotations { display: none; }
-  .hero-annotations-hidden {
+  .hero-annotations {
     position: absolute;
     right: max(24px, 5vw);
     top: 50%;
@@ -1431,11 +1445,11 @@
 
     <div class="hero-img" role="img" aria-label="Tatiana performing PMU in studio"></div>
 
-    <!-- Centred logo headline -->
+    <!-- Left headline -->
     <div class="hero-headline">
-      <div class="hero-logo-wrap">
-        <img src="images/clinita-logo-full.png" alt="Clinita — Clinical Tattooing System" />
-      </div>
+      <span class="h-by">Beauty by</span>
+      <span class="h-name">Lady D</span>
+      <span class="h-studio">Studio</span>
       <p class="h-sub">Private PMU training &amp; treatments by a Clinita Italy certified Master Trainer — by appointment only.</p>
       <a class="h-cta" href="https://www.fresha.com/a/beauty-by-lady-d-studio-nicosia-vasilissis-freiderikis-18-xbmxdtkf" target="_blank" rel="noopener">
         Book via Fresha
