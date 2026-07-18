@@ -244,8 +244,21 @@
     display: block;
     margin-top: 4px;
   }
+  .hero-headline .h-cred {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 10px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--rose);
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    border-left: 2px solid var(--rose);
+    padding-left: 10px;
+    line-height: 1.5;
+  }
   .hero-headline .h-sub {
-    margin-top: 22px;
+    margin-top: 18px;
     font-size: clamp(11px, 1.2vw, 14px);
     color: rgba(255,255,255,.6);
     letter-spacing: .05em;
@@ -373,6 +386,62 @@
 
   .hero-tape {
     display: none;
+  }
+
+  /* trust strip */
+  .trust-strip {
+    background: #1A1A18;
+    padding: 20px max(22px, 6vw);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  .trust-inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .trust-logo {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: #fff;
+  }
+  .trust-divider {
+    width: 1px; height: 40px;
+    background: rgba(255,255,255,.15);
+    flex-shrink: 0;
+  }
+  .trust-items {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .trust-label {
+    font-size: 9px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.4);
+    font-family: 'Poppins', sans-serif;
+  }
+  .trust-value {
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.85);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+  }
+  @media (max-width: 600px) {
+    .trust-items { gap: 18px; }
+    .trust-item:last-child { display: none; }
   }
 
   /* philosophy */
@@ -1450,7 +1519,8 @@
       <span class="h-by">Beauty by</span>
       <span class="h-name">Lady D</span>
       <span class="h-studio">Studio</span>
-      <p class="h-sub">Private PMU training &amp; treatments by a Clinita Italy certified Master Trainer — by appointment only.</p>
+      <span class="h-cred">Cyprus's Official Clinita Italy Certified Master Trainer &amp; Distributor</span>
+      <p class="h-sub">Private PMU training &amp; treatments — by appointment only.</p>
       <a class="h-cta" href="https://www.fresha.com/a/beauty-by-lady-d-studio-nicosia-vasilissis-freiderikis-18-xbmxdtkf" target="_blank" rel="noopener">
         Book via Fresha
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M7 2l5 5-5 5"/></svg>
@@ -1494,6 +1564,28 @@
       </div>
     </div>
   </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="trust-inner">
+      <img src="images/clinita-logo-full.png" alt="Clinita Italy" class="trust-logo" />
+      <div class="trust-divider"></div>
+      <div class="trust-items">
+        <div class="trust-item">
+          <span class="trust-label">Officially Certified by</span>
+          <span class="trust-value">Clinita Italy</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-label">Only Master Trainer &amp; Distributor</span>
+          <span class="trust-value">in Cyprus</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-label">Clinical Tattooing System</span>
+          <span class="trust-value">REACH · MRI · CTL Certified</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- PHILOSOPHY -->
   <section class="philosophy">
@@ -1732,26 +1824,31 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="about-studio fade-up" style="padding:80px 24px;text-align:center;max-width:720px;margin:0 auto;">
-    <span class="eyebrow">— A Quiet Philosophy —</span>
-    <h2 style="margin-top:14px;margin-bottom:28px;">The studio behind <em>the work.</em></h2>
-    <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.85;color:var(--brown-deep);margin-bottom:20px;">Beauty by Lady D is the studio of Tatiana Protasova — Clinita Italy certified Master PMU &amp; Scar Restoration Trainer — the only Clinita-certified PMU &amp; Medical Tattoo trainer in Cyprus.</p>
-    <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.85;color:var(--brown-deep);margin-bottom:20px;">Specialising in Permanent Makeup and Medical Tattoo, Tatiana offers exclusively 1:1 private training built on the scientific protocols of Clinita Italy — the same protocols she applies daily in her professional studio.</p>
-    <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.85;color:var(--brown-deep);">Every course is fully personalised to the student. You leave with no gaps, no unanswered questions — ready to work from day one.</p>
+  <section class="about-studio fade-up" style="padding:80px max(24px,6vw);text-align:center;max-width:780px;margin:0 auto;">
+    <span class="eyebrow">— Credentials —</span>
+    <h2 style="margin-top:14px;margin-bottom:28px;">Why it matters who <em>trained you.</em></h2>
+    <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.85;color:var(--brown-deep);margin-bottom:20px;">Beauty by Lady D is the studio of Tatiana Protasova — Cyprus's only Official Clinita Italy Certified Master Trainer and Distributor. This means every treatment and every course taught here uses authentic Clinita products, protocols and certification — direct from the source in Italy.</p>
+    <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.85;color:var(--brown-deep);margin-bottom:20px;">When you train with Tatiana, you are training with the person Clinita Italy chose to represent their system in Cyprus — not a reseller, not a third-party affiliate. Your certification, your kit and your skills come from the top of the chain.</p>
+    <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.85;color:var(--brown-deep);margin-bottom:32px;">Every course is fully personalised, 1:1, using the same clinical protocols Tatiana applies daily in her professional studio. You leave ready to work from day one.</p>
+    <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+      <div style="background:var(--rose-soft);border:1px solid var(--rose);border-radius:8px;padding:12px 20px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--rose-deep);font-weight:500;">Official Clinita Italy Distributor</div>
+      <div style="background:var(--rose-soft);border:1px solid var(--rose);border-radius:8px;padding:12px 20px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--rose-deep);font-weight:500;">Certified Master Trainer</div>
+      <div style="background:var(--rose-soft);border:1px solid var(--rose);border-radius:8px;padding:12px 20px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--rose-deep);font-weight:500;">Only in Cyprus</div>
+    </div>
   </section>
 
   <!-- COURSES -->
   <section class="courses" id="courses">
     <div class="section-head">
       <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:18px;">
-        <img src="images/clinita-logo.jpeg" alt="Clinita Italy" style="width:64px;height:64px;border-radius:50%;object-fit:contain;background:#fff;border:1px solid var(--line-soft);padding:4px;" />
+        <img src="images/clinita-logo-full.png" alt="Clinita Italy" style="width:64px;height:64px;border-radius:50%;object-fit:cover;background:#fff;" />
         <div style="text-align:left;">
-          <div class="eyebrow">Clinita Italy Certified Master Trainer</div>
+          <div class="eyebrow" style="color:rgba(255,255,255,.5);">Official Clinita Italy Distributor</div>
         </div>
       </div>
-      <span class="eyebrow">— The Courses —</span>
-      <h2 style="margin-top:14px;">Three techniques.<br/>One <em>protocol.</em></h2>
-      <p>Each course pairs anatomy and pigment theory with supervised, hands-on work on a live model.</p>
+      <span class="eyebrow" style="color:rgba(255,255,255,.5);">— The Courses —</span>
+      <h2 style="margin-top:14px;">Train with Cyprus's only<br/>Official Clinita <em>Master Trainer.</em></h2>
+      <p style="color:rgba(255,255,255,.6);">All courses use authentic Clinita Italy products, protocols and certification — direct from the source. Your kit is genuine. Your certificate is real.</p>
     </div>
 
     <div class="course-list">
@@ -2044,9 +2141,14 @@
       <a href="mailto:beautybyladydi@gmail.com">beautybyladydi@gmail.com</a><br/>
       © 2026 — All rights reserved
     </div>
-    <div class="f-partner">
-      <div class="b"><img src="images/clinita-logo.jpeg" alt="" /></div>
-      Clinita Italy Certified Master Trainer
+    <div class="f-partner" style="flex-direction:column;gap:8px;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div class="b"><img src="images/clinita-logo-full.png" alt="" /></div>
+        <div style="text-align:left;">
+          <div style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.85);font-weight:500;">Official Clinita Italy Certified</div>
+          <div style="font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:2px;">Master Trainer &amp; Distributor · Cyprus</div>
+        </div>
+      </div>
     </div>
   </footer>
 
