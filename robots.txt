@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot-Image
+Disallow: /images/result-areola-restoration.jpeg
+Disallow: /images/result-scar-camouflage.jpeg
+Disallow: /images/photo-output.jpeg
+Disallow: /images/IMG_4226.jpeg
+Disallow: /images/result-stretch-mark-restoration.jpeg
+Disallow: /images/clinical-scar.png
+Disallow: /images/philosophy-clinical.png
+
 Sitemap: https://www.beautybyladydstudio.com/sitemap.xml
