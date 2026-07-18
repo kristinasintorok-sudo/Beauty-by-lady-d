@@ -391,9 +391,13 @@
 
   @media (max-width: 700px) {
     .hero-annotations { display: none; }
-    .hero-cards { grid-template-columns: 1fr; bottom: 18px; gap: 8px; }
-    .hero-card { padding: 12px 14px; }
-    .hero-card .card-title { font-size: 15px; }
+    .hero-cards { grid-template-columns: repeat(3, 1fr); bottom: 16px; gap: 6px; }
+    .hero-card { padding: 10px 10px; }
+    .hero-card .card-dot { margin-bottom: 6px; }
+    .hero-card .card-dot span { width: 4px; height: 4px; }
+    .hero-card .card-title { font-size: 13px; }
+    .hero-card .card-sub { font-size: 8px; letter-spacing: .08em; }
+    .hero-headline .h-cta { margin-top: 16px; padding: 11px 20px; }
   }
 
   .hero-tape {
