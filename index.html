@@ -13,32 +13,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --cream:       #101312;
-    --cream-deep:  #0c0f0d;
-    --cream-soft:  #181b19;
-    --paper:       #1e2220;
-    --taupe:       rgba(255,255,255,.38);
-    --taupe-deep:  rgba(255,255,255,.55);
-    --rose:        #FFC29E;
-    --rose-deep:   #1B4FC4;
-    --rose-soft:   rgba(255,194,158,.18);
-    --rose-tint:   rgba(27,79,196,.1);
-    --blue:        #4A90E8;
-    --blue-deep:   #0D2B6E;
-    --blue-soft:   rgba(74,144,232,.2);
-    --blue-tint:   rgba(74,144,232,.08);
-    --brown:       rgba(255,255,255,.75);
-    --brown-deep:  #ffffff;
-    --brown-soft:  rgba(255,255,255,.55);
-    --line:        rgba(255,255,255,.1);
-    --line-soft:   rgba(255,255,255,.07);
+    --cream:       #F4F4F1;
+    --cream-deep:  #EBEBЕ7;
+    --cream-soft:  #F9F9F6;
+    --paper:       #FFFFFF;
+    --taupe:       #9A9A96;
+    --taupe-deep:  #707070;
+    --rose:        #4A6B68;
+    --rose-deep:   #2E5250;
+    --rose-soft:   rgba(74,107,104,.14);
+    --rose-tint:   rgba(74,107,104,.08);
+    --blue:        #4A6B68;
+    --blue-deep:   #2A4A48;
+    --blue-soft:   rgba(74,107,104,.18);
+    --blue-tint:   rgba(74,107,104,.07);
+    --brown:       #3A3A38;
+    --brown-deep:  #1A1A18;
+    --brown-soft:  #6A6A68;
+    --line:        #D4D4D0;
+    --line-soft:   #E6E6E2;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    background: #101312;
-    color: rgba(255,255,255,.75);
+    background: #F4F4F1;
+    color: #3A3A38;
     font-family: 'Poppins', system-ui, sans-serif;
     font-weight: 300;
     font-size: 15px;
@@ -60,12 +60,12 @@
   }
 
   /* layout shell */
-  .wrap { width: 100%; margin: 0 auto; background: #101312; position: relative; }
+  .wrap { width: 100%; margin: 0 auto; background: #F4F4F1; position: relative; }
   section { padding: 56px max(22px, 6vw); }
   h1, h2, h3, h4 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
-    color: #ffffff;
+    color: #1A1A18;
     letter-spacing: .005em;
   }
   h2 { font-size: 34px; line-height: 1.05; text-wrap: balance; }
@@ -347,8 +347,8 @@
     padding: 64px max(22px, 6vw) 50px;
     position: relative;
     overflow: hidden;
-    border-top: 1px solid rgba(255,255,255,.07);
-    border-bottom: 1px solid rgba(255,255,255,.07);
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
   }
   .philosophy::before {
     content: "D";
@@ -430,7 +430,7 @@
   .phil-creds {
     margin-top: 36px;
     padding-top: 22px;
-    border-top: 1px solid rgba(255,255,255,.07);
+    border-top: 1px solid var(--line-soft);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -683,10 +683,13 @@
   /* why clinita */
   .why-clinita {
     padding: 72px max(22px, 6vw) 64px;
-    background: var(--blue-tint);
-    border-top: 1px solid var(--blue-soft);
-    border-bottom: 1px solid var(--blue-soft);
+    background: #4A6B68;
+    border-top: none;
+    border-bottom: none;
   }
+  .why-clinita h2, .why-clinita .eyebrow, .why-clinita p, .why-clinita .wc-badge, .why-clinita .wc-t, .why-clinita .wc-d { color: #fff !important; }
+  .why-clinita .wc-badge { background: rgba(255,255,255,.15) !important; border-color: rgba(255,255,255,.25) !important; }
+  .why-clinita .eyebrow { color: rgba(255,255,255,.7) !important; }
   .wc-inner {
     display: flex;
     flex-direction: column;
@@ -775,11 +778,20 @@
 
   /* courses */
   .courses {
-    background: var(--cream-soft);
+    background: #1A1A18;
     padding: 72px max(22px, 6vw) 56px;
-    border-top: 1px solid var(--line-soft);
-    border-bottom: 1px solid var(--line-soft);
+    border-top: none;
+    border-bottom: none;
   }
+  .courses h2, .courses h3, .courses .ctitle, .courses .eyebrow { color: #fff; }
+  .courses .desc, .courses .meta, .courses .price, .courses .curriculum-eyebrow, .courses .module .mt, .courses .module .md, .courses .takeaway { color: rgba(255,255,255,.7); }
+  .courses .price { color: #fff !important; }
+  .courses .course-toggle { color: rgba(255,255,255,.7); border-color: rgba(255,255,255,.12); }
+  .courses .course-toggle:hover { color: #fff; border-color: rgba(255,255,255,.3); }
+  .courses .module { border-color: rgba(255,255,255,.08); }
+  .courses .takeaway { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.1); color: rgba(255,255,255,.75); }
+  .courses .takeaway b { color: #fff; }
+  .courses .num { color: rgba(255,255,255,.18); }
   .section-head { text-align: center; margin-bottom: 34px; }
   .section-head .eyebrow { display: inline-block; margin-bottom: 14px; }
   .section-head h2 { margin-bottom: 10px; }
@@ -982,7 +994,7 @@
   }
 
   /* bundle */
-  .bundle-wrap { padding: 18px max(22px, 6vw) 64px; background: var(--cream-soft); }
+  .bundle-wrap { padding: 18px max(22px, 6vw) 64px; background: #1A1A18; }
   .bundle {
     background: linear-gradient(180deg, var(--cream-deep) 0%, #E9DDC8 100%);
     border: 1px solid var(--rose);
@@ -1152,7 +1164,7 @@
 
   /* booking */
   .booking {
-    background: var(--rose-tint);
+    background: #4A6B68;
     padding: 72px max(22px, 6vw) 76px;
     text-align: center;
     position: relative;
@@ -1169,9 +1181,10 @@
   .booking::before { top: -120px; left: -120px; }
   .booking::after { bottom: -140px; right: -140px; }
   .booking-inner { position: relative; z-index: 2; }
-  .booking h2 { font-size: 40px; margin: 14px 0 14px; }
-  .booking h2 em { color: var(--rose-deep); }
-  .booking p.lead { font-size: 13.5px; color: var(--brown-soft); max-width: 320px; margin: 0 auto 28px; }
+  .booking h2 { font-size: 40px; margin: 14px 0 14px; color: #fff !important; }
+  .booking h2 em { color: rgba(255,255,255,.75); }
+  .booking p.lead { font-size: 13.5px; color: rgba(255,255,255,.75); max-width: 320px; margin: 0 auto 28px; }
+  .booking .eyebrow { color: rgba(255,255,255,.65) !important; }
   .cta-stack { display: flex; flex-direction: column; gap: 12px; max-width: 320px; margin: 0 auto; }
   .btn-large {
     display: flex;
@@ -1204,11 +1217,15 @@
 
   /* footer */
   footer {
-    background: var(--cream);
+    background: #1A1A18;
     padding: 48px max(22px, 6vw) 36px;
     text-align: center;
-    border-top: 1px solid var(--line-soft);
+    border-top: none;
   }
+  footer, footer h2, footer h3, footer .f-wordmark { color: #fff !important; }
+  footer .f-loc, footer .f-address, footer .f-meta { color: rgba(255,255,255,.55) !important; }
+  footer .f-meta a { color: #4A6B68; }
+  footer .f-partner { border-top-color: rgba(255,255,255,.1) !important; color: rgba(255,255,255,.5); }
   footer .f-wordmark {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
