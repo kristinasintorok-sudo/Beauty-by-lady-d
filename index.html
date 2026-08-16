@@ -185,6 +185,19 @@
     .nav-pill .brand .dot, .nav-pill .clinita-badge { width: 62px; height: 62px; }
   }
 
+  /* landscape phone */
+  @media (max-height: 500px) and (orientation: landscape) {
+    .nav-pill .brand .dot, .nav-pill .clinita-badge { width: 46px; height: 46px; }
+    .nav-pill .brand { font-size: 14px; }
+    .hero-annotations { display: none; }
+    .hero-cards { display: none; }
+    .h-clinita-badge { display: none; }
+    .h-menu { display: none; }
+    .hero-headline { top: 54%; }
+    .hero-headline .h-sub { display: none; }
+    .hero-headline .h-cta { margin-top: 12px; }
+  }
+
   /* hero */
   .hero {
     position: relative;
