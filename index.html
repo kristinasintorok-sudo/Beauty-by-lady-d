@@ -299,28 +299,23 @@
   .h-clinita-badge img { width: 160px; height: auto; display: block; opacity: .85; }
   .h-menu {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 5px;
+    flex-wrap: wrap;
+    gap: 6px;
     margin-top: 18px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    max-width: 100%;
+    max-width: 420px;
   }
-  .h-menu::-webkit-scrollbar { display: none; }
   .h-menu a {
     font-family: 'Poppins', sans-serif;
-    font-size: 9px;
-    letter-spacing: .14em;
+    font-size: 9.5px;
+    letter-spacing: .18em;
     text-transform: uppercase;
     color: rgba(255,255,255,.75);
     border: 1px solid rgba(255,255,255,.2);
     border-radius: 999px;
-    padding: 6px 12px;
+    padding: 6px 14px;
     text-decoration: none;
     transition: background .2s, color .2s, border-color .2s;
     white-space: nowrap;
-    flex-shrink: 0;
   }
   .h-menu a:hover { background: rgba(255,255,255,.14); color: #fff; border-color: rgba(255,255,255,.4); }
 
