@@ -1571,6 +1571,78 @@
     padding-right: 34px;
   }
 
+  /* testimonials */
+  .testimonials {
+    padding: 80px max(24px, 6vw);
+    background: var(--cream-soft);
+    text-align: center;
+  }
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .testi-card {
+    background: #fff;
+    border: 1px solid var(--line-soft);
+    border-radius: 16px;
+    padding: 26px 24px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .testi-stars {
+    color: #C8873A;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  .testi-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--brown-deep);
+    line-height: 1.55;
+    flex: 1;
+  }
+  .testi-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+  }
+  .testi-avatar {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--rose-soft);
+    border: 1px solid var(--rose);
+    color: var(--rose-deep);
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  .testi-service {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--brown-deep);
+    letter-spacing: .04em;
+  }
+  .testi-date {
+    font-size: 10px;
+    color: var(--taupe);
+    letter-spacing: .06em;
+    margin-top: 2px;
+  }
+  @media (max-width: 600px) {
+    .testi-grid { grid-template-columns: 1fr; }
+  }
+
   /* booking */
   .booking {
     background: #4A6B68;
@@ -2588,6 +2660,63 @@
         <summary>How do I book a place?<span class="plus"></span></summary>
         <p>Send a WhatsApp message or call us directly. We'll arrange a short conversation to understand your goals before confirming dates and the deposit.</p>
       </details>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <span class="eyebrow" style="display:block;text-align:center;margin-bottom:14px;">— Client Reviews —</span>
+    <h2 style="text-align:center;margin-bottom:40px;">What clients <em>say.</em></h2>
+    <div class="testi-grid">
+
+      <div class="testi-card fade-up">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Amazing job — excellent service, for sure I will visit again."</p>
+        <div class="testi-meta">
+          <div class="testi-avatar">O</div>
+          <div>
+            <div class="testi-service">Brow Tint &amp; Shape</div>
+            <div class="testi-date">March 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card fade-up">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Very friendly and welcoming — excellent service. Absolutely worth a visit."</p>
+        <div class="testi-meta">
+          <div class="testi-avatar">E</div>
+          <div>
+            <div class="testi-service">Lash Lift</div>
+            <div class="testi-date">February 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card fade-up">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Perfect place for the best powder brows."</p>
+        <div class="testi-meta">
+          <div class="testi-avatar">K</div>
+          <div>
+            <div class="testi-service">Powder Brows</div>
+            <div class="testi-date">October 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card fade-up">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Happy with the results — would recommend and will be coming back."</p>
+        <div class="testi-meta">
+          <div class="testi-avatar">D</div>
+          <div>
+            <div class="testi-service">Lash Lift &amp; Brow Lamination</div>
+            <div class="testi-date">November 2025</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
