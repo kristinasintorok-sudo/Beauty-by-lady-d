@@ -1594,6 +1594,45 @@
   .booking h2 em { color: rgba(255,255,255,.75); }
   .booking p.lead { font-size: 13.5px; color: rgba(255,255,255,.75); max-width: 320px; margin: 0 auto 28px; }
   .booking .eyebrow { color: rgba(255,255,255,.65) !important; }
+  .booking-paths {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    max-width: 500px;
+    margin: 0 auto 28px;
+    text-align: left;
+  }
+  .booking-path {
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .booking-path .bp-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 9px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--rose);
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .booking-path .bp-desc {
+    font-size: 12px;
+    color: rgba(255,255,255,.65);
+    line-height: 1.55;
+  }
+  .booking-next {
+    font-size: 12px;
+    color: rgba(255,255,255,.5);
+    max-width: 380px;
+    margin: 24px auto 0;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  @media (max-width: 500px) {
+    .booking-paths { grid-template-columns: 1fr; }
+  }
   .cta-stack { display: flex; flex-direction: column; gap: 12px; max-width: 320px; margin: 0 auto; }
   .btn-large {
     display: flex;
@@ -2118,6 +2157,7 @@
 
     <!-- Scar & Skin -->
     <div class="svc-panel" id="svc-scars">
+      <p style="font-size:11px;letter-spacing:.08em;color:var(--rose);border-left:2px solid var(--rose);padding-left:10px;margin-bottom:18px;line-height:1.6;">All treatments in this category begin with a consultation. Tatiana will assess your skin and confirm suitability before any appointment is made.</p>
       <div class="svc-list">
         <div class="svc-row">
           <div class="svc-left"><div class="svc-name">Scar Reduction</div><div class="svc-dur">Consultation required · depending on size</div></div>
@@ -2556,7 +2596,17 @@
     <div class="booking-inner">
       <span class="eyebrow">— Book —</span>
       <h2>Every visit,<br/>by <em>appointment.</em></h2>
-      <p class="lead">Training or treatment — reach out on WhatsApp or call and we'll arrange everything privately.</p>
+
+      <div class="booking-paths">
+        <div class="booking-path">
+          <div class="bp-label">For treatments</div>
+          <div class="bp-desc">PMU, facials, nails and brow & lash services can be booked directly via Fresha.</div>
+        </div>
+        <div class="booking-path">
+          <div class="bp-label">For scar, areola &amp; courses</div>
+          <div class="bp-desc">Paramedical treatments and training enquiries start with a short WhatsApp conversation — a consultation is required before booking.</div>
+        </div>
+      </div>
 
       <div class="cta-stack">
         <a class="btn-large fresha" href="https://www.fresha.com/book-now/lady-d-beauty-kktncl4b/services?lid=1497967&amp;eid=3377563&amp;share=true&amp;pId=1422585" target="_blank" rel="noopener">
@@ -2580,6 +2630,8 @@
           <span>Call <span class="num">+357 94 009 509</span></span>
         </a>
       </div>
+
+      <p class="booking-next">After you get in touch, Tatiana will respond personally — usually within a few hours. For treatments, your appointment is confirmed once booked. For paramedical work and courses, she'll arrange a short conversation first to understand your goals and confirm suitability before any commitment.</p>
 
       <div class="hours">Mon — Sat · 10:00 – 19:00 · Nicosia</div>
       <a href="mailto:beautybyladydi@gmail.com" style="display:block;margin-top:12px;font-size:12px;letter-spacing:.06em;color:var(--taupe-deep);text-decoration:none;">beautybyladydi@gmail.com</a>
