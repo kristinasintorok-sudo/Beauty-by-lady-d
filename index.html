@@ -517,6 +517,11 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
   }
+  @media (max-width: 700px) {
+    .phil-grid { grid-template-columns: 1fr; }
+    .phil-img { display: none; }
+  }
+
   @media (max-width: 600px) {
     .trust-items { gap: 18px; }
     .trust-item:last-child { display: none; }
