@@ -517,11 +517,6 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
   }
-  @media (max-width: 700px) {
-    .phil-grid { grid-template-columns: 1fr; }
-    .phil-img { display: none; }
-  }
-
   @media (max-width: 600px) {
     .trust-items { gap: 18px; }
     .trust-item:last-child { display: none; }
@@ -591,6 +586,10 @@
     transition: background .2s ease, transform .2s ease;
   }
   .pill-btn:hover { background: var(--blue-deep); transform: translateY(-1px); }
+  @media (max-width: 700px) {
+    .phil-grid { grid-template-columns: 1fr !important; }
+    .phil-img { display: none !important; }
+  }
   .phil-img {
     aspect-ratio: 3/4;
     background: var(--cream) url('images/philosophy-clinical.png') center top / cover no-repeat;
