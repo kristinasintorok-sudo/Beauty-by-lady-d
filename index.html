@@ -1200,6 +1200,14 @@
   .course-includes li::before { content: '✓'; position: absolute; left: 0; color: var(--rose); font-size: 11px; font-weight: 600; }
   .course-payment { font-size: 11px; color: var(--taupe-deep); font-style: italic; line-height: 1.6; border-left: 2px solid var(--line); padding-left: 10px; margin-bottom: 20px; }
   .course-machine-note { font-size: 11px; color: var(--taupe-deep); font-style: italic; line-height: 1.6; border-left: 2px solid var(--rose); padding-left: 10px; margin: 0 0 14px; }
+  /* course before/after images */
+  .course-ba { margin: 0 0 18px; }
+  .course-ba-single img { width: 100%; border-radius: 8px; display: block; margin-bottom: 6px; }
+  .course-ba-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 6px; }
+  .course-ba-item { position: relative; }
+  .course-ba-item img { width: 100%; border-radius: 8px; display: block; aspect-ratio: 3/4; object-fit: cover; }
+  .course-ba-label { position: absolute; bottom: 6px; left: 6px; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; background: rgba(0,0,0,.52); color: #fff; padding: 3px 8px; border-radius: 4px; font-family: 'Poppins', sans-serif; }
+  .course-ba-cap { font-size: 10px; color: var(--taupe); font-style: italic; letter-spacing: .03em; line-height: 1.5; }
   .curriculum-eyebrow {
     display: flex;
     align-items: center;
@@ -2512,6 +2520,19 @@
         </div>
         <div class="course-extras">
           <span class="course-badge">Suitable for beginners · No prior experience required</span>
+          <div class="course-ba">
+            <div class="course-ba-pair">
+              <div class="course-ba-item">
+                <img src="images/result-scar-arm-before.jpg" alt="Scar — before" />
+                <span class="course-ba-label">Before</span>
+              </div>
+              <div class="course-ba-item">
+                <img src="images/result-scar-arm-after.jpg" alt="Scar — after" />
+                <span class="course-ba-label">After</span>
+              </div>
+            </div>
+            <div class="course-ba-cap">Client result — shown with consent. Treatment in progress.</div>
+          </div>
           <p class="course-machine-note">The Clinita I-FLY machine is required for this course and is included in the price. This ensures the correct protocol is followed for optimal and safe results.</p>
           <ul class="course-includes">
             <li>Full professional Clinita starter kit</li>
@@ -2536,6 +2557,12 @@
         </div>
         <div class="course-extras">
           <span class="course-badge">Suitable for beginners · No prior experience required</span>
+          <div class="course-ba">
+            <div class="course-ba-single">
+              <img src="images/result-acne-face-inkless.jpg" alt="Skin treatment result" />
+            </div>
+            <div class="course-ba-cap">Client result — shown with consent. Treatment in progress.</div>
+          </div>
           <p class="course-machine-note">The Clinita I-FLY machine is required for this course and is included in the price. This ensures the correct protocol is followed for optimal and safe results.</p>
           <ul class="course-includes">
             <li>Full professional Clinita starter kit</li>
@@ -2747,8 +2774,20 @@
               <div class="reveal-text">View Results</div>
               <div class="reveal-note">Clinical images — tap to view with discretion</div>
             </div>
-            <img src="images/result-scar-camouflage.jpeg" alt="Scar camouflage — before (left) and after (right)" style="width:100%;display:block;" />
+            <img src="images/result-scar-camouflage.jpeg" alt="Scar camouflage result" style="width:100%;display:block;" />
             <div class="corr-caption">Before (left) · After (right) · Shown with client consent</div>
+          </div>
+          <div class="corr-pair fade-up">
+            <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
+              <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <div class="reveal-text">View Results</div>
+              <div class="reveal-note">Clinical images — tap to view with discretion</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+              <img src="images/result-scar-arm-before.jpg" alt="Surgical scar — before" style="width:100%;display:block;border-radius:4px 0 0 4px;" />
+              <img src="images/result-scar-arm-after.jpg" alt="Surgical scar — after" style="width:100%;display:block;border-radius:0 4px 4px 0;" />
+            </div>
+            <div class="corr-caption">Scar restoration — before (left) · after (right) · Shown with client consent</div>
           </div>
         </div>
       </div>
@@ -2766,8 +2805,17 @@
               <div class="reveal-text">View Results</div>
               <div class="reveal-note">Clinical images — tap to view with discretion</div>
             </div>
-            <img src="images/result-stretch-mark-restoration.jpeg" alt="Stretch mark restoration — before (top) and after (bottom)" style="width:100%;display:block;" />
+            <img src="images/result-stretch-mark-restoration.jpeg" alt="Stretch mark restoration result" style="width:100%;display:block;" />
             <div class="corr-caption">Before (top) · After (bottom) · Shown with client consent</div>
+          </div>
+          <div class="corr-pair fade-up">
+            <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
+              <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <div class="reveal-text">View Results</div>
+              <div class="reveal-note">Clinical images — tap to view with discretion</div>
+            </div>
+            <img src="images/result-acne-face-inkless.jpg" alt="Acne scar treatment result" style="width:100%;display:block;" />
+            <div class="corr-caption">Acne scar reduction — before (left) · after (right) · Shown with client consent</div>
           </div>
         </div>
       </div>
