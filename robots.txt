@@ -14,5 +14,6 @@ Disallow: /images/result-scar-arm-before.jpg
 Disallow: /images/result-scar-arm-after.jpg
 Disallow: /images/treatment-scar-camouflage-session.jpg
 Disallow: /images/result-scar-face-inkless.png
+Disallow: /images/training-areola-session.jpg
 
 Sitemap: https://www.beautybyladydstudio.com/sitemap.xml
