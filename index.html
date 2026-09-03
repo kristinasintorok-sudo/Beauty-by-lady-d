@@ -1183,6 +1183,23 @@
   .course-body { max-height: 0; overflow: hidden; transition: max-height .5s ease; }
   .course.open .course-body { max-height: 2400px; }
   .course-body-inner { padding: 4px 0 26px; border-top: 1px dashed var(--line-soft); }
+
+  /* split pricing */
+  .course-price-split { grid-column: 1 / -1; margin-top: 16px; border: 1px solid var(--line-soft); border-radius: 10px; overflow: hidden; }
+  .cps-row { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 2px 12px; padding: 11px 14px; }
+  .cps-row + .cps-row { background: var(--cream-soft); border-top: 1px solid var(--line-soft); }
+  .cps-label { font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--taupe-deep); font-family: 'Poppins', sans-serif; font-weight: 500; }
+  .cps-price { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: var(--brown-deep); font-weight: 400; line-height: 1; }
+  .cps-desc { flex-basis: 100%; font-size: 10px; color: var(--taupe); margin-top: 1px; letter-spacing: .02em; line-height: 1.4; }
+
+  /* course extras block */
+  .course-extras { padding: 18px 0 6px; border-top: 1px solid var(--line-soft); margin-top: 0; }
+  .course-badge { display: inline-block; margin-bottom: 16px; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--rose); background: rgba(74,107,104,.07); border: 1px solid rgba(74,107,104,.18); border-radius: 999px; padding: 5px 12px; font-family: 'Poppins', sans-serif; }
+  .course-includes { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 5px; }
+  .course-includes li { font-size: 12px; color: var(--brown-soft); padding-left: 18px; position: relative; line-height: 1.5; }
+  .course-includes li::before { content: '✓'; position: absolute; left: 0; color: var(--rose); font-size: 11px; font-weight: 600; }
+  .course-payment { font-size: 11px; color: var(--taupe-deep); font-style: italic; line-height: 1.6; border-left: 2px solid var(--line); padding-left: 10px; margin-bottom: 20px; }
+  .course-machine-note { font-size: 11px; color: var(--taupe-deep); font-style: italic; line-height: 1.6; border-left: 2px solid var(--rose); padding-left: 10px; margin: 0 0 14px; }
   .curriculum-eyebrow {
     display: flex;
     align-items: center;
@@ -1942,7 +1959,7 @@
   "name": "Beauty by Lady D Studio",
   "description": "Private 1:1 PMU studio and Clinita Italy certified training academy in Nicosia, Cyprus. Specialising in powder brows, lip blush, eyeliner, scar camouflage, inkless needling and areola micropigmentation.",
   "url": "https://www.beautybyladydstudio.com",
-  "telephone": "+35794009509",
+  "telephone": ["+35794009509", "+35799567161"],
   "email": "beautybyladydi@gmail.com",
   "address": {
     "@type": "PostalAddress",
@@ -2387,8 +2404,30 @@
         <div class="course-head">
           <h3 class="ctitle">Powder Brows &amp; Hairstrokes</h3>
           <div class="meta"><span>4 Days</span><i></i><span>1:1 Private</span><i></i><span>Live Model</span></div>
-          <div class="price-enquire">Enquire<br>for pricing</div>
           <p class="desc">Master two of the most in-demand brow techniques.<br><br>Learn how to design, map and execute both powder shading and fine hairstroke work — combining the two approaches to create soft, dimensional and fully personalised brow results.<br><br>This intensive 1:1 training covers skin science, colour theory, machine technique and live-model practice, giving you the skills and confidence to offer professional brow services from day one.</p>
+          <div class="course-price-split">
+            <div class="cps-row">
+              <span class="cps-label">Full Package</span>
+              <span class="cps-price">€1,800</span>
+              <span class="cps-desc">Clinita I-FLY machine + full kit + certificate</span>
+            </div>
+            <div class="cps-row">
+              <span class="cps-label">Kit Only</span>
+              <span class="cps-price">€1,500</span>
+              <span class="cps-desc">Full kit + certificate · own machine required</span>
+            </div>
+          </div>
+        </div>
+        <div class="course-extras">
+          <span class="course-badge">Suitable for beginners · No prior experience required</span>
+          <ul class="course-includes">
+            <li>Full professional Clinita starter kit</li>
+            <li>Clinita Italy certificate — internationally recognised</li>
+            <li>Pre-course webinars from Clinita Italy</li>
+            <li>Post-training support &amp; lifetime mentorship</li>
+            <li>Clinita I-FLY machine included <em>(full package only)</em></li>
+          </ul>
+          <p class="course-payment">Payment plan available — deposit to secure your place, balance split across first and last day of training.</p>
         </div>
         <a class="course-enquire" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Powder%20Brows%20%26%20Hairstrokes%20course." target="_blank" rel="noopener">Enquire about this course →</a>
       </article>
@@ -2399,8 +2438,30 @@
         <div class="course-head">
           <h3 class="ctitle">Lip Blush</h3>
           <div class="meta"><span>3 Days</span><i></i><span>1:1 Private</span><i></i><span>Live Model</span></div>
-          <div class="price-enquire">Enquire<br>for pricing</div>
           <p class="desc">Master the art of Lip Blush.<br><br>Learn how to design, enhance and restore lips with a precise wash of colour — improving shape, symmetry and definition for natural-looking, long-lasting results.<br><br>This 1:1 private training combines colour theory, lip anatomy, machine technique and hands-on live-model practice, preparing you to confidently deliver one of the most requested PMU treatments.</p>
+          <div class="course-price-split">
+            <div class="cps-row">
+              <span class="cps-label">Full Package</span>
+              <span class="cps-price">€1,700</span>
+              <span class="cps-desc">Clinita I-FLY machine + full kit + certificate</span>
+            </div>
+            <div class="cps-row">
+              <span class="cps-label">Kit Only</span>
+              <span class="cps-price">€1,400</span>
+              <span class="cps-desc">Full kit + certificate · own machine required</span>
+            </div>
+          </div>
+        </div>
+        <div class="course-extras">
+          <span class="course-badge">Suitable for beginners · No prior experience required</span>
+          <ul class="course-includes">
+            <li>Full professional Clinita starter kit</li>
+            <li>Clinita Italy certificate — internationally recognised</li>
+            <li>Pre-course webinars from Clinita Italy</li>
+            <li>Post-training support &amp; lifetime mentorship</li>
+            <li>Clinita I-FLY machine included <em>(full package only)</em></li>
+          </ul>
+          <p class="course-payment">Payment plan available — deposit to secure your place, balance split across first and last day of training.</p>
         </div>
         <a class="course-enquire" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Lip%20Blush%20course." target="_blank" rel="noopener">Enquire about this course →</a>
       </article>
@@ -2410,9 +2471,31 @@
         <span class="num">iii.</span>
         <div class="course-head">
           <h3 class="ctitle">Eyeliner</h3>
-          <div class="meta"><span>3 Days</span><i></i><span>1:1 Private</span><i></i><span>Live Model</span></div>
-          <div class="price-enquire">Enquire<br>for pricing</div>
+          <div class="meta"><span>2 Days</span><i></i><span>1:1 Private</span><i></i><span>Live Model</span></div>
           <p class="desc">Master the art of Permanent Eyeliner.<br><br>Learn how to design and execute precise, flattering liner results — from subtle lash line enhancement to defined liner — tailored to each client's eye shape and anatomy.<br><br>Through 1:1 private training and live-model practice, you will develop the technical control and confidence to offer one of the most sought-after PMU services professionally and safely.</p>
+          <div class="course-price-split">
+            <div class="cps-row">
+              <span class="cps-label">Full Package</span>
+              <span class="cps-price">€1,700</span>
+              <span class="cps-desc">Clinita I-FLY machine + full kit + certificate</span>
+            </div>
+            <div class="cps-row">
+              <span class="cps-label">Kit Only</span>
+              <span class="cps-price">€1,300</span>
+              <span class="cps-desc">Full kit + certificate · own machine required</span>
+            </div>
+          </div>
+        </div>
+        <div class="course-extras">
+          <span class="course-badge">Suitable for beginners · No prior experience required</span>
+          <ul class="course-includes">
+            <li>Full professional Clinita starter kit</li>
+            <li>Clinita Italy certificate — internationally recognised</li>
+            <li>Pre-course webinars from Clinita Italy</li>
+            <li>Post-training support &amp; lifetime mentorship</li>
+            <li>Clinita I-FLY machine included <em>(full package only)</em></li>
+          </ul>
+          <p class="course-payment">Payment plan available — deposit to secure your place, balance split across first and last day of training.</p>
         </div>
         <a class="course-enquire" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Eyeliner%20course." target="_blank" rel="noopener">Enquire about this course →</a>
       </article>
@@ -2427,6 +2510,18 @@
           <div class="price-enquire">Enquire<br>for pricing</div>
           <p class="desc">Master the art of Scar Camouflage.<br><br>Learn how to assess suitable scars, understand colour theory and pigment selection, and create natural-looking camouflage results for surgical, traumatic and other suitable scars.<br><br>This intensive 1:1 training combines specialist theory with hands-on live-model practice, giving you the technical knowledge and confidence to add advanced paramedical pigmentation to your professional services.</p>
         </div>
+        <div class="course-extras">
+          <span class="course-badge">Suitable for beginners · No prior experience required</span>
+          <p class="course-machine-note">The Clinita I-FLY machine is required for this course and is included in the price. This ensures the correct protocol is followed for optimal and safe results.</p>
+          <ul class="course-includes">
+            <li>Full professional Clinita starter kit</li>
+            <li>Clinita Italy certificate — internationally recognised</li>
+            <li>Pre-course webinars from Clinita Italy</li>
+            <li>Post-training support &amp; lifetime mentorship</li>
+            <li>Clinita I-FLY machine included</li>
+          </ul>
+          <p class="course-payment">Payment plan available — deposit to secure your place, balance split across first and last day of training.</p>
+        </div>
         <a class="course-enquire" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Scar%20Camouflage%20course." target="_blank" rel="noopener">Enquire about this course →</a>
       </article>
 
@@ -2438,6 +2533,18 @@
           <div class="meta"><span>4 Days</span><i></i><span>1:1 Private</span><i></i><span>Live Model</span></div>
           <div class="price-enquire">Enquire<br>for pricing</div>
           <p class="desc">Learn an advanced non-pigment approach to skin restoration.<br><br>Master specialised inkless needling techniques designed to improve the appearance of suitable scars, stretch marks and uneven skin texture by working with the skin's natural regenerative response.<br><br>Through 1:1 private training and live-model practice, you will develop a deeper understanding of assessment, technique and aftercare — allowing you to confidently introduce this specialised treatment to your clients.</p>
+        </div>
+        <div class="course-extras">
+          <span class="course-badge">Suitable for beginners · No prior experience required</span>
+          <p class="course-machine-note">The Clinita I-FLY machine is required for this course and is included in the price. This ensures the correct protocol is followed for optimal and safe results.</p>
+          <ul class="course-includes">
+            <li>Full professional Clinita starter kit</li>
+            <li>Clinita Italy certificate — internationally recognised</li>
+            <li>Pre-course webinars from Clinita Italy</li>
+            <li>Post-training support &amp; lifetime mentorship</li>
+            <li>Clinita I-FLY machine included</li>
+          </ul>
+          <p class="course-payment">Payment plan available — deposit to secure your place, balance split across first and last day of training.</p>
         </div>
         <a class="course-enquire" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Inkless%20Needling%20course." target="_blank" rel="noopener">Enquire about this course →</a>
       </article>
@@ -2451,6 +2558,16 @@
           <div class="price-enquire">Enquire<br>for pricing</div>
           <p class="desc">Master the art of realistic Areola Micropigmentation.<br><br>Learn a highly specialised paramedical technique for creating natural-looking areola and nipple pigmentation for suitable clients following breast surgery, reconstruction or other changes to the breast area.<br><br>Your 1:1 private training combines colour theory, realistic design, symmetry, skin assessment and hands-on live-model practice to develop precision and confidence in this meaningful specialist treatment.</p>
         </div>
+        <div class="course-extras">
+          <span class="course-badge">Suitable for beginners · No prior experience required</span>
+          <ul class="course-includes">
+            <li>Full professional Clinita starter kit</li>
+            <li>Clinita Italy certificate — internationally recognised</li>
+            <li>Pre-course webinars from Clinita Italy</li>
+            <li>Post-training support &amp; lifetime mentorship</li>
+          </ul>
+          <p class="course-payment">Payment plan available — deposit to secure your place, balance split across first and last day of training.</p>
+        </div>
         <a class="course-enquire" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Areola%20Micropigmentation%20course." target="_blank" rel="noopener">Enquire about this course →</a>
       </article>
 
@@ -2462,15 +2579,16 @@
     <div class="bundle fade-up">
       <div class="bundle-inner">
         <div class="bundle-tag">Full Basic Bundle</div>
-        <div class="b-sub" style="margin-top:6px;">All three techniques · 5 Days total</div>
+        <div class="b-sub" style="margin-top:6px;">All three techniques · Powder Brows, Lip Blush &amp; Eyeliner</div>
         <div class="b-title">The Complete<br/><em>Artist</em><br/><span style="font-size:0.55em;font-style:normal;letter-spacing:.08em;color:var(--taupe-deep);font-weight:400;">PMU Basic Course</span></div>
-        <div class="b-price"><sup>€</sup>2,600</div>
-        <div class="b-save"><s>€4,300</s> Save €1,700</div>
+        <div class="b-price"><sup>€</sup>2,700 <span style="font-size:14px;font-family:'Poppins',sans-serif;letter-spacing:.08em;color:var(--taupe-deep);font-weight:400;">Full Package</span></div>
+        <div class="b-price" style="margin-top:6px;font-size:28px;"><sup style="font-size:14px;">€</sup>2,300 <span style="font-size:14px;font-family:'Poppins',sans-serif;letter-spacing:.08em;color:var(--taupe-deep);font-weight:400;">Kit Only</span></div>
+        <div class="b-save"><s>€5,200</s> Save €2,500</div>
         <ul class="b-list">
           <li>Powder Brows &amp; Hairstrokes</li>
           <li>Lip Blush technique</li>
           <li>Eyeliner technique</li>
-          <li>Certified Clinita PMU machine included</li>
+          <li>Certified Clinita I-FLY machine included <em style="font-style:normal;color:var(--taupe);font-size:0.9em;">(full package)</em></li>
           <li>Pigments, needles &amp; consumables included</li>
           <li>Lifetime mentorship</li>
         </ul>
@@ -2816,6 +2934,12 @@
           </svg>
           <span>Call <span class="num">+357 94 009 509</span></span>
         </a>
+        <a class="btn-large primary" href="tel:+35799567161">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/>
+          </svg>
+          <span>Call <span class="num">+357 99 567 161</span></span>
+        </a>
       </div>
 
       <p class="booking-next">After you get in touch, Tatiana will respond personally — usually within a few hours. For treatments, your appointment is confirmed once booked. For paramedical work and courses, she'll arrange a short conversation first to understand your goals and confirm suitability before any commitment.</p>
@@ -2834,6 +2958,7 @@
     <div class="f-meta">
       <a href="https://instagram.com/beautybylady_d_studio" target="_blank" rel="noopener">@beautybylady_d_studio</a><br/>
       <a href="mailto:beautybyladydi@gmail.com">beautybyladydi@gmail.com</a><br/>
+      <a href="tel:+35794009509">+357 94 009 509</a> &nbsp;·&nbsp; <a href="tel:+35799567161">+357 99 567 161</a><br/>
       © 2026 — All rights reserved
     </div>
     <div class="f-partner" style="flex-direction:column;gap:8px;">
