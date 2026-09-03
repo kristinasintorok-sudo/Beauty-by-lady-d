@@ -1024,7 +1024,7 @@
   .courses .num { color: rgba(255,255,255,.18); }
   /* course cards sit on white — restore dark text */
   .course .ctitle { color: var(--brown-deep) !important; }
-  /* pathway cards sit on cream — restore dark text */
+  /* pathway cards sit on cream — restore dark text (covers pw-l1 through pw-l4) */
   .pathway-card h3, .pathway-card .pw-title { color: var(--brown-deep) !important; }
   .pathway-card .pw-num { color: var(--taupe) !important; }
   .pathway-card .pw-sub { color: var(--taupe-deep) !important; }
@@ -1231,7 +1231,8 @@
   }
   .pw-l1 { background: #F7F3EE; color: var(--brown-deep); }
   .pw-l2 { background: #EDE3D5; color: var(--brown-deep); }
-  .pw-l3 { background: #E0D2C3; color: var(--brown-deep); }
+  .pw-l3 { background: #E3D4C2; color: var(--brown-deep); }
+  .pw-l4 { background: #D8C9B8; color: var(--brown-deep); }
   .pw-badge {
     display: inline-block;
     font-family: 'Poppins', sans-serif;
@@ -1378,17 +1379,19 @@
   .pathway-card + .pw-arrow { margin-top: 0; }
   .pw-arrow + .pathway-card { margin-top: 0; }
 
+  /* course "who is this for" block */
+  .course-who { font-size: 12.5px; color: var(--brown-soft); line-height: 1.7; border-left: 2px solid var(--rose); padding-left: 12px; margin-bottom: 20px; font-style: italic; }
+  /* course prerequisite warning */
+  .course-prereq { font-size: 11.5px; color: #7A4A20; background: #FDF3E8; border: 1px solid #E8C090; border-radius: 8px; padding: 10px 14px; line-height: 1.6; margin-bottom: 18px; }
+
   @media (min-width: 720px) {
     .pathway-grid {
       display: grid;
-      grid-template-columns: 1fr auto 1fr auto 1fr;
-      align-items: center;
-      gap: 0;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
     }
-    .pw-arrow { padding: 0 10px; }
-    /* desktop: show right arrow, hide down arrow */
-    .pw-arrow-h { display: block; }
-    .pw-arrow-v { display: none; }
+    /* hide arrows in 2-col grid — numbering shows progression */
+    .pw-arrow { display: none; }
   }
 
   .curriculum-eyebrow {
@@ -2609,10 +2612,10 @@
 
       <div class="pathway-grid">
 
-        <!-- Level 1 -->
+        <!-- Level 1A -->
         <div class="pathway-card pw-l1">
-          <span class="pw-badge pw-badge-rose">Start Here</span>
-          <div class="pw-num">Level 01</div>
+          <span class="pw-badge pw-badge-rose">Beginners Welcome</span>
+          <div class="pw-num">Level 1A · PMU Fundamentals</div>
           <h3 class="pw-title">Clinita Fundamentals</h3>
           <p class="pw-sub">The foundation of professional PMU</p>
           <p class="pw-body">Master the essentials of permanent makeup — machine technique, skin science, colour theory and live model practice. All courses follow the full Clinita clinical protocol. No previous experience needed.</p>
@@ -2623,22 +2626,35 @@
             <li><span class="pw-cname">Full Bundle (all three)</span><span class="pw-cdur">5 days</span></li>
           </ul>
           <div class="pw-tags">✓ No experience needed &nbsp;·&nbsp; ✓ Machine &amp; kit included &nbsp;·&nbsp; ✓ Clinita Italy certificate</div>
-          <a class="pw-cta pw-cta-rose" href="#foundation-courses">View Foundation Courses →</a>
+          <a class="pw-cta pw-cta-rose" href="#foundation-courses">View PMU Courses →</a>
         </div>
 
-        <!-- Arrow 1→2 -->
+        <!-- Level 1B -->
+        <div class="pathway-card pw-l2">
+          <span class="pw-badge pw-badge-rose">Beginners Welcome</span>
+          <div class="pw-num">Level 1B · Paramedical Entry</div>
+          <h3 class="pw-title">Paramedical Entry</h3>
+          <p class="pw-sub">Open to complete beginners and PMU artists alike</p>
+          <p class="pw-body">Our paramedical entry courses are open to everyone — no prior PMU or beauty experience needed. The 1:1 private format means training is fully adapted to your level, with comprehensive theory and synthetic practice before any live model work.</p>
+          <ul class="pw-courses">
+            <li><span class="pw-cname">Scar Camouflage</span><span class="pw-cdur">4 days</span></li>
+            <li><span class="pw-cname">Inkless Needling / Scar Restoration</span><span class="pw-cdur">4 days</span></li>
+          </ul>
+          <div class="pw-tags">✓ No experience needed &nbsp;·&nbsp; ✓ Machine &amp; kit included &nbsp;·&nbsp; ✓ Clinita Italy certificate</div>
+          <a class="pw-cta pw-cta-rose" href="#foundation-courses">View Paramedical Entry Courses →</a>
+        </div>
+
+        <!-- Arrow (mobile only) -->
         <div class="pw-arrow" aria-hidden="true">
-          <!-- desktop: right arrow; mobile: down arrow via CSS rotation -->
           <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path class="pw-arrow-h" d="M5 12h14M13 6l6 6-6 6"/>
-            <path class="pw-arrow-v" d="M12 5v14M6 13l6 6 6-6"/>
+            <path d="M12 5v14M6 13l6 6 6-6"/>
           </svg>
         </div>
 
         <!-- Level 2 -->
-        <div class="pathway-card pw-l2">
-          <span class="pw-badge pw-badge-brown">Next Step</span>
-          <div class="pw-num">Level 02</div>
+        <div class="pathway-card pw-l3">
+          <span class="pw-badge pw-badge-brown">Experience Required</span>
+          <div class="pw-num">Level 2 · Advanced PMU</div>
           <h3 class="pw-title">Advanced PMU</h3>
           <p class="pw-sub">For working PMU artists ready to go further</p>
           <p class="pw-body">Build on your PMU foundation with specialist techniques that expand your services and increase your earning potential. These courses are designed for artists who are already working on clients.</p>
@@ -2648,32 +2664,23 @@
             <li><span class="pw-cname">PMU Saline Removal</span><span class="pw-cdur">2 days</span></li>
             <li class="pw-cnote">PMU foundation required</li>
           </ul>
-          <div class="pw-tags">✓ Skills focused &nbsp;·&nbsp; ✓ No kit or machine needed &nbsp;·&nbsp; ✓ Enquire for pricing</div>
+          <div class="pw-tags">✓ PMU foundation required &nbsp;·&nbsp; ✓ No kit or machine needed &nbsp;·&nbsp; ✓ Enquire for pricing</div>
           <a class="pw-cta" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20Advanced%20PMU%20courses." target="_blank" rel="noopener">Enquire About Advanced Courses →</a>
         </div>
 
-        <!-- Arrow 2→3 -->
-        <div class="pw-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path class="pw-arrow-h" d="M5 12h14M13 6l6 6-6 6"/>
-            <path class="pw-arrow-v" d="M12 5v14M6 13l6 6 6-6"/>
-          </svg>
-        </div>
-
         <!-- Level 3 -->
-        <div class="pathway-card pw-l3">
-          <span class="pw-badge pw-badge-brown">Master Level</span>
-          <div class="pw-num">Level 03</div>
-          <h3 class="pw-title">Clinita Master Paramedical</h3>
-          <p class="pw-sub">The ultimate level of the Clinita training pathway</p>
-          <p class="pw-body">Paramedical tattooing is the highest point of the Clinita professional pathway. Working on scar tissue, stretch marks and post-surgical cases requires precision, clinical knowledge and a solid PMU foundation. These courses are for serious professionals ready to make a real difference to their clients' lives.</p>
+        <div class="pathway-card pw-l4">
+          <span class="pw-badge pw-badge-brown">Advanced</span>
+          <div class="pw-num">Level 3 · Paramedical Master</div>
+          <h3 class="pw-title">Paramedical Master</h3>
+          <p class="pw-sub">Scar Restoration experience required</p>
+          <p class="pw-body">Areola Micropigmentation is for practitioners who have already completed Scar Camouflage or Inkless Needling training. The techniques involved require familiarity with scar tissue and a solid grasp of paramedical protocols.</p>
           <ul class="pw-courses">
-            <li><span class="pw-cname">Scar Camouflage</span><span class="pw-cdur">4 days</span></li>
-            <li><span class="pw-cname">Inkless Needling / Scar Restoration</span><span class="pw-cdur">4 days</span></li>
             <li><span class="pw-cname">Areola Micropigmentation</span><span class="pw-cdur">4 days</span></li>
+            <li class="pw-cnote">Requires Scar Camouflage or Inkless Needling completion</li>
           </ul>
-          <div class="pw-tags">✓ PMU foundation required &nbsp;·&nbsp; ✓ Machine &amp; kit included &nbsp;·&nbsp; ✓ Clinita Italy certificate</div>
-          <a class="pw-cta" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20Paramedical%20courses." target="_blank" rel="noopener">Enquire About Paramedical Courses →</a>
+          <div class="pw-tags">✓ Scar restoration experience required &nbsp;·&nbsp; ✓ Machine &amp; kit included &nbsp;·&nbsp; ✓ Clinita Italy certificate</div>
+          <a class="pw-cta" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Areola%20Micropigmentation%20course." target="_blank" rel="noopener">Enquire About This Course →</a>
         </div>
 
       </div><!-- /.pathway-grid -->
@@ -2856,7 +2863,8 @@
           <div class="course-body-inner">
             <p class="desc">Master the art of Scar Camouflage.<br><br>Learn how to assess suitable scars, understand colour theory and pigment selection, and create natural-looking camouflage results for surgical, traumatic and other suitable scars.<br><br>This intensive 1:1 training combines specialist theory with hands-on live-model practice, giving you the technical knowledge and confidence to add advanced paramedical pigmentation to your professional services.</p>
             <div class="course-extras">
-              <span class="course-badge">Suitable for beginners · No prior experience required</span>
+              <span class="course-badge">Open to complete beginners · No prior experience required</span>
+              <p class="course-who">This course is open to everyone — whether you are completely new to the field or already working in PMU or beauty. Our 1:1 private format means the training is fully adapted to your level, with comprehensive theory and synthetic practice before any live model work. You will leave confident and ready to work.</p>
               <div class="course-ba">
                 <div class="course-ba-single">
                   <img src="images/treatment-scar-camouflage-session.jpg" alt="Scar camouflage treatment in progress" />
@@ -2865,6 +2873,8 @@
               </div>
               <p class="course-machine-note">The Clinita I-FLY machine is required for this course and is included in the price. This ensures the correct protocol is followed for optimal and safe results.</p>
               <ul class="course-includes">
+                <li>Open to complete beginners — no prior PMU or beauty experience required</li>
+                <li>Full theory and synthetic practice included before live model work</li>
                 <li>Full professional Clinita starter kit</li>
                 <li>Clinita Italy certificate — internationally recognised</li>
                 <li>Pre-course webinars from Clinita Italy</li>
@@ -2895,7 +2905,8 @@
           <div class="course-body-inner">
             <p class="desc">Learn an advanced non-pigment approach to skin restoration.<br><br>Master specialised inkless needling techniques designed to improve the appearance of suitable scars, stretch marks and uneven skin texture by working with the skin's natural regenerative response.<br><br>Through 1:1 private training and live-model practice, you will develop a deeper understanding of assessment, technique and aftercare — allowing you to confidently introduce this specialised treatment to your clients.</p>
             <div class="course-extras">
-              <span class="course-badge">Suitable for beginners · No prior experience required</span>
+              <span class="course-badge">Open to complete beginners · No prior experience required</span>
+              <p class="course-who">This course is open to everyone — whether you are completely new to the field or already working in PMU or beauty. Our 1:1 private format means the training is fully adapted to your level, with comprehensive theory and synthetic practice before any live model work. You will leave confident and ready to work.</p>
               <div class="course-ba">
                 <div class="course-ba-single">
                   <img src="images/result-acne-face-inkless.jpg" alt="Skin treatment result" />
@@ -2907,6 +2918,8 @@
               </div>
               <p class="course-machine-note">The Clinita I-FLY machine is required for this course and is included in the price. This ensures the correct protocol is followed for optimal and safe results.</p>
               <ul class="course-includes">
+                <li>Open to complete beginners — no prior PMU or beauty experience required</li>
+                <li>Full theory and synthetic practice included before live model work</li>
                 <li>Full professional Clinita starter kit</li>
                 <li>Clinita Italy certificate — internationally recognised</li>
                 <li>Pre-course webinars from Clinita Italy</li>
@@ -2937,7 +2950,9 @@
           <div class="course-body-inner">
             <p class="desc">Master the art of realistic Areola Micropigmentation.<br><br>Learn a highly specialised paramedical technique for creating natural-looking areola and nipple pigmentation for suitable clients following breast surgery, reconstruction or other changes to the breast area.<br><br>Your 1:1 private training combines colour theory, realistic design, symmetry, skin assessment and hands-on live-model practice to develop precision and confidence in this meaningful specialist treatment.</p>
             <div class="course-extras">
-              <span class="course-badge">PMU experience &amp; scar restoration experience required</span>
+              <span class="course-badge">Scar Camouflage or Inkless Needling required</span>
+              <p class="course-prereq">⚠ This course requires prior experience in Scar Camouflage or Inkless Needling. The techniques involved require familiarity with working on scar tissue and a solid understanding of paramedical protocols. It is not suitable for complete beginners.</p>
+              <p class="course-who">This course is designed for practitioners who have already completed Scar Camouflage or Inkless Needling training. It is the natural next step for those looking to extend their paramedical skills into one of the most meaningful specialist services available.</p>
               <div class="course-ba">
                 <div class="course-ba-single">
                   <img src="images/training-areola-session.jpg" alt="Areola micropigmentation training session" />
