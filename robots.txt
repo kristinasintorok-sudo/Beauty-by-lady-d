@@ -12,5 +12,6 @@ Disallow: /images/philosophy-clinical.png
 Disallow: /images/result-acne-face-inkless.jpg
 Disallow: /images/result-scar-arm-before.jpg
 Disallow: /images/result-scar-arm-after.jpg
+Disallow: /images/treatment-scar-camouflage-session.jpg
 
 Sitemap: https://www.beautybyladydstudio.com/sitemap.xml
