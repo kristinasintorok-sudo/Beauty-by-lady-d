@@ -986,6 +986,7 @@
   .port-tab.active { background: var(--rose); border-color: var(--rose); color: #fff; }
   .port-panel { display: none; }
   .port-panel.active { display: block; }
+  .port-panel-label { font-family: 'Poppins', sans-serif; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--taupe); text-align: center; margin-bottom: 14px; }
 
   /* portfolio photo grid */
   .portfolio-grid {
@@ -2429,7 +2430,7 @@
           <div class="svc-price"><sup>€</sup>100</div>
         </div>
         <div class="svc-row">
-          <div class="svc-left"><div class="svc-name">PMU Tattoo Removal</div><div class="svc-dur">1h · per session</div></div>
+          <div class="svc-left"><div class="svc-name">PMU Removal</div><div class="svc-dur">1h · saline, non-laser · per session</div></div>
           <div class="svc-price"><sup>€</sup>70</div>
         </div>
         <div class="svc-row">
@@ -2741,7 +2742,7 @@
                 <li>Post-training support &amp; lifetime mentorship</li>
                 <li>Clinita I-FLY machine included <em>(full package only)</em></li>
               </ul>
-              <p class="course-payment">Payment plan available — deposit to secure your place, balance split across first and last day of training.</p>
+              <p class="course-payment">Payment plan available — deposit to secure your place, balance due on the first day of training.</p>
             </div>
             <a class="course-enquire" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Powder%20Brows%20%26%20Hairstrokes%20course." target="_blank" rel="noopener">Enquire about this course →</a>
           </div>
@@ -2791,7 +2792,7 @@
                 <li>Post-training support &amp; lifetime mentorship</li>
                 <li>Clinita I-FLY machine included <em>(full package only)</em></li>
               </ul>
-              <p class="course-payment">Payment plan available — deposit to secure your place, balance split across first and last day of training.</p>
+              <p class="course-payment">Payment plan available — deposit to secure your place, balance due on the first day of training.</p>
             </div>
             <a class="course-enquire" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Lip%20Blush%20course." target="_blank" rel="noopener">Enquire about this course →</a>
           </div>
@@ -2841,7 +2842,7 @@
                 <li>Post-training support &amp; lifetime mentorship</li>
                 <li>Clinita I-FLY machine included <em>(full package only)</em></li>
               </ul>
-              <p class="course-payment">Payment plan available — deposit to secure your place, balance split across first and last day of training.</p>
+              <p class="course-payment">Payment plan available — deposit to secure your place, balance due on the first day of training.</p>
             </div>
             <a class="course-enquire" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Eyeliner%20course." target="_blank" rel="noopener">Enquire about this course →</a>
           </div>
@@ -2883,7 +2884,7 @@
                 <li>Post-training support &amp; lifetime mentorship</li>
                 <li>Clinita I-FLY machine included</li>
               </ul>
-              <p class="course-payment">Payment plan available — deposit to secure your place, balance split across first and last day of training.</p>
+              <p class="course-payment">Payment plan available — deposit to secure your place, balance due on the first day of training.</p>
             </div>
             <a class="course-enquire" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Scar%20Camouflage%20course." target="_blank" rel="noopener">Enquire about this course →</a>
           </div>
@@ -2928,7 +2929,7 @@
                 <li>Post-training support &amp; lifetime mentorship</li>
                 <li>Clinita I-FLY machine included</li>
               </ul>
-              <p class="course-payment">Payment plan available — deposit to secure your place, balance split across first and last day of training.</p>
+              <p class="course-payment">Payment plan available — deposit to secure your place, balance due on the first day of training.</p>
             </div>
             <a class="course-enquire" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Inkless%20Needling%20course." target="_blank" rel="noopener">Enquire about this course →</a>
           </div>
@@ -2967,7 +2968,7 @@
                 <li>Pre-course webinars from Clinita Italy</li>
                 <li>Post-training support &amp; lifetime mentorship</li>
               </ul>
-              <p class="course-payment">Payment plan available — deposit to secure your place, balance split across first and last day of training.</p>
+              <p class="course-payment">Payment plan available — deposit to secure your place, balance due on the first day of training.</p>
             </div>
             <a class="course-enquire" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Areola%20Micropigmentation%20course." target="_blank" rel="noopener">Enquire about this course →</a>
           </div>
@@ -3088,23 +3089,21 @@
 
     <!-- Category tabs -->
     <div class="port-tabs fade-up">
-      <button class="port-tab active" data-port="brows">Brows</button>
-      <button class="port-tab" data-port="lips">Lips</button>
-      <button class="port-tab" data-port="corrective">Corrective &amp; Restorative</button>
+      <button class="port-tab active" data-port="pmu">PMU</button>
+      <button class="port-tab" data-port="scar">Scar &amp; Stretch Mark</button>
+      <button class="port-tab" data-port="areola">Areola</button>
     </div>
 
-    <!-- Brows -->
-    <div class="port-panel active" id="port-brows">
+    <!-- PMU: Brows + Lips -->
+    <div class="port-panel active" id="port-pmu">
+      <p class="port-panel-label fade-up">Brows</p>
       <div class="portfolio-grid fade-up">
         <img src="images/IMG_4027.png" alt="Powder brows and hairstrokes PMU result by Lady D Studio Nicosia" loading="lazy" />
         <img src="images/brow-result-1.png" alt="Powder brows permanent makeup result — Beauty by Lady D, Nicosia Cyprus" loading="lazy" />
         <img src="images/brow-result-2.jpeg" alt="Powder brows permanent makeup before and after — Beauty by Lady D, Nicosia" loading="lazy" />
         <img src="images/brow-result-3.jpeg" alt="Hairstroke brows PMU result by Tatiana, Lady D Studio Nicosia" loading="lazy" />
       </div>
-    </div>
-
-    <!-- Lips -->
-    <div class="port-panel" id="port-lips">
+      <p class="port-panel-label fade-up" style="margin-top:28px;">Lips</p>
       <div class="portfolio-grid fade-up">
         <img src="images/AE15BF2F-9901-407C-8378-4E8CB7CEABD9.png" alt="Lip blush permanent makeup result by Lady D Studio Nicosia" loading="lazy" />
         <img src="images/lips-result-1.jpeg" alt="Lip blush PMU result — soft natural colour by Tatiana, Nicosia Cyprus" loading="lazy" />
@@ -3113,95 +3112,79 @@
       </div>
     </div>
 
-    <!-- Corrective & Restorative -->
-    <div class="port-panel" id="port-corrective">
+    <!-- Scar & Stretch Mark -->
+    <div class="port-panel" id="port-scar">
       <p class="fade-up" style="max-width:580px;margin:0 auto 32px;text-align:center;font-size:13px;color:var(--brown-soft);line-height:1.75;">Paramedical tattooing — distinct from cosmetic PMU. All images shown with explicit client consent. Results vary by individual. A consultation is required before treatment.</p>
-
-      <!-- Sub-category tabs -->
-      <div class="corr-tabs fade-up">
-        <button class="corr-tab active" data-corr="areola">Areola Restoration</button>
-        <button class="corr-tab" data-corr="camouflage">Scar Camouflage</button>
-        <button class="corr-tab" data-corr="reduction">Scar Reduction</button>
+      <div class="corr-intro">
+        <h3>Scar <em>Camouflage</em></h3>
+        <p>Skin-toned pigments blend scars — from surgery, injury or stretch marks — into the surrounding skin. Results are gradual and cumulative, building across sessions to create a significantly more even skin tone.</p>
       </div>
-
-      <!-- Areola Restoration -->
-      <div class="corr-panel active" id="corr-areola">
-        <div class="corr-intro">
-          <h3>Areola <em>Restoration</em></h3>
-          <p>Designed for clients who have undergone mastectomy, reconstructive breast surgery or other procedures affecting the areola. Tatiana recreates a natural-looking areola and nipple — restoring a sense of wholeness and confidence.</p>
-        </div>
-        <div class="corr-gallery">
-          <div class="corr-pair fade-up">
-            <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
-              <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-              <div class="reveal-text">View Results</div>
-              <div class="reveal-note">Paramedical images — tap to view with discretion</div>
-            </div>
-            <img src="images/result-areola-restoration.jpeg" alt="Areola restoration — before (top) and after (bottom)" style="width:100%;display:block;" />
-            <div class="corr-caption">Before (top) · After (bottom) · Shown with client consent</div>
+      <div class="corr-gallery">
+        <div class="corr-pair fade-up">
+          <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
+            <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div class="reveal-text">View Results</div>
+            <div class="reveal-note">Clinical images — tap to view with discretion</div>
           </div>
+          <img src="images/result-scar-camouflage.jpeg" alt="Scar camouflage result" style="width:100%;display:block;" />
+          <div class="corr-caption">Before (left) · After (right) · Shown with client consent</div>
         </div>
-      </div>
-
-      <!-- Scar Camouflage -->
-      <div class="corr-panel" id="corr-camouflage">
-        <div class="corr-intro">
-          <h3>Scar <em>Camouflage</em></h3>
-          <p>Skin-toned pigments blend scars — from surgery, injury or stretch marks — into the surrounding skin. Results are gradual and cumulative, building across sessions to create a significantly more even skin tone.</p>
+        <div class="corr-pair fade-up">
+          <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
+            <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div class="reveal-text">View Results</div>
+            <div class="reveal-note">Clinical images — tap to view with discretion</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+            <img src="images/result-scar-arm-before.jpg" alt="Surgical scar — before" style="width:100%;display:block;border-radius:4px 0 0 4px;" />
+            <img src="images/result-scar-arm-after.jpg" alt="Surgical scar — after" style="width:100%;display:block;border-radius:0 4px 4px 0;" />
+          </div>
+          <div class="corr-caption">Scar restoration — before (left) · after (right) · Shown with client consent</div>
         </div>
-        <div class="corr-gallery">
-          <div class="corr-pair fade-up">
-            <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
-              <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-              <div class="reveal-text">View Results</div>
-              <div class="reveal-note">Clinical images — tap to view with discretion</div>
-            </div>
-            <img src="images/result-scar-camouflage.jpeg" alt="Scar camouflage result" style="width:100%;display:block;" />
-            <div class="corr-caption">Before (left) · After (right) · Shown with client consent</div>
+        <div class="corr-pair fade-up">
+          <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
+            <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div class="reveal-text">View Results</div>
+            <div class="reveal-note">Clinical images — tap to view with discretion</div>
           </div>
-          <div class="corr-pair fade-up">
-            <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
-              <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-              <div class="reveal-text">View Results</div>
-              <div class="reveal-note">Clinical images — tap to view with discretion</div>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
-              <img src="images/result-scar-arm-before.jpg" alt="Surgical scar — before" style="width:100%;display:block;border-radius:4px 0 0 4px;" />
-              <img src="images/result-scar-arm-after.jpg" alt="Surgical scar — after" style="width:100%;display:block;border-radius:0 4px 4px 0;" />
-            </div>
-            <div class="corr-caption">Scar restoration — before (left) · after (right) · Shown with client consent</div>
+          <img src="images/result-stretch-mark-restoration.jpeg" alt="Stretch mark restoration result" style="width:100%;display:block;" />
+          <div class="corr-caption">Stretch mark restoration — before (top) · after (bottom) · Shown with client consent</div>
+        </div>
+        <div class="corr-pair fade-up">
+          <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
+            <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div class="reveal-text">View Results</div>
+            <div class="reveal-note">Clinical images — tap to view with discretion</div>
           </div>
+          <img src="images/result-acne-face-inkless.jpg" alt="Acne scar treatment result" style="width:100%;display:block;" />
+          <div class="corr-caption">Inkless needling — shown with client consent</div>
         </div>
       </div>
+      <div class="corr-cta fade-up">
+        <h3 style="font-size:clamp(22px,3vw,34px);margin-bottom:12px;">Restorative treatments<br/>begin with a <em>consultation.</em></h3>
+        <p>A consultation allows Tatiana to assess your skin, understand your goals and create a realistic treatment plan — with no obligation to proceed.</p>
+        <a class="pill-btn" href="#book" style="margin-top:0;">Book a Consultation</a>
+      </div>
+    </div>
 
-      <!-- Scar Reduction -->
-      <div class="corr-panel" id="corr-reduction">
-        <div class="corr-intro">
-          <h3>Scar <em>Reduction</em></h3>
-          <p>Advanced microneedling and clinical tattooing protocols break down scar tissue and stimulate collagen remodelling — improving texture, colour and the profile of a scar. Suitable for hypertrophic scars, keloids (with assessment) and deep acne scarring.</p>
-        </div>
-        <div class="corr-gallery">
-          <div class="corr-pair fade-up">
-            <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
-              <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-              <div class="reveal-text">View Results</div>
-              <div class="reveal-note">Clinical images — tap to view with discretion</div>
-            </div>
-            <img src="images/result-stretch-mark-restoration.jpeg" alt="Stretch mark restoration result" style="width:100%;display:block;" />
-            <div class="corr-caption">Before (top) · After (bottom) · Shown with client consent</div>
+    <!-- Areola -->
+    <div class="port-panel" id="port-areola">
+      <p class="fade-up" style="max-width:580px;margin:0 auto 32px;text-align:center;font-size:13px;color:var(--brown-soft);line-height:1.75;">Paramedical tattooing — distinct from cosmetic PMU. All images shown with explicit client consent. Results vary by individual. A consultation is required before treatment.</p>
+      <div class="corr-intro">
+        <h3>Areola <em>Restoration</em></h3>
+        <p>Designed for clients who have undergone mastectomy, reconstructive breast surgery or other procedures affecting the areola. Tatiana recreates a natural-looking areola and nipple — restoring a sense of wholeness and confidence.</p>
+      </div>
+      <div class="corr-gallery">
+        <div class="corr-pair fade-up">
+          <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
+            <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div class="reveal-text">View Results</div>
+            <div class="reveal-note">Paramedical images — tap to view with discretion</div>
           </div>
-          <div class="corr-pair fade-up">
-            <div class="corr-reveal-overlay" onclick="this.classList.add('hidden')">
-              <div class="reveal-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-              <div class="reveal-text">View Results</div>
-              <div class="reveal-note">Clinical images — tap to view with discretion</div>
-            </div>
-            <img src="images/result-acne-face-inkless.jpg" alt="Acne scar treatment result" style="width:100%;display:block;" />
-            <div class="corr-caption">Acne scar reduction — before (left) · after (right) · Shown with client consent</div>
-          </div>
+          <img src="images/result-areola-restoration.jpeg" alt="Areola restoration — before (top) and after (bottom)" style="width:100%;display:block;" />
+          <div class="corr-caption">Before (top) · After (bottom) · Shown with client consent</div>
         </div>
       </div>
-
       <div class="corr-cta fade-up">
         <h3 style="font-size:clamp(22px,3vw,34px);margin-bottom:12px;">Restorative treatments<br/>begin with a <em>consultation.</em></h3>
         <p>A consultation allows Tatiana to assess your skin, understand your goals and create a realistic treatment plan — with no obligation to proceed.</p>
