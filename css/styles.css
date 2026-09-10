@@ -2196,8 +2196,8 @@
 
   .cp-photo-grid { display:grid; grid-template-columns:1fr 1fr; gap:4px; margin-bottom:20px; }
   .cp-photo-grid.cols-3 { grid-template-columns:repeat(3,1fr); }
-  .cp-photo-grid img { width:100%; aspect-ratio:1/1; object-fit:cover; display:block; }
-  .cp-photo-grid.wide img { aspect-ratio:4/3; }
+  .cp-photo-grid img { width:100%; height:auto; display:block; }
+  .cp-photo-grid.wide img { width:100%; height:auto; }
   .cp-photo-cap { font-family:'Poppins',sans-serif; font-size:9px; letter-spacing:.12em; text-transform:uppercase; color:var(--taupe); margin-top:10px; }
 
   .cp-section.tinted { background:rgba(74,107,104,.06); }
