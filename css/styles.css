@@ -2139,15 +2139,15 @@
   .cp-body { background:var(--cream-soft); }
   .cp-section { padding:60px max(24px,6vw) 52px; border-bottom:1px solid var(--line-soft); max-width:860px; margin:0 auto; }
   .cp-section:last-child { border-bottom:none; }
-  .cp-section-label { font-family:'Poppins',sans-serif; font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:var(--taupe); margin-bottom:20px; }
-  .cp-section h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(26px,3.5vw,38px); font-weight:300; color:var(--brown-deep); line-height:1.1; margin-bottom:20px; }
-  .cp-section h2 em { font-style:italic; }
+  .cp-section-label { font-family:'Poppins',sans-serif; font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:var(--rose); font-weight:500; margin-bottom:20px; }
+  .cp-section h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(26px,3.5vw,38px); font-weight:400; color:var(--brown-deep); line-height:1.1; margin-bottom:20px; }
+  .cp-section h2 em { font-style:italic; color:var(--rose); }
   .cp-section p { font-size:14px; color:var(--brown-soft); line-height:1.8; margin-bottom:16px; }
 
   .cp-checklist { list-style:none; padding:0; margin:0 0 24px; display:flex; flex-direction:column; gap:8px; }
-  .cp-checklist li { font-size:13px; color:var(--brown-soft); padding-left:22px; position:relative; line-height:1.55; }
+  .cp-checklist li { font-size:13px; color:var(--brown-deep); padding-left:22px; position:relative; line-height:1.55; font-weight:300; }
   .cp-checklist li::before { content:'✓'; position:absolute; left:0; color:var(--rose); font-weight:600; font-size:12px; }
-  .cp-checklist.bold-checks li { color:var(--brown-deep); font-weight:400; }
+  .cp-checklist.bold-checks li { color:var(--brown-deep); font-weight:500; }
 
   .cp-price-block { background:#fff; border:1px solid var(--line-soft); border-radius:14px; padding:28px 24px; margin-bottom:20px; }
   .cp-price-row { display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--line-soft); gap:12px; }
@@ -2191,18 +2191,18 @@
   }
 
   /* ── Course page photo additions ── */
-  .cp-hero-img { width:100%; height:380px; object-fit:cover; display:block; }
-  @media(min-width:720px) { .cp-hero-img { height:500px; } }
+  .cp-hero-img { width:100%; height:220px; object-fit:cover; display:block; }
+  @media(min-width:720px) { .cp-hero-img { height:320px; } }
 
   .cp-photo-grid { display:grid; grid-template-columns:1fr 1fr; gap:4px; margin-bottom:20px; }
   .cp-photo-grid.cols-3 { grid-template-columns:repeat(3,1fr); }
-  .cp-photo-grid img { width:100%; aspect-ratio:4/5; object-fit:cover; display:block; }
-  .cp-photo-grid.wide img { aspect-ratio:3/2; }
+  .cp-photo-grid img { width:100%; aspect-ratio:1/1; object-fit:cover; display:block; }
+  .cp-photo-grid.wide img { aspect-ratio:4/3; }
   .cp-photo-cap { font-family:'Poppins',sans-serif; font-size:9px; letter-spacing:.12em; text-transform:uppercase; color:var(--taupe); margin-top:10px; }
 
   .cp-section.tinted { background:rgba(74,107,104,.06); }
   .cp-section.dark { background:var(--brown-deep); border-bottom-color:rgba(255,255,255,.06); }
-  .cp-section.dark .cp-section-label { color:rgba(255,255,255,.35); }
+  .cp-section.dark .cp-section-label { color:rgba(74,107,104,.7); }
   .cp-section.dark h2 { color:#fff; }
   .cp-section.dark p { color:rgba(255,255,255,.6); }
   .cp-section.dark .cp-checklist li { color:rgba(255,255,255,.75); }
