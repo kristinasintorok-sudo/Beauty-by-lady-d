@@ -2191,8 +2191,7 @@
   }
 
   /* ── Course page photo additions ── */
-  .cp-hero-img { width:auto; max-width:100%; max-height:280px; height:auto; display:block; margin:0 auto; }
-  @media(min-width:720px) { .cp-hero-img { max-height:400px; } }
+  .cp-photo-feature { width:100%; height:auto; display:block; margin-bottom:16px; }
 
   .cp-photo-grid { display:grid; grid-template-columns:1fr 1fr; gap:4px; margin-bottom:20px; }
   .cp-photo-grid.cols-3 { grid-template-columns:repeat(3,1fr); }
