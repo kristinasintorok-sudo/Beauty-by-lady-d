@@ -672,34 +672,83 @@
   </section>
 
   <!-- CLINITA PRODUCTS -->
-  <section class="clinita-products-band fade-up" style="padding:80px max(24px,6vw);background:var(--ink);color:var(--white);">
-    <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
-      <div>
-        <span class="eyebrow" style="color:rgba(255,255,255,.5);">— Clinita Italy · Cyprus —</span>
-        <h2 style="margin-top:14px;color:var(--white);">Professional products,<br><em>available here.</em></h2>
-        <p style="font-size:14px;line-height:1.8;color:rgba(255,255,255,.65);margin-top:18px;">Beauty by Lady D is the only Official Clinita Italy Distributor in Cyprus. PMU artists and beauty professionals can source genuine Clinita pigments, machines, consumables and skincare directly — with personal support from a certified Clinita master trainer.</p>
-        <a href="/clinita.html" style="display:inline-block;margin-top:28px;padding:13px 28px;background:var(--white);color:var(--ink);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-family:'Poppins',sans-serif;font-weight:500;text-decoration:none;border-radius:40px;">Explore Clinita Products</a>
+  <section class="clinita-products-band fade-up">
+    <style>
+      .clinita-products-band {
+        padding: 80px max(24px,6vw);
+        background: #1A1A18;
+        color: #ffffff;
+      }
+      .clinita-products-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+      }
+      .clinita-products-text .eyebrow { color: rgba(255,255,255,.45); }
+      .clinita-products-text h2 { margin-top: 14px; color: #ffffff; }
+      .clinita-products-text p { font-size: 14px; line-height: 1.8; color: rgba(255,255,255,.65); margin-top: 18px; }
+      .clinita-products-text a {
+        display: inline-block;
+        margin-top: 28px;
+        padding: 13px 28px;
+        background: #ffffff;
+        color: #1A1A18;
+        font-size: 11px;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: 40px;
+      }
+      .clinita-products-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .clinita-prod-card {
+        background: rgba(255,255,255,.06);
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 10px;
+        padding: 20px 18px;
+      }
+      .clinita-prod-card .cp-icon { font-size: 18px; margin-bottom: 8px; }
+      .clinita-prod-card .cp-name { font-size: 12px; font-weight: 500; letter-spacing: .06em; color: rgba(255,255,255,.9); margin-bottom: 4px; }
+      .clinita-prod-card .cp-desc { font-size: 11px; color: rgba(255,255,255,.45); line-height: 1.55; }
+      @media (max-width: 640px) {
+        .clinita-products-inner { grid-template-columns: 1fr; gap: 32px; }
+      }
+    </style>
+    <div class="clinita-products-inner">
+      <div class="clinita-products-text">
+        <span class="eyebrow">— Clinita Italy · Cyprus —</span>
+        <h2>Professional products,<br><em>available here.</em></h2>
+        <p>Beauty by Lady D is the only Official Clinita Italy Distributor in Cyprus. PMU artists and beauty professionals can source genuine Clinita pigments, machines, consumables and skincare directly — with personal support from a certified Clinita master trainer.</p>
+        <a href="/clinita.html">Explore Clinita Products</a>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px 18px;">
-          <div style="font-size:18px;margin-bottom:8px;">🎨</div>
-          <div style="font-size:12px;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.9);margin-bottom:4px;">Pigments</div>
-          <div style="font-size:11px;color:rgba(255,255,255,.45);line-height:1.55;">Full Clinita Italy colour range</div>
+      <div class="clinita-products-grid">
+        <div class="clinita-prod-card">
+          <div class="cp-icon">🎨</div>
+          <div class="cp-name">Pigments</div>
+          <div class="cp-desc">Full Clinita Italy colour range</div>
         </div>
-        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px 18px;">
-          <div style="font-size:18px;margin-bottom:8px;">⚙️</div>
-          <div style="font-size:12px;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.9);margin-bottom:4px;">Machines</div>
-          <div style="font-size:11px;color:rgba(255,255,255,.45);line-height:1.55;">Clinita I-FLY &amp; accessories</div>
+        <div class="clinita-prod-card">
+          <div class="cp-icon">⚙️</div>
+          <div class="cp-name">Machines</div>
+          <div class="cp-desc">Clinita I-FLY &amp; accessories</div>
         </div>
-        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px 18px;">
-          <div style="font-size:18px;margin-bottom:8px;">🧴</div>
-          <div style="font-size:12px;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.9);margin-bottom:4px;">Clinita Care</div>
-          <div style="font-size:11px;color:rgba(255,255,255,.45);line-height:1.55;">Skincare &amp; aftercare range</div>
+        <div class="clinita-prod-card">
+          <div class="cp-icon">🧴</div>
+          <div class="cp-name">Clinita Care</div>
+          <div class="cp-desc">Skincare &amp; aftercare range</div>
         </div>
-        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px 18px;">
-          <div style="font-size:18px;margin-bottom:8px;">📦</div>
-          <div style="font-size:12px;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.9);margin-bottom:4px;">Consumables</div>
-          <div style="font-size:11px;color:rgba(255,255,255,.45);line-height:1.55;">Kits &amp; studio supplies</div>
+        <div class="clinita-prod-card">
+          <div class="cp-icon">📦</div>
+          <div class="cp-name">Consumables</div>
+          <div class="cp-desc">Kits &amp; studio supplies</div>
         </div>
       </div>
     </div>
