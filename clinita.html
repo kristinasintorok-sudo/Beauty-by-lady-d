@@ -122,6 +122,135 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
   }
+  /* AbracAdabra Pigment Collection */
+  .aa-safety-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 16px 0 0;
+  }
+  .aa-safety-pill {
+    font-size: 9px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--rose);
+    border: 1px solid rgba(74,107,104,.3);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-family: 'Poppins', sans-serif;
+  }
+  .aa-tabs {
+    display: flex;
+    gap: 6px;
+    margin: 28px 0 20px;
+  }
+  .aa-tab {
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 8px 22px;
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--taupe-deep);
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background .15s, color .15s, border-color .15s;
+  }
+  .aa-tab.active {
+    background: var(--rose);
+    border-color: var(--rose);
+    color: #fff;
+  }
+  .aa-panel { display: none; }
+  .aa-panel.active { display: block; }
+  .aa-cat-intro {
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--taupe-deep);
+    margin-bottom: 24px;
+    max-width: 620px;
+  }
+  .aa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(188px, 1fr));
+    gap: 14px;
+  }
+  .aa-shade {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .aa-swatch {
+    height: 52px;
+    width: 100%;
+    display: block;
+  }
+  .aa-shade-body {
+    padding: 11px 13px 13px;
+  }
+  .aa-shade-code {
+    font-size: 10px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--taupe-deep);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1px;
+  }
+  .aa-shade-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ink);
+    font-style: italic;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .aa-shade-meta {
+    font-size: 9px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--taupe-deep);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 7px;
+    opacity: .65;
+  }
+  .aa-shade-desc {
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--taupe-deep);
+  }
+  .aa-enquire {
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+  }
+  .aa-enquire > p {
+    font-size: 13px;
+    color: var(--taupe-deep);
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+  .aa-shade { background: var(--white, #fff); }
+  .aa-bottle-img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    object-position: center bottom;
+    background: #fff;
+    padding: 12px 20px 6px;
+  }
+  .aa-swatch-fallback {
+    display: block;
+    height: 180px;
+  }
+  @media (max-width: 600px) {
+    .aa-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .aa-shade-name { font-size: 15px; }
+    .aa-bottle-img { height: 140px; padding: 8px 12px 4px; }
+    .aa-swatch-fallback { height: 140px; }
+  }
 </style>
 </head>
 <body>
@@ -217,6 +346,205 @@
         </div>
       </section>
 
+      <!-- AbracAdabra Pigment Collection -->
+      <section class="cp-section fade-up">
+        <div class="cp-section-label">Pigments</div>
+        <h2>AbracAdabra <em>Collection</em></h2>
+        <p>A unique synergy of inorganic pigments, organic pigments and specialised carriers — engineered for long-lasting stability in the skin, outstanding colour retention and natural healed results. Available exclusively through Clinita Cyprus.</p>
+        <div class="aa-safety-pills">
+          <span class="aa-safety-pill">EU REACH Compliant</span>
+          <span class="aa-safety-pill">MOCRA Compliant</span>
+          <span class="aa-safety-pill">Cruelty Free</span>
+          <span class="aa-safety-pill">Vegan Friendly</span>
+          <span class="aa-safety-pill">Hypoallergenic</span>
+        </div>
+        <div class="aa-tabs" role="tablist">
+          <button class="aa-tab active" role="tab" aria-selected="true" onclick="aaSwitch('brows',this)">Eyebrows</button>
+          <button class="aa-tab" role="tab" aria-selected="false" onclick="aaSwitch('skin',this)">Skin / Areola</button>
+        </div>
+
+        <!-- Eyebrow panel -->
+        <div class="aa-panel active" id="aa-brows" role="tabpanel">
+          <p class="aa-cat-intro">Perfect tones, shades and lines with outstanding writing capacity. Hybrid pigments formulated for all eyebrow techniques including hair strokes, ombré and combination brows.</p>
+          <div class="aa-grid">
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-AA200.jpg" alt="AbracAdabra AA200 Mystery pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">AA200</div>
+                <div class="aa-shade-name">Mystery</div>
+                <div class="aa-shade-meta">Hybrid · V 9 · T −1</div>
+                <div class="aa-shade-desc">Rich, deep ebony. Fitzpatrick 4–6 for brows; adds depth to any brown mix. Also suitable for eyeliner.</div>
+              </div>
+            </div>
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-AA201.jpg" alt="AbracAdabra AA201 Allure pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">AA201</div>
+                <div class="aa-shade-name">Allure</div>
+                <div class="aa-shade-meta">Hybrid · V 9/8 · T −1</div>
+                <div class="aa-shade-desc">Elegant slate brown, dark coffee. Fitzpatrick 3–6. Also suitable for eyeliner with a cool-neutral tone.</div>
+              </div>
+            </div>
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-AA216.jpg" alt="AbracAdabra AA216 Cosmos pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">AA216</div>
+                <div class="aa-shade-name">Cosmos</div>
+                <div class="aa-shade-meta">Hybrid · V 9/8 · T −1</div>
+                <div class="aa-shade-desc">Chocolate brown for all eyebrow techniques. Emphasises 3D hair-stroke effects. Fitzpatrick 2–5.</div>
+              </div>
+            </div>
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-AA215.jpg" alt="AbracAdabra AA215 Mystical pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">AA215</div>
+                <div class="aa-shade-name">Mystical</div>
+                <div class="aa-shade-meta">Hybrid · V 6/7 · T 0</div>
+                <div class="aa-shade-desc">Soft balanced brown, ideal for blondes. Fitzpatrick 1–4. Highly versatile for adjusting value in any mix.</div>
+              </div>
+            </div>
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-AA213.jpg" alt="AbracAdabra AA213 Mirra pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">AA213</div>
+                <div class="aa-shade-name">Mirra</div>
+                <div class="aa-shade-meta">Hybrid · V 7/8 · T −1/0</div>
+                <div class="aa-shade-desc">Elegant golden brown. Fitzpatrick 1–3. Soft in shading; rich for hyper-realistic hair-stroke work.</div>
+              </div>
+            </div>
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-AA212.jpg" alt="AbracAdabra AA212 Incense pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">AA212</div>
+                <div class="aa-shade-name">Incense</div>
+                <div class="aa-shade-meta">Hybrid · V 7 · T 0/1</div>
+                <div class="aa-shade-desc">Refined sepia for natural-looking brows. Fitzpatrick 2–3. Heals into soft, neutral tones.</div>
+              </div>
+            </div>
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-AA214.jpg" alt="AbracAdabra AA214 Starlight pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">AA214</div>
+                <div class="aa-shade-name">Starlight</div>
+                <div class="aa-shade-meta">Hybrid · V 7/8 · T −1</div>
+                <div class="aa-shade-desc">Amber honey shade. Fitzpatrick 1–3. Excellent for warm and golden undertones. Also ideal for hazelnut-toned areolas.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skin / Areola panel -->
+        <div class="aa-panel" id="aa-skin" role="tabpanel">
+          <p class="aa-cat-intro">From 30 years of experience in areola reconstruction and paramedical applications. Pharmaceutical-grade hybrid pigments for camouflage, areola complex and lip work.</p>
+          <div class="aa-grid">
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-MED0.jpg" alt="AbracAdabra MED0 White pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">MED0</div>
+                <div class="aa-shade-name">White</div>
+                <div class="aa-shade-meta">Inorganic · V 0 · T 0</div>
+                <div class="aa-shade-desc">Unsaturates and creates sophisticated nuances when added to any colour.</div>
+              </div>
+            </div>
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-MED1.jpg" alt="AbracAdabra MED1 Sand pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">MED1</div>
+                <div class="aa-shade-name">Sand</div>
+                <div class="aa-shade-meta">Hybrid · V 3 · T 1</div>
+                <div class="aa-shade-desc">Cool-based (green). For mixing skin tones and camouflage. Neutralises red, pink and violet hues.</div>
+              </div>
+            </div>
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-MED2.jpg" alt="AbracAdabra MED2 Hazel pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">MED2</div>
+                <div class="aa-shade-name">Hazel</div>
+                <div class="aa-shade-meta">Hybrid · V 3 · T 1</div>
+                <div class="aa-shade-desc">Camouflage, nipple-areola complex, or to lighten and brighten skin tones. Golden base that stays stable.</div>
+              </div>
+            </div>
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-MED3.jpg" alt="AbracAdabra MED3 Jicama pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">MED3</div>
+                <div class="aa-shade-name">Jicama</div>
+                <div class="aa-shade-meta">Hybrid · V 4 · T 2</div>
+                <div class="aa-shade-desc">Very natural skin tone. Recommended for camouflage blends, areolas and lip reconstructions.</div>
+              </div>
+            </div>
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-MED4.jpg" alt="AbracAdabra MED4 Peanut pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">MED4</div>
+                <div class="aa-shade-name">Peanut</div>
+                <div class="aa-shade-meta">Hybrid · V 4/5 · T 2</div>
+                <div class="aa-shade-desc">Amber skin tones and light areolas in medium rosy-brown shades.</div>
+              </div>
+            </div>
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-MED5.jpg" alt="AbracAdabra MED5 Almond pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">MED5</div>
+                <div class="aa-shade-name">Almond</div>
+                <div class="aa-shade-meta">Hybrid · V 3 · T 0</div>
+                <div class="aa-shade-desc">Extremely versatile neutral beige. Base for nipple-areola complex. Softens bright lip tones while cooling them slightly.</div>
+              </div>
+            </div>
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-MED6.jpg" alt="AbracAdabra MED6 Pink Powder pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">MED6</div>
+                <div class="aa-shade-name">Pink Powder</div>
+                <div class="aa-shade-meta">Hybrid · V 3/4 · T −1</div>
+                <div class="aa-shade-desc">Neutral pink, no warm undertones. Excellent base mix for areolas combined with Shitake. Unsaturates lip colours.</div>
+              </div>
+            </div>
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-MED7.jpg" alt="AbracAdabra MED7 Toffee pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">MED7</div>
+                <div class="aa-shade-name">Toffee</div>
+                <div class="aa-shade-meta">Hybrid · V 6/7 · T 1</div>
+                <div class="aa-shade-desc">Medium areolas. Fitzpatrick 2–4. Brown with a delicate rosy hue. Adds neutral nude on lips.</div>
+              </div>
+            </div>
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-MED8.jpg" alt="AbracAdabra MED8 Mango Chutney pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">MED8</div>
+                <div class="aa-shade-name">Mango Chutney</div>
+                <div class="aa-shade-meta">Hybrid · V 4 · T 1/2</div>
+                <div class="aa-shade-desc">Rosy shade for natural nude lips and softening vibrant colours. Excellent areola base; essential for medical mixes.</div>
+              </div>
+            </div>
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-MED9.jpg" alt="AbracAdabra MED9 Thule pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">MED9</div>
+                <div class="aa-shade-name">Thule</div>
+                <div class="aa-shade-meta">Hybrid · V 8 · T −1</div>
+                <div class="aa-shade-desc">Intensifies lip colours toward nude. Nipple shading. Mixing colour for areola tones; delicate shading on light areolas.</div>
+              </div>
+            </div>
+            <div class="aa-shade">
+              <img class="aa-bottle-img" src="images/aa-MED10.jpg" alt="AbracAdabra MED10 Shitake pigment bottle" loading="lazy">
+              <div class="aa-shade-body">
+                <div class="aa-shade-code">MED10</div>
+                <div class="aa-shade-name">Shitake</div>
+                <div class="aa-shade-meta">Hybrid · V 8 · T +1</div>
+                <div class="aa-shade-desc">Golden brown for medium-dark brows (Fitzpatrick 2–5) and shading darker areolas (Fitzpatrick 4–6). Warm and stable over time.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="aa-enquire">
+          <p>Availability and pricing for AbracAdabra pigments are handled directly. Message on WhatsApp to enquire about specific shades, starter sets or professional orders.</p>
+          <a class="cp-cta-btn" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20AbracAdabra%20pigments." target="_blank" rel="noopener">Request availability &amp; pricing</a>
+        </div>
+      </section>
+
       <section class="cp-section dark fade-up">
         <div class="cp-section-label">Professional Enquiries</div>
         <h2>Order or enquire <em>about products</em></h2>
@@ -278,5 +606,15 @@
 
 </div>
 <script src="js/main.js"></script>
+<script>
+function aaSwitch(cat, btn) {
+  document.querySelectorAll('.aa-tab').forEach(function(t){ t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+  document.querySelectorAll('.aa-panel').forEach(function(p){ p.classList.remove('active'); });
+  btn.classList.add('active');
+  btn.setAttribute('aria-selected','true');
+  document.getElementById('aa-' + cat).classList.add('active');
+}
+
+</script>
 </body>
 </html>
