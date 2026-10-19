@@ -304,8 +304,8 @@
   .hero-headline .h-cta:hover { background: var(--rose); color: #fff; }
   .hero-headline .h-cta svg { width: 14px; height: 14px; }
   .hero-headline h1 { display: block; margin: 0; padding: 0; font: inherit; }
-  .h-clinita-badge { margin-top: 16px; display: block; }
-  .h-clinita-badge img { width: 160px; height: auto; display: block; opacity: .85; }
+  .h-clinita-badge { margin-top: 20px; display: block; }
+  .h-clinita-badge img { width: 200px; height: auto; display: block; opacity: 1; }
   .h-menu {
     display: flex;
     flex-wrap: wrap;
@@ -430,7 +430,8 @@
     .hero-card .card-title { font-size: 13px; }
     .hero-card .card-sub { font-size: 8px; letter-spacing: .08em; }
     .hero-headline .h-cta { margin-top: 16px; padding: 11px 20px; }
-    .h-clinita-badge { display: none; }
+    .h-clinita-badge { display: block; }
+    .h-clinita-badge img { width: 150px; }
     .h-menu { display: none; }
   }
 
