@@ -231,10 +231,26 @@
     line-height: 1.75;
     margin-bottom: 16px;
   }
+  .aa-shade { background: var(--white, #fff); }
+  .aa-bottle-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 18px 0 12px;
+    background: #f5f3f0;
+    min-height: 124px;
+  }
+  .aa-bottle-svg {
+    width: 46px;
+    height: 92px;
+    filter: drop-shadow(0 3px 8px rgba(0,0,0,.14));
+  }
   @media (max-width: 600px) {
     .aa-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
     .aa-shade-name { font-size: 15px; }
     .aa-swatch { height: 40px; }
+    .aa-bottle-svg { width: 38px; height: 76px; }
+    .aa-bottle-wrap { min-height: 104px; padding: 14px 0 10px; }
   }
 </style>
 </head>
@@ -599,6 +615,24 @@ function aaSwitch(cat, btn) {
   btn.setAttribute('aria-selected','true');
   document.getElementById('aa-' + cat).classList.add('active');
 }
+
+document.querySelectorAll('.aa-swatch').forEach(function(el) {
+  var c = el.style.background;
+  var isLight = (c === '#F0EBE3');
+  var labelFill = isLight ? 'rgba(0,0,0,.07)' : 'rgba(255,255,255,.22)';
+  var stroke = isLight ? 'rgba(0,0,0,.12)' : 'none';
+  var wrap = document.createElement('div');
+  wrap.className = 'aa-bottle-wrap';
+  wrap.innerHTML =
+    '<svg class="aa-bottle-svg" viewBox="0 0 48 92" xmlns="http://www.w3.org/2000/svg">'
+    + '<rect x="15" y="0" width="18" height="10" rx="3" fill="#1A1A18"/>'
+    + '<rect x="19" y="10" width="10" height="13" fill="' + c + '"/>'
+    + '<path d="M19,23 L10,37 L10,86 Q10,92 16,92 L32,92 Q38,92 38,86 L38,37 L29,23 Z"'
+    +   ' fill="' + c + '" stroke="' + stroke + '" stroke-width="0.8"/>'
+    + '<rect x="11" y="47" width="26" height="22" rx="2" fill="' + labelFill + '"/>'
+    + '</svg>';
+  el.parentNode.replaceChild(wrap, el);
+});
 </script>
 </body>
 </html>
