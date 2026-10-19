@@ -141,27 +141,33 @@
       </div>
     </div>
 
-    <!-- Bottom 3 feature cards -->
+    <!-- Bottom feature cards — two brand groups -->
     <div class="hero-cards">
-      <div class="hero-card">
-        <div class="card-dot"><span></span><span></span><span></span></div>
-        <div class="card-title">Permanent Makeup</div>
-        <div class="card-sub">Brows · Lips · Eyeliner</div>
+      <div class="hero-card-group">
+        <div class="hero-card-group-label">Beauty by Lady D Studio</div>
+        <div class="hero-card">
+          <div class="card-dot"><span></span><span></span><span></span></div>
+          <div class="card-title">Permanent Makeup</div>
+          <div class="card-sub">Brows · Lips · Eyeliner</div>
+        </div>
+        <div class="hero-card">
+          <div class="card-dot"><span></span><span></span><span></span></div>
+          <div class="card-title">Medical Tattoo</div>
+          <div class="card-sub">Scar &amp; Areola Restoration</div>
+        </div>
       </div>
-      <div class="hero-card">
-        <div class="card-dot"><span></span><span></span><span></span></div>
-        <div class="card-title">Medical Tattoo</div>
-        <div class="card-sub">Scar &amp; Areola Restoration</div>
-      </div>
-      <div class="hero-card">
-        <div class="card-dot"><span></span><span></span><span></span></div>
-        <div class="card-title">Private 1:1 Training</div>
-        <div class="card-sub">Clinita certified courses</div>
-      </div>
-      <div class="hero-card">
-        <div class="card-dot"><span></span><span></span><span></span></div>
-        <div class="card-title">Clinita Products</div>
-        <div class="card-sub">Pigments · Machines · Skincare</div>
+      <div class="hero-card-group hero-card-group--clinita">
+        <div class="hero-card-group-label">Clinita Cyprus</div>
+        <div class="hero-card">
+          <div class="card-dot"><span></span><span></span><span></span></div>
+          <div class="card-title">Private 1:1 Training</div>
+          <div class="card-sub">Clinita certified courses</div>
+        </div>
+        <div class="hero-card">
+          <div class="card-dot"><span></span><span></span><span></span></div>
+          <div class="card-title">Clinita Products</div>
+          <div class="card-sub">Pigments · Machines · Skincare</div>
+        </div>
       </div>
     </div>
   </section>
@@ -208,6 +214,89 @@
       </div>
     </div>
   </div>
+
+  <!-- CLINITA PRODUCTS -->
+  <section class="clinita-products-band fade-up">
+    <style>
+      .clinita-products-band {
+        padding: 80px max(24px,6vw);
+        background: #1A1A18;
+        color: #ffffff;
+      }
+      .clinita-products-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+      }
+      .clinita-products-text .eyebrow { color: rgba(255,255,255,.45); }
+      .clinita-products-text h2 { margin-top: 14px; color: #ffffff; }
+      .clinita-products-text p { font-size: 14px; line-height: 1.8; color: rgba(255,255,255,.65); margin-top: 18px; }
+      .clinita-products-text a {
+        display: inline-block;
+        margin-top: 28px;
+        padding: 13px 28px;
+        background: #ffffff;
+        color: #1A1A18;
+        font-size: 11px;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: 40px;
+      }
+      .clinita-products-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .clinita-prod-card {
+        background: rgba(255,255,255,.06);
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 10px;
+        padding: 20px 18px;
+      }
+      .clinita-prod-card .cp-icon { font-size: 18px; margin-bottom: 8px; }
+      .clinita-prod-card .cp-name { font-size: 12px; font-weight: 500; letter-spacing: .06em; color: rgba(255,255,255,.9); margin-bottom: 4px; }
+      .clinita-prod-card .cp-desc { font-size: 11px; color: rgba(255,255,255,.45); line-height: 1.55; }
+      @media (max-width: 640px) {
+        .clinita-products-inner { grid-template-columns: 1fr; gap: 32px; }
+      }
+    </style>
+    <div class="clinita-products-inner">
+      <div class="clinita-products-text">
+        <span class="eyebrow">— Clinita Italy · Cyprus —</span>
+        <h2>Professional products,<br><em>available here.</em></h2>
+        <p>Beauty by Lady D is the only Official Clinita Italy Distributor in Cyprus. PMU artists and beauty professionals can source genuine Clinita pigments, machines, consumables and skincare directly — with personal support from a certified Clinita master trainer.</p>
+        <a href="/clinita.html">Explore Clinita Products</a>
+      </div>
+      <div class="clinita-products-grid">
+        <div class="clinita-prod-card">
+          <div class="cp-icon">🎨</div>
+          <div class="cp-name">Pigments</div>
+          <div class="cp-desc">Full Clinita Italy colour range</div>
+        </div>
+        <div class="clinita-prod-card">
+          <div class="cp-icon">⚙️</div>
+          <div class="cp-name">Machines</div>
+          <div class="cp-desc">Clinita I-FLY &amp; accessories</div>
+        </div>
+        <div class="clinita-prod-card">
+          <div class="cp-icon">🧴</div>
+          <div class="cp-name">Clinita Care</div>
+          <div class="cp-desc">Skincare &amp; aftercare range</div>
+        </div>
+        <div class="clinita-prod-card">
+          <div class="cp-icon">📦</div>
+          <div class="cp-name">Consumables</div>
+          <div class="cp-desc">Kits &amp; studio supplies</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- PHILOSOPHY -->
   <section class="philosophy">
@@ -663,98 +752,16 @@
         <img src="images/clinita-logo.jpeg" alt="Clinita Italy" />
       </div>
       <div class="wc-text">
-        <span class="eyebrow">— Why Clinita? —</span>
-        <h2 style="margin-top:14px;">Europe's most <em>scientifically advanced</em> PMU system.</h2>
-        <p>Clinita is one of Europe's most scientifically advanced PMU systems, with over 20 years of expertise. Their pigments are REACH-compliant, MRI-compatible and certified by CTL Bielefeld — the most rigorous independent European laboratory.</p>
-        <p>As a Clinita-trained professional, your qualification is recognised internationally.</p>
+        <span class="eyebrow">— The Clinita Difference —</span>
+        <h2 style="margin-top:14px;">Professional products and <em>internationally recognised</em> training.</h2>
+        <p>Clinita Italy has been developing professional PMU systems for over 20 years. Their pigments are REACH-compliant, MRI-compatible and certified by CTL Bielefeld — the most rigorous independent European laboratory in dermopigmentation.</p>
+        <p>The same professional-grade products used in every training course are available to beauty professionals and studios in Cyprus through Beauty by Lady D — the only Official Clinita Italy Distributor on the island.</p>
+        <p>Clinita-trained practitioners receive internationally recognised certification, registered in the official Clinita international professional list.</p>
         <div class="wc-badges">
           <div class="wc-badge">REACH<br/>Compliant</div>
           <div class="wc-badge">MRI<br/>Compatible</div>
           <div class="wc-badge">CTL Bielefeld<br/>Certified</div>
           <div class="wc-badge">20+ Years<br/>Expertise</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CLINITA PRODUCTS -->
-  <section class="clinita-products-band fade-up">
-    <style>
-      .clinita-products-band {
-        padding: 80px max(24px,6vw);
-        background: #1A1A18;
-        color: #ffffff;
-      }
-      .clinita-products-inner {
-        max-width: 900px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 48px;
-        align-items: center;
-      }
-      .clinita-products-text .eyebrow { color: rgba(255,255,255,.45); }
-      .clinita-products-text h2 { margin-top: 14px; color: #ffffff; }
-      .clinita-products-text p { font-size: 14px; line-height: 1.8; color: rgba(255,255,255,.65); margin-top: 18px; }
-      .clinita-products-text a {
-        display: inline-block;
-        margin-top: 28px;
-        padding: 13px 28px;
-        background: #ffffff;
-        color: #1A1A18;
-        font-size: 11px;
-        letter-spacing: .18em;
-        text-transform: uppercase;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 500;
-        text-decoration: none;
-        border-radius: 40px;
-      }
-      .clinita-products-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 14px;
-      }
-      .clinita-prod-card {
-        background: rgba(255,255,255,.06);
-        border: 1px solid rgba(255,255,255,.1);
-        border-radius: 10px;
-        padding: 20px 18px;
-      }
-      .clinita-prod-card .cp-icon { font-size: 18px; margin-bottom: 8px; }
-      .clinita-prod-card .cp-name { font-size: 12px; font-weight: 500; letter-spacing: .06em; color: rgba(255,255,255,.9); margin-bottom: 4px; }
-      .clinita-prod-card .cp-desc { font-size: 11px; color: rgba(255,255,255,.45); line-height: 1.55; }
-      @media (max-width: 640px) {
-        .clinita-products-inner { grid-template-columns: 1fr; gap: 32px; }
-      }
-    </style>
-    <div class="clinita-products-inner">
-      <div class="clinita-products-text">
-        <span class="eyebrow">— Clinita Italy · Cyprus —</span>
-        <h2>Professional products,<br><em>available here.</em></h2>
-        <p>Beauty by Lady D is the only Official Clinita Italy Distributor in Cyprus. PMU artists and beauty professionals can source genuine Clinita pigments, machines, consumables and skincare directly — with personal support from a certified Clinita master trainer.</p>
-        <a href="/clinita.html">Explore Clinita Products</a>
-      </div>
-      <div class="clinita-products-grid">
-        <div class="clinita-prod-card">
-          <div class="cp-icon">🎨</div>
-          <div class="cp-name">Pigments</div>
-          <div class="cp-desc">Full Clinita Italy colour range</div>
-        </div>
-        <div class="clinita-prod-card">
-          <div class="cp-icon">⚙️</div>
-          <div class="cp-name">Machines</div>
-          <div class="cp-desc">Clinita I-FLY &amp; accessories</div>
-        </div>
-        <div class="clinita-prod-card">
-          <div class="cp-icon">🧴</div>
-          <div class="cp-name">Clinita Care</div>
-          <div class="cp-desc">Skincare &amp; aftercare range</div>
-        </div>
-        <div class="clinita-prod-card">
-          <div class="cp-icon">📦</div>
-          <div class="cp-name">Consumables</div>
-          <div class="cp-desc">Kits &amp; studio supplies</div>
         </div>
       </div>
     </div>
