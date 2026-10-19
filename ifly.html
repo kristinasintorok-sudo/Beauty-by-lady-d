@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Clinita I-FLY Wireless PMU Machine · Beauty by Lady D Studio, Nicosia</title>
+<meta name="description" content="The Clinita I-FLY is a professional wireless PMU machine with LCD display, variable 4–12V output, 3mm stroke and 4–5 hour working time. Available in Cyprus exclusively through Beauty by Lady D Studio." />
+<link rel="canonical" href="https://www.beautybyladydstudio.com/ifly.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  /* Product page layout */
+  .prod-back {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--rose, #4A6B68);
+    text-decoration: none;
+    padding: 24px max(24px, 6vw) 0;
+  }
+  .prod-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 40px max(24px, 6vw) 56px;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  @media (max-width: 680px) {
+    .prod-hero { grid-template-columns: 1fr; gap: 28px; padding-top: 28px; }
+  }
+  .prod-photo-wrap {
+    background: #1e1e1e;
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .prod-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+  .prod-meta { display: flex; flex-direction: column; gap: 12px; }
+  .prod-eyebrow { font-family: 'Poppins', sans-serif; font-size: 9px; letter-spacing: .24em; text-transform: uppercase; color: var(--rose, #4A6B68); font-weight: 500; }
+  .prod-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 48px); font-weight: 400; color: var(--brown-deep, #1A1A18); line-height: 1.05; margin: 0; }
+  .prod-title em { font-style: italic; color: var(--rose, #4A6B68); }
+  .prod-subtitle { font-family: 'Poppins', sans-serif; font-size: 12px; color: var(--taupe-deep, #707070); letter-spacing: .06em; margin: 0; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+  .prod-highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(74,107,104,.06);
+    border-radius: 10px;
+    border-left: 2px solid var(--rose, #4A6B68);
+  }
+  .prod-highlight-icon { color: var(--rose, #4A6B68); flex-shrink: 0; margin-top: 1px; }
+  .prod-highlight-text { font-family: 'Poppins', sans-serif; font-size: 12px; color: var(--brown-deep, #1A1A18); line-height: 1.5; }
+  .prod-highlight-text strong { font-weight: 500; display: block; font-size: 11px; letter-spacing: .04em; }
+  .prod-cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+
+  /* Sections */
+  .prod-section { padding: 52px max(24px, 6vw); border-top: 1px solid var(--line-soft, #E6E6E2); max-width: 920px; margin: 0 auto; }
+  .prod-section-label { font-family: 'Poppins', sans-serif; font-size: 9px; letter-spacing: .22em; text-transform: uppercase; color: var(--rose, #4A6B68); font-weight: 500; margin-bottom: 20px; }
+  .prod-section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 34px); font-weight: 400; color: var(--brown-deep, #1A1A18); line-height: 1.1; margin-bottom: 24px; }
+  .prod-section h2 em { font-style: italic; color: var(--rose, #4A6B68); }
+  .prod-section p { font-size: 14px; color: var(--brown-soft, #6A6A68); line-height: 1.8; margin-bottom: 14px; }
+
+  /* Feature cards */
+  .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 8px; }
+  .feat-card {
+    border: 1px solid var(--line, #D4D4D0);
+    border-radius: 12px;
+    padding: 20px 18px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .feat-icon { color: var(--rose, #4A6B68); }
+  .feat-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; color: var(--brown-deep, #1A1A18); line-height: 1.2; }
+  .feat-desc { font-family: 'Poppins', sans-serif; font-size: 11px; color: var(--taupe-deep, #707070); line-height: 1.6; }
+
+  /* Steps */
+  .steps { display: flex; flex-direction: column; gap: 16px; margin-top: 8px; }
+  .step { display: flex; gap: 16px; align-items: flex-start; }
+  .step-num { width: 32px; height: 32px; border-radius: 50%; background: var(--rose, #4A6B68); color: #fff; font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .step-body h4 { font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 500; color: var(--brown-deep, #1A1A18); margin-bottom: 4px; }
+  .step-body p { font-size: 12px; color: var(--taupe-deep, #707070); line-height: 1.6; margin: 0; }
+
+  /* Specs table */
+  .specs-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .specs-table tr { border-bottom: 1px solid var(--line-soft, #E6E6E2); }
+  .specs-table tr:last-child { border-bottom: none; }
+  .specs-table td { padding: 12px 4px; font-family: 'Poppins', sans-serif; font-size: 12px; line-height: 1.5; vertical-align: top; }
+  .specs-table td:first-child { color: var(--taupe-deep, #707070); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; width: 42%; padding-right: 16px; padding-top: 14px; }
+  .specs-table td:last-child { color: var(--brown-deep, #1A1A18); font-weight: 400; }
+
+  /* CTA dark */
+  .prod-cta-dark {
+    background: var(--brown-deep, #1A1A18);
+    padding: 52px max(24px, 6vw);
+    text-align: center;
+  }
+  .prod-cta-dark .prod-section-label { color: rgba(74,107,104,.7); }
+  .prod-cta-dark h2 { color: #fff; font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 34px); font-weight: 400; line-height: 1.1; margin-bottom: 14px; }
+  .prod-cta-dark h2 em { font-style: italic; color: var(--rose, #4A6B68); }
+  .prod-cta-dark p { color: rgba(255,255,255,.65); font-size: 13px; max-width: 480px; margin: 0 auto 28px; }
+  .prod-cta-dark .cp-cta-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--rose, #4A6B68); color: #fff; font-family: 'Poppins', sans-serif; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; padding: 14px 32px; border-radius: 999px; transition: background .2s; }
+  .prod-cta-dark .cp-cta-btn:hover { background: #2E5250; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section class="cp-hero" style="min-height: auto; padding-bottom: 0;">
+    <nav class="nav-pill" aria-label="Primary">
+      <a class="brand" href="/">
+        <span class="dot"><img src="images/ladyd-logo.png" alt="Beauty by Lady D Studio" /></span>
+        Beauty by Lady D
+      </a>
+      <div class="links">
+        <a href="/#services">Treatments</a>
+        <a href="/#courses">Academy</a>
+        <a href="/clinita.html" class="active">Clinita</a>
+        <a href="/#portfolio">Results</a>
+        <a href="/#about">About</a>
+        <a href="/#book">Book</a>
+      </div>
+      <div class="clinita-badge-wrap">
+        <div class="clinita-badge">
+          <img src="images/clinita-logo-full.png" alt="Clinita Italy" />
+        </div>
+        <div class="clinita-tooltip">Clinita Italy Certified Trainer</div>
+      </div>
+    </nav>
+    <div style="height: 70px;"></div>
+  </section>
+
+  <div class="cp-body">
+    <div class="wrap-inner">
+
+      <a class="prod-back" href="clinita.html">
+        ← Back to Clinita Italy
+      </a>
+
+      <div class="prod-hero">
+        <div class="prod-photo-wrap">
+          <img src="images/clinita-ifly.jpg" alt="Clinita I-FLY wireless PMU machine — black pen dermograph with LCD display" class="prod-photo" />
+        </div>
+        <div class="prod-meta">
+          <div class="prod-eyebrow">Clinita Italy · Professional PMU Equipment</div>
+          <h1 class="prod-title">I-FLY <em>Wireless</em><br>PMU Machine</h1>
+          <p class="prod-subtitle">Wireless Machine for Permanent Make Up, Scalp Micropigmentation, Medical Tattoo &amp; Collagen Bio-Induction® treatments</p>
+          <div class="prod-highlights">
+            <div class="prod-highlight">
+              <div class="prod-highlight-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+              </div>
+              <div class="prod-highlight-text"><strong>LCD screen</strong>Live voltage and battery percentage display. Default startup at 7V.</div>
+            </div>
+            <div class="prod-highlight">
+              <div class="prod-highlight-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <div class="prod-highlight-text"><strong>Variable 4–12V output</strong>Full range control via +/− buttons in 0.5V increments</div>
+            </div>
+            <div class="prod-highlight">
+              <div class="prod-highlight-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+              </div>
+              <div class="prod-highlight-text"><strong>4–5 hr working time</strong>1000 mAh battery · 2–3 hr charge · Type-C</div>
+            </div>
+            <div class="prod-highlight">
+              <div class="prod-highlight-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="prod-highlight-text"><strong>Autoclavable grip · 121°C</strong>Grip sterilisable at 2 bar pressure · 20-minute cycle</div>
+            </div>
+          </div>
+          <div class="prod-cta-row">
+            <a class="cp-cta-btn" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Clinita%20I-FLY%20machine." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-section">
+        <div class="prod-section-label">Key Features</div>
+        <h2>Built for professional <em>precision</em></h2>
+        <div class="feat-grid">
+          <div class="feat-card">
+            <div class="feat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+            </div>
+            <div class="feat-name">LCD Screen</div>
+            <div class="feat-desc">Shows current voltage and battery percentage in real time. Standby display reads 0.0V.</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <div class="feat-name">Variable Output</div>
+            <div class="feat-desc">4–12V range, adjustable in 0.5V steps with + and − controls. Startup default at 7V.</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="feat-name">Autoclavable</div>
+            <div class="feat-desc">Grip sterilised at 121°C / 2 bar for 20 minutes. Detaches from the drive section for full cleaning.</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div class="feat-name">Short-circuit protection</div>
+            <div class="feat-desc">Battery powers off instantly on short-circuit. Recharge to reactivate — prevents damage to machine and artist.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-section">
+        <div class="prod-section-label">Setup &amp; Use</div>
+        <h2>Ready in <em>three steps</em></h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>Attach the FLY needle cartridge</h4>
+              <p>The I-FLY is compatible exclusively with FLY needle cartridges. Assemble the needle on the pen before powering on.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>Power on</h4>
+              <p>Hold the button for two seconds to start. The machine launches at 7V by default. Tap once to stop and start during the session.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>Adjust needle depth</h4>
+              <p>Rotate the grip section to set needle depth. Numbered depth markings (2.2, 2.5, 2.8 mm visible on barrel) for precise, repeatable settings.</p>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top:24px;font-size:12px;color:var(--taupe-deep);">Note: take a 10-minute break from the device approximately every two hours of continuous use.</p>
+      </div>
+
+      <div class="prod-section">
+        <div class="prod-section-label">Technical Specifications</div>
+        <h2>Full <em>specifications</em></h2>
+        <table class="specs-table" aria-label="I-FLY technical specifications">
+          <tr><td>Mode</td><td>I-FLY</td></tr>
+          <tr><td>Input</td><td>5 V</td></tr>
+          <tr><td>Output</td><td>4–12 V · 800 mA</td></tr>
+          <tr><td>Power</td><td>10 W</td></tr>
+          <tr><td>Stroke</td><td>3 mm</td></tr>
+          <tr><td>Body material</td><td>Aluminium</td></tr>
+          <tr><td>Dimensions</td><td>22 × 144 mm</td></tr>
+          <tr><td>Pen + battery weight</td><td>91 g</td></tr>
+          <tr><td>Battery weight</td><td>40 g</td></tr>
+          <tr><td>Battery capacity</td><td>1000 mAh</td></tr>
+          <tr><td>Charging port</td><td>Type-C</td></tr>
+          <tr><td>Charging time</td><td>2–3 hours</td></tr>
+          <tr><td>Working time</td><td>4–5 hours</td></tr>
+          <tr><td>Needle compatibility</td><td>FLY needle cartridges only</td></tr>
+          <tr><td>Sterilisation</td><td>Autoclavable grip at 121°C · 2 bar · 20 min</td></tr>
+          <tr><td>Warranty</td><td>12 months from date of purchase</td></tr>
+          <tr><td>Produced by</td><td>Clinita SRL · Zero Branco (TV), Italy</td></tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="prod-cta-dark">
+    <div class="prod-section-label">Available in Cyprus</div>
+    <h2>Enquire about the <em>I-FLY</em></h2>
+    <p>Pricing and availability for the Clinita I-FLY are handled directly. Message on WhatsApp and we'll respond personally.</p>
+    <a class="cp-cta-btn" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Clinita%20I-FLY%20machine." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+  </div>
+
+  <footer>
+    <div class="f-wordmark">Lady&nbsp;D</div>
+    <div class="f-loc">Beauty by Lady D Studio · Nicosia</div>
+    <div class="f-address">Vasilissis Freiderikis 18 · Nicosia 1066</div>
+    <div class="f-meta">
+      <a href="https://instagram.com/beautybylady_d_studio" target="_blank" rel="noopener">@beautybylady_d_studio</a><br/>
+      <a href="mailto:beautybyladydi@gmail.com">beautybyladydi@gmail.com</a><br/>
+      <a href="tel:+35794009509">+357 94 009 509</a> &nbsp;·&nbsp; <a href="tel:+35799567161">+357 99 567 161</a><br/>
+      © 2026 — All rights reserved
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

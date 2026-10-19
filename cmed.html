@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Clinita C-MED Wireless PMU Dermograph · Beauty by Lady D Studio, Nicosia</title>
+<meta name="description" content="The Clinita C-MED is a professional wireless PMU dermograph with Maxon motor, aircraft-grade aluminium body, 3 operating modes and USB-C charging. Available in Cyprus through Beauty by Lady D Studio." />
+<link rel="canonical" href="https://www.beautybyladydstudio.com/cmed.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  /* Product page layout */
+  .prod-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--rose, #4A6B68);
+    text-decoration: none;
+    padding: 24px max(24px, 6vw) 0;
+    display: block;
+  }
+  .prod-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 40px max(24px, 6vw) 56px;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  @media (max-width: 680px) {
+    .prod-hero { grid-template-columns: 1fr; gap: 28px; padding-top: 28px; }
+  }
+  .prod-photo-wrap {
+    background: #f5f5f3;
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .prod-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+  .prod-meta { display: flex; flex-direction: column; gap: 12px; }
+  .prod-eyebrow { font-family: 'Poppins', sans-serif; font-size: 9px; letter-spacing: .24em; text-transform: uppercase; color: var(--rose, #4A6B68); font-weight: 500; }
+  .prod-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 48px); font-weight: 400; color: var(--brown-deep, #1A1A18); line-height: 1.05; margin: 0; }
+  .prod-title em { font-style: italic; color: var(--rose, #4A6B68); }
+  .prod-subtitle { font-family: 'Poppins', sans-serif; font-size: 12px; color: var(--taupe-deep, #707070); letter-spacing: .06em; margin: 0; }
+  .prod-highlights { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+  .prod-highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(74,107,104,.06);
+    border-radius: 10px;
+    border-left: 2px solid var(--rose, #4A6B68);
+  }
+  .prod-highlight-icon { color: var(--rose, #4A6B68); flex-shrink: 0; margin-top: 1px; }
+  .prod-highlight-text { font-family: 'Poppins', sans-serif; font-size: 12px; color: var(--brown-deep, #1A1A18); line-height: 1.5; }
+  .prod-highlight-text strong { font-weight: 500; display: block; font-size: 11px; letter-spacing: .04em; }
+  .prod-cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+
+  /* Sections */
+  .prod-section { padding: 52px max(24px, 6vw); border-top: 1px solid var(--line-soft, #E6E6E2); max-width: 920px; margin: 0 auto; }
+  .prod-section-label { font-family: 'Poppins', sans-serif; font-size: 9px; letter-spacing: .22em; text-transform: uppercase; color: var(--rose, #4A6B68); font-weight: 500; margin-bottom: 20px; }
+  .prod-section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 34px); font-weight: 400; color: var(--brown-deep, #1A1A18); line-height: 1.1; margin-bottom: 24px; }
+  .prod-section h2 em { font-style: italic; color: var(--rose, #4A6B68); }
+  .prod-section p { font-size: 14px; color: var(--brown-soft, #6A6A68); line-height: 1.8; margin-bottom: 14px; }
+
+  /* Modes grid */
+  .mode-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-top: 8px; }
+  .mode-card {
+    border: 1px solid var(--line, #D4D4D0);
+    border-radius: 12px;
+    padding: 20px 18px;
+    background: #fff;
+  }
+  .mode-tag { font-family: 'Poppins', sans-serif; font-size: 8px; letter-spacing: .2em; text-transform: uppercase; color: var(--rose, #4A6B68); font-weight: 500; margin-bottom: 6px; }
+  .mode-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; color: var(--brown-deep, #1A1A18); margin-bottom: 6px; line-height: 1.2; }
+  .mode-desc { font-family: 'Poppins', sans-serif; font-size: 11px; color: var(--taupe-deep, #707070); line-height: 1.6; }
+  .mode-card.pshot { border-color: var(--rose, #4A6B68); background: rgba(74,107,104,.05); }
+  .mode-card.pshot .mode-tag { color: var(--rose, #4A6B68); }
+
+  /* Steps */
+  .steps { display: flex; flex-direction: column; gap: 16px; margin-top: 8px; }
+  .step { display: flex; gap: 16px; align-items: flex-start; }
+  .step-num { width: 32px; height: 32px; border-radius: 50%; background: var(--rose, #4A6B68); color: #fff; font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .step-body h4 { font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 500; color: var(--brown-deep, #1A1A18); margin-bottom: 4px; }
+  .step-body p { font-size: 12px; color: var(--taupe-deep, #707070); line-height: 1.6; margin: 0; }
+
+  /* Specs table */
+  .specs-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .specs-table tr { border-bottom: 1px solid var(--line-soft, #E6E6E2); }
+  .specs-table tr:last-child { border-bottom: none; }
+  .specs-table td { padding: 12px 4px; font-family: 'Poppins', sans-serif; font-size: 12px; line-height: 1.5; vertical-align: top; }
+  .specs-table td:first-child { color: var(--taupe-deep, #707070); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; width: 42%; padding-right: 16px; padding-top: 14px; }
+  .specs-table td:last-child { color: var(--brown-deep, #1A1A18); font-weight: 400; }
+
+  /* CTA dark */
+  .prod-cta-dark {
+    background: var(--brown-deep, #1A1A18);
+    padding: 52px max(24px, 6vw);
+    text-align: center;
+  }
+  .prod-cta-dark .prod-section-label { color: rgba(74,107,104,.7); }
+  .prod-cta-dark h2 { color: #fff; margin-bottom: 14px; }
+  .prod-cta-dark p { color: rgba(255,255,255,.65); font-size: 13px; max-width: 480px; margin: 0 auto 28px; }
+  .prod-cta-dark .cp-cta-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--rose, #4A6B68); color: #fff; font-family: 'Poppins', sans-serif; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; padding: 14px 32px; border-radius: 999px; transition: background .2s; }
+  .prod-cta-dark .cp-cta-btn:hover { background: #2E5250; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section class="cp-hero" style="min-height: auto; padding-bottom: 0;">
+    <nav class="nav-pill" aria-label="Primary">
+      <a class="brand" href="/">
+        <span class="dot"><img src="images/ladyd-logo.png" alt="Beauty by Lady D Studio" /></span>
+        Beauty by Lady D
+      </a>
+      <div class="links">
+        <a href="/#services">Treatments</a>
+        <a href="/#courses">Academy</a>
+        <a href="/clinita.html" class="active">Clinita</a>
+        <a href="/#portfolio">Results</a>
+        <a href="/#about">About</a>
+        <a href="/#book">Book</a>
+      </div>
+      <div class="clinita-badge-wrap">
+        <div class="clinita-badge">
+          <img src="images/clinita-logo-full.png" alt="Clinita Italy" />
+        </div>
+        <div class="clinita-tooltip">Clinita Italy Certified Trainer</div>
+      </div>
+    </nav>
+    <div style="height: 70px;"></div>
+  </section>
+
+  <div class="cp-body">
+    <div class="wrap-inner">
+
+      <a class="prod-back" href="clinita.html">
+        ← Back to Clinita Italy
+      </a>
+
+      <div class="prod-hero">
+        <div class="prod-photo-wrap">
+          <img src="images/clinita-cmed.jpg" alt="Clinita C-MED wireless PMU dermograph — silver pen with teal needle cartridge" class="prod-photo" />
+        </div>
+        <div class="prod-meta">
+          <div class="prod-eyebrow">Clinita Italy · Professional PMU Equipment</div>
+          <h1 class="prod-title">C-MED <em>Wireless</em><br>Dermograph</h1>
+          <p class="prod-subtitle">Wireless Machine for Permanent Make Up, Scalp Micropigmentation &amp; Paramedical Procedures</p>
+          <div class="prod-highlights">
+            <div class="prod-highlight">
+              <div class="prod-highlight-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v6m0 8v6M4.93 4.93l4.24 4.24m5.66 5.66 4.24 4.24M2 12h6m8 0h6M4.93 19.07l4.24-4.24m5.66-5.66 4.24-4.24"/></svg>
+              </div>
+              <div class="prod-highlight-text"><strong>Maxon Motor</strong>Precision Swiss engineering for consistent power delivery across all techniques</div>
+            </div>
+            <div class="prod-highlight">
+              <div class="prod-highlight-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+              </div>
+              <div class="prod-highlight-text"><strong>Aircraft-grade aluminium body</strong>Lightweight at 85 g · Dimensions 121 × 27.5 mm</div>
+            </div>
+            <div class="prod-highlight">
+              <div class="prod-highlight-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 7 16 12 23 17V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+              </div>
+              <div class="prod-highlight-text"><strong>3 operating modes + P-Shot</strong>M1 Regular · M2 Intermittent · M3 Gradual</div>
+            </div>
+            <div class="prod-highlight">
+              <div class="prod-highlight-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+              <div class="prod-highlight-text"><strong>Replaceable battery · USB-C</strong>1000 mAh · 2 hr charge time</div>
+            </div>
+          </div>
+          <div class="prod-cta-row">
+            <a class="cp-cta-btn" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Clinita%20C-MED%20machine." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-section">
+        <div class="prod-section-label">Operating Modes</div>
+        <h2>Four precision <em>modes</em></h2>
+        <p>The C-MED offers three core operating modes for different techniques, plus a dedicated P-Shot mode for collagen bio-induction procedures.</p>
+        <div class="mode-grid">
+          <div class="mode-card">
+            <div class="mode-tag">M1</div>
+            <div class="mode-name">Regular</div>
+            <div class="mode-desc">Continuous, consistent needle action. Ideal for fill work, shading and most standard PMU techniques.</div>
+          </div>
+          <div class="mode-card">
+            <div class="mode-tag">M2</div>
+            <div class="mode-name">Intermittent</div>
+            <div class="mode-desc">Pulse-based delivery for sensitive areas. Reduces trauma on delicate skin.</div>
+          </div>
+          <div class="mode-card">
+            <div class="mode-tag">M3</div>
+            <div class="mode-name">Gradual</div>
+            <div class="mode-desc">Progressive build-up in each pass. Precise control for hair strokes and fine detail work.</div>
+          </div>
+          <div class="mode-card pshot">
+            <div class="mode-tag">P-Shot</div>
+            <div class="mode-name">P-Shot</div>
+            <div class="mode-desc">Dedicated mode for collagen bio-induction treatments.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-section">
+        <div class="prod-section-label">Setup &amp; Use</div>
+        <h2>Ready in <em>three steps</em></h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>Attach the needle cartridge</h4>
+              <p>Compatible with universal needles and Fly by Clinita cartridges. Bayonet-style connection clicks securely into place.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>Power on</h4>
+              <p>Press the button for two seconds to start. The machine begins at a safe default setting.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>Set stroke depth</h4>
+              <p>Rotate the handle grip to adjust needle depth between 2.2 and 3.3 mm across 6 discrete settings. No tools required.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-section">
+        <div class="prod-section-label">Technical Specifications</div>
+        <h2>Full <em>specifications</em></h2>
+        <table class="specs-table" aria-label="C-MED technical specifications">
+          <tr><td>Input voltage</td><td>3–12 V</td></tr>
+          <tr><td>Power</td><td>6 W</td></tr>
+          <tr><td>Stroke range</td><td>2.2–3.3 mm (6 settings)</td></tr>
+          <tr><td>Max speed</td><td>12,600 RPM</td></tr>
+          <tr><td>Needle speed range</td><td>0–4 mm/s</td></tr>
+          <tr><td>Motor</td><td>Maxon precision motor</td></tr>
+          <tr><td>Body material</td><td>Aircraft-grade aluminium</td></tr>
+          <tr><td>Dimensions</td><td>121 × 27.5 mm</td></tr>
+          <tr><td>Weight</td><td>85 g</td></tr>
+          <tr><td>Battery</td><td>1000 mAh, replaceable</td></tr>
+          <tr><td>Charging</td><td>USB-C · ~2 hr charge time</td></tr>
+          <tr><td>Needle compatibility</td><td>Universal cartridges · Fly by Clinita</td></tr>
+          <tr><td>Sterilisation</td><td>Autoclavable handle (grip) at 121°C</td></tr>
+          <tr><td>Warranty</td><td>12 months from date of purchase</td></tr>
+          <tr><td>Produced by</td><td>Clinita SRL · Treviso, Italy</td></tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="prod-cta-dark">
+    <div class="prod-section-label">Available in Cyprus</div>
+    <h2>Enquire about the <em>C-MED</em></h2>
+    <p>Pricing and availability for the Clinita C-MED are handled directly. Message on WhatsApp and we'll respond personally.</p>
+    <a class="cp-cta-btn" href="https://wa.me/35794009509?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Clinita%20C-MED%20machine." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+  </div>
+
+  <footer>
+    <div class="f-wordmark">Lady&nbsp;D</div>
+    <div class="f-loc">Beauty by Lady D Studio · Nicosia</div>
+    <div class="f-address">Vasilissis Freiderikis 18 · Nicosia 1066</div>
+    <div class="f-meta">
+      <a href="https://instagram.com/beautybylady_d_studio" target="_blank" rel="noopener">@beautybylady_d_studio</a><br/>
+      <a href="mailto:beautybyladydi@gmail.com">beautybyladydi@gmail.com</a><br/>
+      <a href="tel:+35794009509">+357 94 009 509</a> &nbsp;·&nbsp; <a href="tel:+35799567161">+357 99 567 161</a><br/>
+      © 2026 — All rights reserved
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
