@@ -85,6 +85,9 @@
     font-size: 18px;
     font-weight: 500;
     letter-spacing: .01em;
+    white-space: nowrap;
+    flex-shrink: 1;
+    min-width: 0;
   }
   .nav-pill .brand .dot {
     width: 86px; height: 86px;
