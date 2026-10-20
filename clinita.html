@@ -292,44 +292,30 @@
   /* Machines & Equipment section */
   .mach-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
     margin-top: 32px;
   }
-  @media (max-width: 640px) {
-    .mach-grid { grid-template-columns: 1fr; }
-  }
   .mach-card {
-    display: flex;
-    flex-direction: column;
-    background: var(--white, #fff);
     border: 1px solid var(--line);
-    border-radius: 14px;
+    border-radius: 10px;
     overflow: hidden;
+    background: var(--white, #fff);
     text-decoration: none;
     color: inherit;
-    transition: box-shadow .2s, transform .2s;
+    display: block;
+    transition: box-shadow .18s;
   }
-  .mach-card:hover { box-shadow: 0 8px 28px rgba(74,107,104,.15); transform: translateY(-2px); }
-  .mach-img-wrap {
-    background: #f5f5f3;
-    aspect-ratio: 4/3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+  .mach-card:hover { box-shadow: 0 4px 18px rgba(74,107,104,.13); }
+  .mach-prod-img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
   }
-  .mach-img-wrap.dark { background: #1e1e1e; }
-  .mach-img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
-  .mach-body { padding: 22px 20px 24px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
-  .mach-label { font-family: 'Poppins', sans-serif; font-size: 9px; letter-spacing: .22em; text-transform: uppercase; color: var(--rose, #4A6B68); font-weight: 500; }
-  .mach-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--brown-deep, #1A1A18); line-height: 1.1; margin: 0; }
-  .mach-name em { font-style: italic; color: var(--rose, #4A6B68); }
-  .mach-sub { font-family: 'Poppins', sans-serif; font-size: 11px; color: var(--taupe-deep, #707070); letter-spacing: .04em; margin: 0; }
-  .mach-specs { list-style: none; padding: 0; margin: 6px 0 0; display: flex; flex-direction: column; gap: 5px; }
-  .mach-specs li { font-family: 'Poppins', sans-serif; font-size: 11px; color: var(--brown-soft, #6A6A68); line-height: 1.5; padding-left: 16px; position: relative; }
-  .mach-specs li::before { content: '·'; position: absolute; left: 0; color: var(--rose, #4A6B68); font-weight: 700; }
-  .mach-link { font-family: 'Poppins', sans-serif; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--rose, #4A6B68); margin-top: auto; padding-top: 14px; display: inline-block; }
+  .mach-prod-img.on-dark { background: #1e1e1e; }
+  .mach-prod-img.on-light { background: #f5f5f3; }
 </style>
 </head>
 <body>
@@ -687,37 +673,21 @@
         <p>Professional wireless dermographs engineered for permanent makeup, scalp micropigmentation and paramedical procedures. Aircraft-grade aluminium bodies, precision motors and USB-C charging — available exclusively through Beauty by Lady D Studio, Cyprus's only Clinita Italy distributor.</p>
         <div class="mach-grid">
           <a class="mach-card" href="cmed.html">
-            <div class="mach-img-wrap">
-              <img src="images/clinita-cmed.jpg" alt="Clinita C-MED wireless PMU dermograph — silver pen with teal needle cartridge" class="mach-img" loading="lazy">
-            </div>
-            <div class="mach-body">
-              <div class="mach-label">C-MED</div>
-              <h3 class="mach-name">Clinita <em>C-MED</em></h3>
-              <p class="mach-sub">Wireless PMU Dermograph</p>
-              <ul class="mach-specs">
-                <li>3 operating modes + P-Shot</li>
-                <li>6 adjustable stroke settings (2.2–3.3 mm)</li>
-                <li>Aircraft-grade aluminium · Maxon motor</li>
-                <li>Replaceable battery · USB-C charging</li>
-              </ul>
-              <span class="mach-link">View details →</span>
+            <img class="mach-prod-img on-dark" src="images/clinita-cmed.jpg" alt="Clinita C-MED wireless PMU dermograph" loading="lazy">
+            <div class="aa-shade-body">
+              <div class="aa-shade-code">C-MED</div>
+              <div class="aa-shade-name">C-MED</div>
+              <div class="aa-shade-meta">Wireless PMU Dermograph · 85 g · USB-C</div>
+              <div class="aa-shade-desc">3 operating modes + P-Shot · 6 stroke settings (2.2–3.3 mm) · Maxon motor · Aircraft-grade aluminium · Replaceable battery</div>
             </div>
           </a>
           <a class="mach-card" href="ifly.html">
-            <div class="mach-img-wrap dark">
-              <img src="images/clinita-ifly.jpg" alt="Clinita I-FLY wireless PMU machine — three black pen dermographs on display block" class="mach-img" loading="lazy">
-            </div>
-            <div class="mach-body">
-              <div class="mach-label">I-FLY</div>
-              <h3 class="mach-name">Clinita <em>I-FLY</em></h3>
-              <p class="mach-sub">Wireless PMU Machine</p>
-              <ul class="mach-specs">
-                <li>4–12V variable output · LCD display</li>
-                <li>3 mm stroke · Aluminium body</li>
-                <li>4–5 hr working time · Type-C charging</li>
-                <li>Compatible with FLY needle cartridges</li>
-              </ul>
-              <span class="mach-link">View details →</span>
+            <img class="mach-prod-img on-light" src="images/clinita-ifly.jpg" alt="Clinita I-FLY wireless PMU machine" loading="lazy">
+            <div class="aa-shade-body">
+              <div class="aa-shade-code">I-FLY</div>
+              <div class="aa-shade-name">I-FLY</div>
+              <div class="aa-shade-meta">Wireless PMU Machine · 91 g · Type-C</div>
+              <div class="aa-shade-desc">4–12V variable output · LCD screen · 3 mm stroke · 4–5 hr working time · FLY needle cartridges · Autoclavable grip</div>
             </div>
           </a>
         </div>
